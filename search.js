@@ -52,7 +52,8 @@ const searchIndex = {
         { id: 'kvk', name: 'Kingdom vs Kingdom', keywords: ['kvk', 'kingdom', 'guerra', 'reinos'], url: 'alianzas.html#kvk', category: 'Guías', description: 'Guía de Kingdom vs Kingdom' },
         { id: 'vip', name: 'Sistema VIP', keywords: ['vip', 'nivel', 'beneficios', 'puntos', 'gemas'], url: 'vip.html', category: 'Guías', description: 'Sistema VIP y beneficios por nivel' },
         { id: 'equipment', name: 'Guía de Equipment', keywords: ['equipment', 'equipo', 'sets', 'forja', 'materiales'], url: 'equipment.html', category: 'Guías', description: 'Guía completa de sets y crafting' },
-        { id: 'tier-lists', name: 'Tier Lists 2026', keywords: ['tier list', 'ranking', 'mejor', 'meta'], url: 'tier-lists.html', category: 'Guías', description: 'Los mejores comandantes y civilizaciones' }
+        { id: 'tier-lists', name: 'Tier Lists 2026', keywords: ['tier list', 'ranking', 'mejor', 'meta'], url: 'tier-lists.html', category: 'Guías', description: 'Los mejores comandantes y civilizaciones' },
+        { id: 'kvk-guide', name: 'Especial KvK (SoC & KvK 1)', keywords: ['kvk', 'guerra', 'mapas', 'soc', 'hero anthem', 'strife of eight'], url: 'kvk.html', category: 'Guías', description: 'Manual de supervivencia y análisis de mapas de guerra' }
     ],
     herramientas: [
         { id: 'calculadora', name: 'Calculadora de Recursos', keywords: ['calculadora', 'recursos', 'speedups', 'tiempo'], url: 'calculadora.html', category: 'Herramientas', description: 'Calcula tiempo y speedups necesarios' },

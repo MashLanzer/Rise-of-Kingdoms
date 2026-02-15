@@ -1628,11 +1628,59 @@ mark {
    VIP SYSTEM STYLES
    =================================== */
 
-.milestones-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
+/* ESPECIAL KVK */
+.kvk-hero {
+    background: linear-gradient(135deg, rgba(8, 10, 15, 0.9) 0%, rgba(20, 25, 40, 0.8) 100%),
+        url('images/kvk-bg.webp') center/cover;
+    border-bottom: 2px solid var(--gold-primary);
+}
+
+.quick-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--navy-800);
+    border: 1px solid var(--navy-border);
+    border-radius: 8px;
+    margin: -3rem auto 3rem;
+    position: relative;
+    z-index: 10;
+    max-width: 900px;
+    flex-wrap: wrap;
+    box-shadow: var(--shadow-deep);
+}
+
+.quick-nav a {
+    color: var(--text-medium);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: var(--transition-premium);
+}
+
+.quick-nav a:hover {
+    color: var(--gold-primary);
+    background: var(--gold-ghost);
+}
+
+.accordion-body-inner {
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    line-height: 1.7;
+    color: var(--text-medium);
+}
+
+.accordion-body-inner h4 {
+    color: var(--gold-light);
+    margin: 1rem 0 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
 .milestone-card {
