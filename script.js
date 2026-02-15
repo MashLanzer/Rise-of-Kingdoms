@@ -690,11 +690,24 @@ function displaySearchResults(results, query) {
       const highlightedName = highlightMatch(result.name, query);
       const highlightedDesc = highlightMatch(result.description, query);
 
+      let pairingsHTML = '';
+      if (result.category === 'Comandantes' && result.pairings) {
+        pairingsHTML = `
+          <div class="search-result-pairings">
+            <span class="pairing-label">💡 Sugerencia AI:</span>
+            ${result.pairings.map(p => `<span class="pairing-tag">${p}</span>`).join('')}
+          </div>
+        `;
+      }
+
       html += `
         <a href="${result.url}" class="search-result-item">
-          <div class="search-result-title">${highlightedName}</div>
+          <div class="search-result-header">
+            <div class="search-result-title">${highlightedName}</div>
+            <div class="search-result-category">${result.category}</div>
+          </div>
           <div class="search-result-description">${highlightedDesc}</div>
-          <div class="search-result-category">${result.category}</div>
+          ${pairingsHTML}
         </a>
       `;
     });

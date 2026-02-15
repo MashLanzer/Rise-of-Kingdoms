@@ -1506,23 +1506,61 @@ footer {
     transform: translateX(5px);
 }
 
-.search-result-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--primary-gold);
+.search-result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 0.5rem;
+}
+
+.search-result-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--gold-primary);
+}
+
+.search-result-category {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 8px;
+    border-radius: 4px;
 }
 
 .search-result-description {
     font-size: 0.95rem;
-    color: var(--text-secondary);
-    margin-bottom: 0.5rem;
+    color: var(--text-medium);
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
 }
 
-.search-result-category {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    font-style: italic;
+.search-result-pairings {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    margin-top: 0.5rem;
+}
+
+.pairing-label {
+    font-size: 0.75rem;
+    color: var(--gold-light);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pairing-tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 4px;
+    color: var(--gold-primary);
+    font-weight: 600;
 }
 
 /* Highlight de coincidencias */
