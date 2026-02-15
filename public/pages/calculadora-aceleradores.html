@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Aceleradores - Rise of Kingdoms Academy</title>
+    <meta name="description"
+        content="Calculadora avanzada de aceleradores para Rise of Kingdoms. Suma tu inventario y planifica tus construcciones, investigaciones y entrenamiento.">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">RoK Academy</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">Guías Principales</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="civilizaciones.html">Civilizaciones</a></li>
+                            <li><a href="comandantes.html">Comandantes</a></li>
+                            <li><a href="builds.html">Árboles de Talentos</a></li>
+                            <li><a href="tier-lists.html">Tier Lists</a></li>
+                            <li><a href="equipment.html">Equipment</a></li>
+                            <li><a href="vip.html">VIP</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">Sistemas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="osiris.html">Arca de Osiris</a></li>
+                            <li><a href="armamentos.html">Armamentos y Formaciones</a></li>
+                            <li><a href="edificios.html">Edificios</a></li>
+                            <li><a href="tropas.html">Tropas</a></li>
+                            <li><a href="alianzas.html">Alianzas</a></li>
+                            <li><a href="recursos.html">Recursos</a></li>
+                            <li><a href="tecnologia.html">Tecnología</a></li>
+                            <li><a href="eventos.html">Eventos</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <a class="dropdown-toggle">Más</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="kvk.html">Especial KvK</a></li>
+                            <li><a href="avanzado.html">Guías Avanzadas</a></li>
+                            <li><a href="calculadora-tropas.html">🪖 Calculadora Tropas</a></li>
+                            <li><a href="calculadora-aceleradores.html" class="active">🧮 Calculadora Speedups</a></li>
+                            <li><a href="calculadora.html">⚖️ Calculadora Recursos</a></li>
+                        </ul>
+                    </li>
+                    <li><button class="search-btn" id="globalSearchBtn">🔍 Buscar</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero speedup-hero">
+            <div class="hero-content">
+                <span class="badge badge-legendary">HERRAMIENTA TÄCTICA</span>
+                <h1>🧮 Calculadora de Aceleradores</h1>
+                <p>Gestiona tu inventario con precisión matemática. Suma todos tus speedups y descubre si estás listo
+                    para el próximo evento de potencia.</p>
+            </div>
+        </section>
+
+        <div class="container calculator-wrapper">
+            <!-- Selector de Categoría -->
+            <div class="category-tabs">
+                <button class="tab-btn active" data-tab="universal">Universales</button>
+                <button class="tab-btn" data-tab="building">Construcción</button>
+                <button class="tab-btn" data-tab="research">Investigación</button>
+                <button class="tab-btn" data-tab="training">Entrenamiento</button>
+                <button class="tab-btn" data-tab="healing">Curación</button>
+            </div>
+
+            <div class="calculator-grid">
+                <!-- Panel de Inventario -->
+                <div class="inventory-panel card">
+                    <div class="panel-header">
+                        <h2 id="currentTabTitle">Aceleradores Universales</h2>
+                        <button class="btn btn-secondary btn-sm" onclick="resetCurrentTab()">Limpiar Sección</button>
+                    </div>
+
+                    <div class="speedup-inputs-grid" id="inputsContainer">
+                        <!-- Generado por JS -->
+                    </div>
+                </div>
+
+                <!-- Panel de Resultados -->
+                <div class="summary-panel side-panel">
+                    <div class="card result-card sticky-result">
+                        <h3>📊 Total Acumulado</h3>
+                        <div class="main-result" id="totalTimeDisplay">0d 0h 0m</div>
+                        <div class="secondary-result" id="totalMinutesDisplay">0 minutos totales</div>
+
+                        <hr class="gold-divider">
+
+                        <div class="goal-section">
+                            <h4>🎯 Definir Objetivo</h4>
+                            <div class="input-group">
+                                <label>Tiempo requerido (Días/Horas):</label>
+                                <div class="goal-inputs">
+                                    <input type="number" id="goalDays" placeholder="Días" min="0">
+                                    <input type="number" id="goalHours" placeholder="Horas" min="0" max="23">
+                                </div>
+                            </div>
+                            <div id="goalStatus" class="goal-status">Define un objetivo para comparar</div>
+                        </div>
+
+                        <button class="btn btn-primary w-100 mt-2" onclick="shareSummary()">Copiar Resumen</button>
+                        <button class="btn btn-danger w-100 mt-1" onclick="resetAll()">Limpiar Todo</button>
+                    </div>
+
+                    <!-- Tips Rápidos -->
+                    <div class="card tip-card mt-2">
+                        <h4>💡 Pro Tip</h4>
+                        <p id="randomTip">Guarda tus aceleradores para el evento "More Than Gems" o eventos de potencia
+                            del reino.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>RoK Academy - Speedup Calculator v2.0</strong></p>
+            <p>Precisión táctica para el campo de batalla.</p>
+            <div class="footer-links">
+                <a href="../index.html">Inicio</a>
+                <a href="avanzado.html">Guías</a>
+                <a href="kvk.html">Especial KvK</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Búsqueda -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <div class="search-input-container">
+                    <input type="text" class="search-input" id="globalSearchInput"
+                        placeholder="Buscar herramientas, guías...">
+                </div>
+                <button class="close-search" id="closeSearch">✕</button>
+            </div>
+            <div class="search-modal-body">
+                <div id="searchResults"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/search.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        const durations = [
+            { label: '1 min', val: 1 },
+            { label: '5 min', val: 5 },
+            { label: '10 min', val: 10 },
+            { label: '15 min', val: 15 },
+            { label: '30 min', val: 30 },
+            { label: '60 min', val: 60 },
+            { label: '3 h', val: 180 },
+            { label: '8 h', val: 480 },
+            { label: '15 h', val: 900 },
+            { label: '24 h', val: 1440 },
+            { label: '3 d', val: 4320 },
+            { label: '7 d', val: 10080 }
+        ];
+
+        const inventory = {
+            universal: {},
+            building: {},
+            research: {},
+            training: {},
+            healing: {}
+        };
+
+        let currentTab = 'universal';
+
+        function initInputs() {
+            const container = document.getElementById('inputsContainer');
+            container.innerHTML = '';
+
+            durations.forEach(d => {
+                const count = inventory[currentTab][d.val] || 0;
+                const div = document.createElement('div');
+                div.className = 'speedup-input-item';
+                div.innerHTML = `
+                    <label>${d.label}</label>
+                    <div class="input-control">
+                        <input type="number" value="${count}" min="0" onchange="updateValue(${d.val}, this.value)">
+                        <div class="quick-add">
+                            <button onclick="addValue(${d.val}, 1)">+1</button>
+                            <button onclick="addValue(${d.val}, 10)">+10</button>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+            updateTotal();
+        }
+
+        function updateValue(duration, val) {
+            inventory[currentTab][duration] = parseInt(val) || 0;
+            updateTotal();
+        }
+
+        function addValue(duration, amount) {
+            const current = inventory[currentTab][duration] || 0;
+            inventory[currentTab][duration] = current + amount;
+            initInputs(); // Refresh
+        }
+
+        function updateTotal() {
+            let totalMins = 0;
+            Object.keys(inventory).forEach(cat => {
+                Object.keys(inventory[cat]).forEach(dur => {
+                    totalMins += parseInt(dur) * inventory[cat][dur];
+                });
+            });
+
+            const days = Math.floor(totalMins / 1440);
+            const hours = Math.floor((totalMins % 1440) / 60);
+            const mins = totalMins % 60;
+
+            document.getElementById('totalTimeDisplay').innerText = `${days}d ${hours}h ${mins}m`;
+            document.getElementById('totalMinutesDisplay').innerText = `${totalMins.toLocaleString()} minutos totales`;
+
+            checkGoal(totalMins);
+        }
+
+        function checkGoal(totalMins) {
+            const gDays = parseInt(document.getElementById('goalDays').value) || 0;
+            const gHours = parseInt(document.getElementById('goalHours').value) || 0;
+            const goalMins = (gDays * 1440) + (gHours * 60);
+
+            const status = document.getElementById('goalStatus');
+            if (goalMins <= 0) {
+                status.innerText = 'Define un objetivo para comparar';
+                status.className = 'goal-status';
+                return;
+            }
+
+            if (totalMins >= goalMins) {
+                status.innerText = '✅ ¡Listo! Tienes suficientes aceleradores.';
+                status.className = 'goal-status success';
+            } else {
+                const diff = goalMins - totalMins;
+                const d = Math.floor(diff / 1440);
+                const h = Math.floor((diff % 1440) / 60);
+                status.innerText = `❌ Te faltan ${d}d ${h}h para el objetivo.`;
+                status.className = 'goal-status warning';
+            }
+        }
+
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentTab = this.dataset.tab;
+                document.getElementById('currentTabTitle').innerText = `Aceleradores ${this.innerText}`;
+                initInputs();
+            });
+        });
+
+        document.getElementById('goalDays').addEventListener('input', updateTotal);
+        document.getElementById('goalHours').addEventListener('input', updateTotal);
+
+        function resetCurrentTab() {
+            inventory[currentTab] = {};
+            initInputs();
+        }
+
+        function resetAll() {
+            Object.keys(inventory).forEach(cat => inventory[cat] = {});
+            document.getElementById('goalDays').value = '';
+            document.getElementById('goalHours').value = '';
+            initInputs();
+        }
+
+        function shareSummary() {
+            const total = document.getElementById('totalTimeDisplay').innerText;
+            const text = `📊 Mi Inventario de RoK Academy:\nTotal: ${total}\nCalculado en RoK Academy Tool.`;
+            navigator.clipboard.writeText(text).then(() => alert('¡Resumen copiado al portapapeles!'));
+        }
+
+        // Tips aleatorios
+        const tips = [
+            "Usa los aceleradores universales siempre al final de los de categoría.",
+            "En KvK, guarda aceleradores de entrenamiento para misiones de 'State Power'.",
+            "La tecnología de alianza reduce el tiempo base antes de que uses speedups.",
+            "Pide ayuda de alianza SIEMPRE antes de activar tus aceleradores.",
+            "VIP 14 otorga un bono masivo de velocidad de investigación."
+        ];
+        document.getElementById('randomTip').innerText = tips[Math.floor(Math.random() * tips.length)];
+
+        initInputs();
+    </script>
+
+    <style>
+        .speedup-hero {
+            background: linear-gradient(135deg, rgba(8, 10, 15, 0.95) 0%, rgba(20, 25, 40, 0.9) 100%),
+                url('images/speedup-bg.webp') center/cover;
+            border-bottom: 2px solid var(--gold-primary);
+        }
+
+        .category-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tab-btn {
+            padding: 0.8rem 1.5rem;
+            background: var(--navy-800);
+            border: 1px solid var(--navy-border);
+            color: var(--text-medium);
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            transition: var(--transition-premium);
+        }
+
+        .tab-btn.active {
+            background: var(--gold-primary);
+            color: var(--navy-900);
+            border-color: var(--gold-primary);
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 2rem;
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--navy-border);
+        }
+
+        .speedup-inputs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .speedup-input-item {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--navy-border);
+        }
+
+        .speedup-input-item label {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--gold-light);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .input-control {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .input-control input {
+            width: 100%;
+            background: var(--navy-900);
+            border: 1px solid var(--navy-border);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .quick-add {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.3rem;
+        }
+
+        .quick-add button {
+            background: var(--navy-700);
+            border: 1px solid var(--navy-border);
+            color: var(--text-medium);
+            padding: 0.3rem;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: 0.2s;
+        }
+
+        .quick-add button:hover {
+            border-color: var(--gold-primary);
+            color: var(--gold-primary);
+        }
+
+        .main-result {
+            font-size: 2.5rem;
+            font-family: var(--font-heading);
+            color: var(--gold-primary);
+            margin: 1rem 0;
+            font-weight: 700;
+        }
+
+        .secondary-result {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+        }
+
+        .sticky-result {
+            position: sticky;
+            top: 100px;
+        }
+
+        .gold-divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+            margin: 1.5rem 0;
+        }
+
+        .goal-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .goal-inputs input {
+            background: var(--navy-900);
+            border: 1px solid var(--navy-border);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        .goal-status {
+            padding: 1rem;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.02);
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .goal-status.success {
+            background: rgba(46, 213, 115, 0.1);
+            color: #2ed573;
+            border: 1px solid #2ed573;
+        }
+
+        .goal-status.warning {
+            background: rgba(255, 71, 87, 0.1);
+            color: #ff4757;
+            border: 1px solid #ff4757;
+        }
+
+        @media (max-width: 900px) {
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .summary-panel {
+                order: -1;
+            }
+
+            .sticky-result {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</body>
+
+</html>

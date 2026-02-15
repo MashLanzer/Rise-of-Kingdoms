@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tier Lists - Rise of Kingdoms Guía 2026</title>
+    <meta name="description"
+        content="Tier lists actualizadas de Rise of Kingdoms 2026 - Rankings de comandantes PvP, PvE, Garrison, civilizaciones y equipment sets">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                Rise of Kingdoms
+            </a>
+
+            <!-- Event Ticker -->
+            <div class="event-ticker" id="eventTicker">
+                <div class="ticker-content" id="tickerItems">
+                    <span class="ticker-item"><span class="event-dot live"></span> More Than Gems (En curso: 1d
+                        04h)</span>
+                    <span class="ticker-item"><span class="event-dot upcoming"></span> Ceroli Crisis (Próximamente:
+                        3d)</span>
+                    <span class="ticker-item"><span class="event-dot live"></span> MGE: Cavalry Stage (En curso:
+                        08h)</span>
+                </div>
+            </div>
+
+            <button class="search-btn" id="globalSearchBtn">
+                🔍 Buscar
+            </button>
+
+            <button class="theme-toggle" id="themeToggle" title="Cambiar Tema">
+                🌙
+            </button>
+
+            <button class="sound-toggle" id="soundToggle" title="Activar/Desactivar Sonidos">
+                🔊
+            </button>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" class="active">Guías Principales</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="civilizaciones.html">Civilizaciones</a></li>
+                            <li><a href="comandantes.html">Comandantes</a></li>
+                            <li><a href="builds.html">Árboles de Talentos</a></li>
+                            <li><a href="tier-lists.html">Tier Lists</a></li>
+                            <li><a href="equipment.html">Equipment</a></li>
+                            <li><a href="vip.html">VIP</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">Sistemas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="osiris.html">Arca de Osiris</a></li>
+                            <li><a href="armamentos.html">Armamentos y Formaciones</a></li>
+                            <li><a href="edificios.html">Edificios</a></li>
+                            <li><a href="tropas.html">Tropas</a></li>
+                            <li><a href="alianzas.html">Alianzas</a></li>
+                            <li><a href="recursos.html">Recursos</a></li>
+                            <li><a href="tecnologia.html">Tecnología</a></li>
+                            <li><a href="eventos.html">Eventos</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">Más</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="jumper-guide.html">🚀 Guía Jumper</a></li>
+                            <li><a href="avanzado.html">Guías Avanzadas</a></li>
+                            <li><a href="calculadora-tropas.html">🪖 Calculadora Tropas</a></li>
+                            <li><a href="calculadora-aceleradores.html">🧮 Calculadora Speedups</a></li>
+                            <li><a href="calculadora.html">⚖️ Calculadora Recursos</a></li>
+                            <li><a href="comparador.html">⚖️ Comparador</a></li>
+                            <li><a href="glosario.html">Glosario y FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>📊 Tier Lists - Meta 2026</h1>
+            <p class="subtitle">Rankings actualizados de comandantes, civilizaciones y equipment</p>
+            <p class="text-muted">Última actualización: Febrero 2026</p>
+        </header>
+
+        <!-- QUICK NAVIGATION -->
+        <section class="quick-nav">
+            <h2>Navegación Rápida</h2>
+            <div class="nav-grid">
+                <a href="#pvp-infantry" class="nav-card">⚔️ PvP Infantry</a>
+                <a href="#pvp-cavalry" class="nav-card">🏇 PvP Cavalry</a>
+                <a href="#pvp-archer" class="nav-card">🏹 PvP Archer</a>
+                <a href="#pve" class="nav-card">🎯 PvE</a>
+                <a href="#garrison" class="nav-card">🏰 Garrison</a>
+                <a href="#gathering" class="nav-card">⛏️ Gathering</a>
+                <a href="#civilizaciones" class="nav-card">🌍 Civilizaciones</a>
+                <a href="#pairings" class="nav-card">🤝 Pairings</a>
+            </div>
+        </section>
+
+        <!-- TIER EXPLANATION -->
+        <section class="tier-explanation">
+            <h2>Explicación de Tiers</h2>
+            <div class="tier-grid">
+                <div class="tier-card tier-s">
+                    <h3>S+ Tier</h3>
+                    <p>Meta dominante. Los mejores del juego. Inversión prioritaria.</p>
+                </div>
+                <div class="tier-card tier-a">
+                    <h3>S Tier</h3>
+                    <p>Excelentes opciones. Muy fuertes en el meta actual.</p>
+                </div>
+                <div class="tier-card tier-b">
+                    <h3>A Tier</h3>
+                    <p>Sólidos y confiables. Buenas opciones para la mayoría de situaciones.</p>
+                </div>
+                <div class="tier-card tier-c">
+                    <h3>B Tier</h3>
+                    <p>Decentes pero superados por opciones superiores.</p>
+                </div>
+                <div class="tier-card tier-d">
+                    <h3>C Tier</h3>
+                    <p>Situacionales o para early game. Reemplazar cuando sea posible.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FILTRO DE EXPERTISE -->
+        <section id="tier-filters" class="reveal reveal-up">
+            <div class="expertise-filter-container">
+                <input type="checkbox" id="showExpertiseOnly" class="expertise-checkbox">
+                <label for="showExpertiseOnly">Mostrar solo comandantes que tengo en <strong>Expertise
+                        🏅</strong></label>
+            </div>
+        </section>
+
+        <!-- PVP INFANTRY -->
+        <section id="pvp-infantry">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <button class="fav-btn" data-fav-id="tier-infantry" data-fav-name="Tier List: Infantería"
+                    data-fav-category="Tier List" data-fav-url="tier-lists.html#pvp-infantry">☆</button>
+                <h2 style="margin: 0;">⚔️ Comandantes PvP - Infantry</h2>
+            </div>
+            <p class="text-muted">Mejores comandantes de infantería para campo abierto y KvK</p>
+
+            <div class="tier-list">
+                <div class="tier-row tier-s-plus">
+                    <div class="tier-label">S+</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card legendary" data-exp-id="guan-yu">
+                            <button class="expertise-btn" data-exp-id="guan-yu" data-exp-name="Guan Yu">🏅</button>
+                            <span class="commander-name">Guan Yu</span>
+                            <span class="commander-role">DPS GOD</span>
+                        </div>
+                        <div class="commander-card legendary" data-exp-id="alexander">
+                            <button class="expertise-btn" data-exp-id="alexander"
+                                data-exp-name="Alexander the Great">🏅</button>
+                            <span class="commander-name">Alexander</span>
+                            <span class="commander-role">Versatile</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tier-row tier-s">
+                    <div class="tier-label">S</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card legendary" data-exp-id="charles-martel">
+                            <button class="expertise-btn" data-exp-id="charles-martel"
+                                data-exp-name="Charles Martel">🏅</button>
+                            <span class="commander-name">Charles Martel</span>
+                            <span class="commander-role">Tank</span>
+                        </div>
+                        <div class="commander-card legendary" data-exp-id="richard-i">
+                            <button class="expertise-btn" data-exp-id="richard-i" data-exp-name="Richard I">🏅</button>
+                            <span class="commander-name">Richard I</span>
+                            <span class="commander-role">Tank/Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tier-row tier-a">
+                    <div class="tier-label">A</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card epic" data-exp-id="sun-tzu">
+                            <button class="expertise-btn" data-exp-id="sun-tzu" data-exp-name="Sun Tzu">🏅</button>
+                            <span class="commander-name">Sun Tzu</span>
+                            <span class="commander-role">F2P King</span>
+                        </div>
+                        <div class="commander-card epic">
+                            <span class="commander-name">Eulji Mundeok</span>
+                            <span class="commander-role">Counter-Cavalry</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tier-row tier-b">
+                    <div class="tier-label">B</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card epic">
+                            <span class="commander-name">Björn Ironside</span>
+                            <span class="commander-role">PvE Focus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PVP CAVALRY -->
+        <section id="pvp-cavalry">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <button class="fav-btn" data-fav-id="tier-cavalry" data-fav-name="Tier List: Caballería"
+                    data-fav-category="Tier List" data-fav-url="tier-lists.html#pvp-cavalry">☆</button>
+                <h2 style="margin: 0;">🏇 Comandantes PvP - Cavalry</h2>
+            </div>
+            <p class="text-muted">Mejores comandantes de caballería para campo abierto y KvK</p>
+
+            <div class="tier-list">
+                <div class="tier-row tier-s-plus">
+                    <div class="tier-label">S+</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card legendary">
+                            <span class="commander-name">Genghis Khan</span>
+                            <span class="commander-role">DPS GOD</span>
+                        </div>
+                        <div class="commander-card legendary">
+                            <span class="commander-name">Saladin</span>
+                            <span class="commander-role">Anti-Archer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tier-row tier-s">
+                    <div class="tier-label">S</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card legendary">
+                            <span class="commander-name">Minamoto</span>
+                            <span class="commander-role">Nuker</span>
+                        </div>
+                        <div class="commander-card legendary">
+                            <span class="commander-name">Cao Cao</span>
+                            <span class="commander-role">Speed/Mobility</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tier-row tier-a">
+                    <div class="tier-label">A</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card epic">
+                            <span class="commander-name">Pelagius</span>
+                            <span class="commander-role">F2P Option</span>
+                        </div>
+                        <div class="commander-card epic">
+                            <span class="commander-name">Belisarius</span>
+                            <span class="commander-role">Mobility</span>
+                        </div>
+                        <div class="commander-card epic">
+                            <span class="commander-name">El Cid</span>
+                            <span class="commander-role">Conquest</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tier-row tier-b">
+                    <div class="tier-label">B</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card epic">
+                            <span class="commander-name">Hermann</span>
+                            <span class="commander-role">PvE Focus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PVP ARCHER -->
+        <section id="pvp-archer">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <button class="fav-btn" data-fav-id="tier-archer" data-fav-name="Tier List: Arqueros"
+                    data-fav-category="Tier List" data-fav-url="tier-lists.html#pvp-archer">☆</button>
+                <h2 style="margin: 0;">🏹 Comandantes PvP - Archer</h2>
+            </div>
+            <p class="text-muted">Mejores comandantes de arqueros para campo abierto y KvK</p>
+
+            <div class="tier-list">
+                <div class="tier-row tier-s-plus">
+                    <div class="tier-label">S+</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card legendary">
+                            <span class="commander-name">Yi Seong-Gye</span>
+                            <span class="commander-role">Nuker GOD</span>
+                        </div>
+                        <div class="commander-card legendary">
+                            <span class="commander-name">Ramesses II</span>
+                            <span class="commander-role">Garrison/DPS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tier-row tier-s">
+                    <div class="tier-label">S</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card epic">
+                            <span class="commander-name">Tomyris</span>
+                            <span class="commander-role">Canyon Queen</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tier-row tier-a">
+                    <div class="tier-label">A</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card epic">
+                            <span class="commander-name">Keira</span>
+                            <span class="commander-role">PvE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PVE -->
+        <section id="pve">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <button class="fav-btn" data-fav-id="tier-pve" data-fav-name="Tier List: PvE/Bárbaros"
+                    data-fav-category="Tier List" data-fav-url="tier-lists.html#pve">☆</button>
+                <h2 style="margin: 0;">🎯 Comandantes PvE - Bárbaros y Farming</h2>
+            </div>
+            <p class="text-muted">Mejores comandantes para matar bárbaros y farmear XP</p>
+
+            <div class="tier-list">
+                <div class="tier-row tier-s-plus">
+                    <div class="tier-label">S+</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card legendary">
+                            <span class="commander-name">Aethelflaed</span>
+                            <span class="commander-role">GRATIS - AoE</span>
+                        </div>
+                        <div class="commander-card elite">
+                            <span class="commander-name">Lohar</span>
+                            <span class="commander-role">GRATIS - Barbarian God</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tier-row tier-s">
+                    <div class="tier-label">S</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card epic">
+                            <span class="commander-name">Boudica</span>
+                            <span class="commander-role">Barbarian Killer</span>
+                        </div>
+                        <div class="commander-card epic">
+                            <span class="commander-name">Björn Ironside</span>
+                            <span class="commander-role">Infantry PvE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tier-row tier-a">
+                    <div class="tier-label">A</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card epic">
+                            <span class="commander-name">Hermann</span>
+                            <span class="commander-role">Cavalry PvE</span>
+                        </div>
+                        <div class="commander-card epic">
+                            <span class="commander-name">Keira</span>
+                            <span class="commander-role">Archer PvE</span>
+                        </div>
+                        <div class="commander-card elite">
+                            <span class="commander-name">Kusunoki</span>
+                            <span class="commander-role">Infantry</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GARRISON -->
+        <section id="garrison">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <button class="fav-btn" data-fav-id="tier-garrison" data-fav-name="Tier List: Garrison"
+                    data-fav-category="Tier List" data-fav-url="tier-lists.html#garrison">☆</button>
+                <h2 style="margin: 0;">🏰 Comandantes Garrison - Defensa de Ciudad</h2>
+            </div>
+            <p class="text-muted">Mejores comandantes para defender tu ciudad</p>
+
+            <div class="tier-list">
+                <div class="tier-row tier-s-plus">
+                    <div class="tier-label">S+</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card legendary">
+                            <span class="commander-name">Charles Martel</span>
+                            <span class="commander-role">Garrison GOD</span>
+                        </div>
+                        <div class="commander-card legendary">
+                            <span class="commander-name">Ramesses II</span>
+                            <span class="commander-role">Archer Garrison</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tier-row tier-s">
+                    <div class="tier-label">S</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card legendary">
+                            <span class="commander-name">Richard I</span>
+                            <span class="commander-role">Tank</span>
+                        </div>
+                        <div class="commander-card legendary">
+                            <span class="commander-name">Yi Seong-Gye</span>
+                            <span class="commander-role">Nuker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tier-row tier-a">
+                    <div class="tier-label">A</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card epic">
+                            <span class="commander-name">Osman I</span>
+                            <span class="commander-role">F2P Garrison</span>
+                        </div>
+                        <div class="commander-card epic">
+                            <span class="commander-name">Sun Tzu</span>
+                            <span class="commander-role">Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GATHERING -->
+        <section id="gathering">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <button class="fav-btn" data-fav-id="tier-gathering" data-fav-name="Tier List: Recolección"
+                    data-fav-category="Tier List" data-fav-url="tier-lists.html#gathering">☆</button>
+                <h2 style="margin: 0;">⛏️ Comandantes Gathering - Recolección</h2>
+            </div>
+            <p class="text-muted">Mejores comandantes para recolectar recursos</p>
+
+            <div class="tier-list">
+                <div class="tier-row tier-s-plus">
+                    <div class="tier-label">S+</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card legendary">
+                            <span class="commander-name">Seondeok</span>
+                            <span class="commander-role">MEJOR Gatherer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tier-row tier-s">
+                    <div class="tier-label">S</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card epic">
+                            <span class="commander-name">Joan of Arc</span>
+                            <span class="commander-role">F2P QUEEN</span>
+                        </div>
+                        <div class="commander-card legendary">
+                            <span class="commander-name">Cleopatra VII</span>
+                            <span class="commander-role">Gold Specialist</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tier-row tier-a">
+                    <div class="tier-label">A</div>
+                    <div class="tier-commanders">
+                        <div class="commander-card epic">
+                            <span class="commander-name">Baibars</span>
+                            <span class="commander-role">Gathering</span>
+                        </div>
+                        <div class="commander-card elite">
+                            <span class="commander-name">Constance</span>
+                            <span class="commander-role">Stone</span>
+                        </div>
+                        <div class="commander-card elite">
+                            <span class="commander-name">Sarka</span>
+                            <span class="commander-role">Wood</span>
+                        </div>
+                        <div class="commander-card elite">
+                            <span class="commander-name">Centurion</span>
+                            <span class="commander-role">Food</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CIVILIZACIONES -->
+        <section id="civilizaciones">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <button class="fav-btn" data-fav-id="tier-civs" data-fav-name="Tier List: Civilizaciones"
+                    data-fav-category="Tier List" data-fav-url="tier-lists.html#civilizaciones">☆</button>
+                <h2 style="margin: 0;">🌍 Tier List - Civilizaciones</h2>
+            </div>
+            <p class="text-muted">Mejores civilizaciones por categoría</p>
+
+            <div class="civ-tier-grid">
+                <div class="civ-tier-category">
+                    <h3>🏆 Overall (General)</h3>
+                    <div class="tier-list-compact">
+                        <div class="tier-compact tier-s-plus">
+                            <span class="tier-label-small">S+</span>
+                            <span class="civ-name">China</span>
+                        </div>
+                        <div class="tier-compact tier-s">
+                            <span class="tier-label-small">S</span>
+                            <span class="civ-name">Francia, Corea</span>
+                        </div>
+                        <div class="tier-compact tier-a">
+                            <span class="tier-label-small">A</span>
+                            <span class="civ-name">Roma, Alemania, Japón</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="civ-tier-category">
+                    <h3>⚔️ PvP</h3>
+                    <div class="tier-list-compact">
+                        <div class="tier-compact tier-s-plus">
+                            <span class="tier-label-small">S+</span>
+                            <span class="civ-name">China, Francia</span>
+                        </div>
+                        <div class="tier-compact tier-s">
+                            <span class="tier-label-small">S</span>
+                            <span class="civ-name">Alemania, Roma</span>
+                        </div>
+                        <div class="tier-compact tier-a">
+                            <span class="tier-label-small">A</span>
+                            <span class="civ-name">Japón, Bizancio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="civ-tier-category">
+                    <h3>⛏️ Gathering</h3>
+                    <div class="tier-list-compact">
+                        <div class="tier-compact tier-s-plus">
+                            <span class="tier-label-small">S+</span>
+                            <span class="civ-name">Corea</span>
+                        </div>
+                        <div class="tier-compact tier-s">
+                            <span class="tier-label-small">S</span>
+                            <span class="civ-name">China, España</span>
+                        </div>
+                        <div class="tier-compact tier-a">
+                            <span class="tier-label-small">A</span>
+                            <span class="civ-name">Japón, Egipto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="civ-tier-category">
+                    <h3>🏰 Defensa</h3>
+                    <div class="tier-list-compact">
+                        <div class="tier-compact tier-s-plus">
+                            <span class="tier-label-small">S+</span>
+                            <span class="civ-name">Bizancio</span>
+                        </div>
+                        <div class="tier-compact tier-s">
+                            <span class="tier-label-small">S</span>
+                            <span class="civ-name">Francia, China</span>
+                        </div>
+                        <div class="tier-compact tier-a">
+                            <span class="tier-label-small">A</span>
+                            <span class="civ-name">Roma, Alemania</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAIRINGS META -->
+        <section id="pairings">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <button class="fav-btn" data-fav-id="tier-pairings" data-fav-name="Tier List: Mejores Pairings"
+                    data-fav-category="Tier List" data-fav-url="tier-lists.html#pairings">☆</button>
+                <h2 style="margin: 0;">🤝 Mejores Pairings - Meta 2026</h2>
+            </div>
+            <p class="text-muted">Combinaciones de comandantes más efectivas</p>
+
+            <div class="pairings-grid">
+                <div class="pairing-card tier-s-plus">
+                    <h3>🏇 Cavalry Meta</h3>
+                    <div class="pairing-combo">
+                        <span class="commander-badge legendary">Genghis Khan</span>
+                        <span class="plus">+</span>
+                        <span class="commander-badge legendary">Saladin</span>
+                    </div>
+                    <p class="pairing-desc">El mejor combo cavalry del juego. DPS masivo + Anti-archer.</p>
+                    <span class="tier-badge tier-s-plus">S+ TIER</span>
+                </div>
+
+                <div class="pairing-card tier-s-plus">
+                    <h3>⚔️ Infantry Meta</h3>
+                    <div class="pairing-combo">
+                        <span class="commander-badge legendary">Guan Yu</span>
+                        <span class="plus">+</span>
+                        <span class="commander-badge legendary">Alexander</span>
+                    </div>
+                    <p class="pairing-desc">Infantry dominante. Daño brutal + Versatilidad.</p>
+                    <span class="tier-badge tier-s-plus">S+ TIER</span>
+                </div>
+
+                <div class="pairing-card tier-s-plus">
+                    <h3>🏹 Archer Meta</h3>
+                    <div class="pairing-combo">
+                        <span class="commander-badge legendary">Ramesses II</span>
+                        <span class="plus">+</span>
+                        <span class="commander-badge legendary">YSG</span>
+                    </div>
+                    <p class="pairing-desc">Archer nuker combo. Garrison + Campo abierto.</p>
+                    <span class="tier-badge tier-s-plus">S+ TIER</span>
+                </div>
+
+                <div class="pairing-card tier-s">
+                    <h3>🏰 Garrison Meta</h3>
+                    <div class="pairing-combo">
+                        <span class="commander-badge legendary">Charles Martel</span>
+                        <span class="plus">+</span>
+                        <span class="commander-badge legendary">YSG</span>
+                    </div>
+                    <p class="pairing-desc">Tank + Nuker. Defensa impenetrable.</p>
+                    <span class="tier-badge tier-s">S TIER</span>
+                </div>
+
+                <div class="pairing-card tier-s">
+                    <h3>🎯 PvE Meta</h3>
+                    <div class="pairing-combo">
+                        <span class="commander-badge legendary">Aethelflaed</span>
+                        <span class="plus">+</span>
+                        <span class="commander-badge legendary">YSG</span>
+                    </div>
+                    <p class="pairing-desc">AoE damage brutal. Perfecto para bárbaros.</p>
+                    <span class="tier-badge tier-s">S TIER</span>
+                </div>
+
+                <div class="pairing-card tier-a">
+                    <h3>💰 F2P Infantry</h3>
+                    <div class="pairing-combo">
+                        <span class="commander-badge epic">Sun Tzu</span>
+                        <span class="plus">+</span>
+                        <span class="commander-badge legendary">Richard I</span>
+                    </div>
+                    <p class="pairing-desc">Budget infantry. Excelente para F2P.</p>
+                    <span class="tier-badge tier-a">A TIER</span>
+                </div>
+
+                <div class="pairing-card tier-a">
+                    <h3>⛏️ Gathering Meta</h3>
+                    <div class="pairing-combo">
+                        <span class="commander-badge legendary">Seondeok</span>
+                        <span class="plus">+</span>
+                        <span class="commander-badge epic">Joan of Arc</span>
+                    </div>
+                    <p class="pairing-desc">Gathering speed máximo. Ahorra MUCHO tiempo.</p>
+                    <span class="tier-badge tier-s-plus">S+ TIER</span>
+                </div>
+
+                <div class="pairing-card tier-a">
+                    <h3>🏇 F2P Cavalry</h3>
+                    <div class="pairing-combo">
+                        <span class="commander-badge epic">Pelagius</span>
+                        <span class="plus">+</span>
+                        <span class="commander-badge legendary">Cao Cao</span>
+                    </div>
+                    <p class="pairing-desc">Speed + Movilidad. Excelente para raids.</p>
+                    <span class="tier-badge tier-a">A TIER</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOTAS IMPORTANTES -->
+        <section class="important-notes">
+            <h2>📌 Notas Importantes</h2>
+            <div class="note-grid">
+                <div class="note-card">
+                    <h3>🎯 Meta Actual</h3>
+                    <p>Estas tier lists están basadas en el meta de <strong>Febrero 2026</strong>. El meta puede cambiar
+                        con actualizaciones del juego.</p>
+                </div>
+                <div class="note-card">
+                    <h3>💰 F2P vs P2W</h3>
+                    <p>Los comandantes legendarios son más fuertes, pero los épicos como <strong>Sun Tzu</strong>,
+                        <strong>Joan of Arc</strong> y <strong>Tomyris</strong> son excelentes opciones F2P.
+                    </p>
+                </div>
+                <div class="note-card">
+                    <h3>⚡ Situacional</h3>
+                    <p>Algunos comandantes son mejores en situaciones específicas. Por ejemplo, <strong>Tomyris</strong>
+                        es S+ en Canyon pero A tier en campo abierto.</p>
+                </div>
+                <div class="note-card">
+                    <h3>🔄 Actualización</h3>
+                    <p>Revisa esta página regularmente para ver actualizaciones del meta y nuevos comandantes.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Rise of Kingdoms Guía. Creado con ❤️ para la comunidad.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

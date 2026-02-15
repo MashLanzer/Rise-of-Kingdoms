@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Herramientas de Guerra: Calculadora MGE y KVK War Clock para Rise of Kingdoms.">
+    <title>War Tools - Rise of Kingdoms Academy</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#d4af37">
+</head>
+
+<body data-theme="standard">
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">⚔️</span>
+                <div class="logo-text">
+                    <h1>ROK Academy</h1>
+                    <span>War Tools</span>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="talent-builder.html">Talent Builder</a></li>
+                    <li><a href="war-tools.html" class="active">War Tools</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <section class="reveal active">
+            <div class="section-header">
+                <h2>🎖️ Centro de Operaciones de Guerra</h2>
+                <p>Planifica tu victoria en el MGE y coordina el Reino Perdido.</p>
+            </div>
+
+            <div class="war-tools-grid">
+                <!-- CALCULADORA MGE -->
+                <div class="tool-card">
+                    <h3>🏆 Optimizador MGE</h3>
+                    <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-dim);">
+                        Calcula tus puntos proyectados para el evento "Gobernador Más Grande".
+                    </p>
+
+                    <div class="mge-stage">
+                        <h4>Etapa 1: Entrenamiento 🛡️</h4>
+                        <div class="stage-input-group">
+                            <input type="number" id="mge-t4-train" placeholder="T4 Entrenadas">
+                            <input type="number" id="mge-t5-train" placeholder="T5 Entrenadas">
+                        </div>
+                    </div>
+
+                    <div class="mge-stage">
+                        <h4>Etapa 5: Evento de Asesinato ⚔️</h4>
+                        <div class="stage-input-group">
+                            <input type="number" id="mge-kill-t4" placeholder="T4 Eliminadas">
+                            <input type="number" id="mge-kill-t5" placeholder="T5 Eliminadas">
+                        </div>
+                    </div>
+
+                    <div class="total-points-display">
+                        <span>Puntos Proyectados</span>
+                        <h3 id="mgeTotalPoints">0</h3>
+                        <p id="mgeRankEstimate" style="font-size: 0.8rem; color: var(--gold-light);">Objetivo: Top 10
+                            proyectado</p>
+                    </div>
+                </div>
+
+                <!-- KVK WAR CLOCK -->
+                <div class="tool-card">
+                    <h3>⏳ KVK War Clock</h3>
+                    <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-dim);">
+                        Cronómetros tácticos para aperturas de estructuras y eventos de KvK.
+                    </p>
+
+                    <div class="kvk-clock-container" id="clockContainer">
+                        <!-- Clocks will be here -->
+                        <div class="clock-item">
+                            <div class="clock-label">
+                                <span>Pasos Nivel 4 🏰</span>
+                                <span>Apertura de Zona 4</span>
+                            </div>
+                            <div class="clock-timer" data-time="7200">02:00:00</div>
+                        </div>
+                        <div class="clock-item">
+                            <div class="clock-label">
+                                <span>Ruinas Antiguas 🏛️</span>
+                                <span>Próxima apertura</span>
+                            </div>
+                            <div class="clock-timer" data-time="18000">05:00:00</div>
+                        </div>
+                        <div class="clock-item">
+                            <div class="clock-label">
+                                <span>Ziggurat Lanzamiento 🚀</span>
+                                <span>Fin de Temporada</span>
+                            </div>
+                            <div class="clock-timer" data-time="86400">24:00:00</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <button class="btn btn-secondary" style="width: 100%;" id="addCustomClock">➕ Añadir Cronómetro
+                            Táctico</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initMGE();
+            initWarClocks();
+        });
+
+        function initMGE() {
+            const inputs = ['mge-t4-train', 'mge-t5-train', 'mge-kill-t4', 'mge-kill-t5'];
+            inputs.forEach(id => {
+                document.getElementById(id).addEventListener('input', calculateMGE);
+            });
+
+            function calculateMGE() {
+                const t4Train = parseInt(document.getElementById('mge-t4-train').value) || 0;
+                const t5Train = parseInt(document.getElementById('mge-t5-train').value) || 0;
+                const t4Kill = parseInt(document.getElementById('mge-kill-t4').value) || 0;
+                const t5Kill = parseInt(document.getElementById('mge-kill-t5').value) || 0;
+
+                // Valores estándar SoC
+                const points = (t4Train * 40) + (t5Train * 100) + (t4Kill * 10) + (t5Kill * 20);
+
+                document.getElementById('mgeTotalPoints').innerText = points.toLocaleString();
+
+                const rankMsg = document.getElementById('mgeRankEstimate');
+                if (points > 50000000) rankMsg.innerText = "🏆 Rango Estimado: Top 1-3";
+                else if (points > 20000000) rankMsg.innerText = "👑 Rango Estimado: Top 10";
+                else rankMsg.innerText = "🎖️ Rango Estimado: Top 50";
+            }
+        }
+
+        function initWarClocks() {
+            setInterval(() => {
+                document.querySelectorAll('.clock-timer').forEach(timer => {
+                    let seconds = parseInt(timer.getAttribute('data-time'));
+                    if (seconds > 0) {
+                        seconds--;
+                        timer.setAttribute('data-time', seconds);
+                        timer.innerText = formatTime(seconds);
+                    } else {
+                        timer.innerText = "¡ABIERTO!";
+                        timer.classList.add('clock-expired');
+                    }
+                });
+            }, 1000);
+
+            function formatTime(sec) {
+                const hrs = Math.floor(sec / 3600);
+                const min = Math.floor((sec % 3600) / 60);
+                const s = sec % 60;
+                return `${hrs.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+            }
+
+            document.getElementById('addCustomClock').addEventListener('click', () => {
+                const name = prompt("Nombre del evento:");
+                const mins = prompt("Minutos para el evento:");
+                if (name && mins) {
+                    const container = document.getElementById('clockContainer');
+                    const item = document.createElement('div');
+                    item.className = 'clock-item';
+                    item.innerHTML = `
+                        <div class="clock-label">
+                            <span>${name}</span>
+                            <span>Personalizado</span>
+                        </div>
+                        <div class="clock-timer" data-time="${mins * 60}">${formatTime(mins * 60)}</div>
+                    `;
+                    container.appendChild(item);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

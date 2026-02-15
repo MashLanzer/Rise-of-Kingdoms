@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simulador Interactivo de Árboles de Talentos para Rise of Kingdoms Academy.">
+    <title>Talent Builder - Rise of Kingdoms Academy</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#d4af37">
+</head>
+
+<body data-theme="standard">
+    <!-- Pantalla de carga -->
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🏰</span>
+                <div class="logo-text">
+                    <h1>ROK Academy</h1>
+                    <span>Talent Simulator</span>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" title="Cambiar Tema">🌙</button>
+                <button class="sound-toggle" id="soundToggle" title="Activar/Desactivar Sonidos">🔊</button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="comandantes.html">Comandantes</a></li>
+                    <li><a href="tier-lists.html">Tier Lists</a></li>
+                    <li><a href="builds.html">Builds</a></li>
+                    <li><a href="talent-builder.html" class="active">Simulator</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <section class="reveal active">
+            <div class="section-header">
+                <h2>🏗️ Simulador de Talentos</h2>
+                <p>Configura tu build perfecta y calcula las estadísticas finales.</p>
+            </div>
+
+            <div class="talent-builder-container">
+                <!-- Área del Árbol -->
+                <div class="talent-tree-canvas" id="talentTreeContainer">
+                    <div id="treeGrid" style="position: relative; width: 100%; height: 100%;">
+                        <!-- Los nodos se generarán dinámicamente -->
+                    </div>
+                </div>
+
+                <!-- Sidebar de Estadísticas -->
+                <aside class="talent-sidebar">
+                    <div class="points-counter">
+                        <span>Puntos Disponibles</span>
+                        <strong id="pointsRemaining">74</strong>
+                        <small>Nivel 60 / Max</small>
+                    </div>
+
+                    <div class="talent-stats-box">
+                        <h3>📊 Bonificaciones de Build</h3>
+                        <div id="statsSummary">
+                            <div class="stat-row">
+                                <span>Ataque Total</span>
+                                <span class="stat-value" id="stat-attack">+0%</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Defensa Total</span>
+                                <span class="stat-value" id="stat-defense">+0%</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Salud Total</span>
+                                <span class="stat-value" id="stat-health">+0%</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Velocidad de Marcha</span>
+                                <span class="stat-value" id="stat-speed">+0%</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Daño de Habilidad</span>
+                                <span class="stat-value" id="stat-skill">+0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="talent-actions">
+                        <button class="btn btn-primary" id="saveBuild">💾 Guardar Build</button>
+                        <button class="btn btn-secondary" id="resetBuild">🔄 Reiniciar</button>
+                        <button class="btn btn-secondary" id="exportImage">📸 Exportar Imagen</button>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- UI Elements -->
+    <div id="notification" class="notification"></div>
+
+    <!-- COMMAND PALETTE (CTRL+K) -->
+    <div class="command-palette-overlay" id="commandPalette">
+        <div class="command-palette-box">
+            <div class="command-palette-input-wrapper">
+                <input type="text" class="command-palette-input" id="commandInput"
+                    placeholder="¿A dónde quieres ir hoy?" autocomplete="off">
+            </div>
+            <div class="command-palette-results" id="commandResults"></div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Lógica específica del simulador (Prototipo para Infantería)
+        document.addEventListener('DOMContentLoaded', () => {
+            initTalentSimulator();
+        });
+
+        function initTalentSimulator() {
+            const treeData = [
+                // NÚCLEO SUPREMO
+                { id: 1, x: 50, y: 50, label: '👑', title: 'Pericia Suprema', maxPoints: 1, stats: { skill: 10, attack: 5, defense: 5 } },
+
+                // RAMA INFANTERÍA (9:00 - Izquierda)
+                { id: 10, x: 30, y: 50, label: '⚔️', title: 'Ataque Infantería', maxPoints: 3, stats: { attack: 5 } },
+                { id: 11, x: 20, y: 45, label: '🛡️', title: 'Defensa Infantería', maxPoints: 3, stats: { defense: 5 } },
+                { id: 12, x: 10, y: 50, label: '❤️', title: 'Salud Infantería', maxPoints: 3, stats: { health: 5 } },
+                { id: 13, x: 20, y: 55, label: '🛡️', title: 'Escudo Maestro', maxPoints: 5, stats: { defense: 8, health: 5 } },
+                { id: 14, x: 5, y: 50, label: '🏆', title: 'Infantería de Élite', maxPoints: 5, stats: { attack: 10, defense: 10 } },
+
+                // RAMA ARQUEROS (3:00 - Derecha)
+                { id: 30, x: 70, y: 50, label: '🏹', title: 'Ataque Arqueros', maxPoints: 3, stats: { attack: 6 } },
+                { id: 31, x: 80, y: 45, label: '🏹', title: 'Precisión', maxPoints: 3, stats: { skill: 5 } },
+                { id: 32, x: 90, y: 50, label: '🏹', title: 'Lluvia de Flechas', maxPoints: 5, stats: { attack: 8, skill: 8 } },
+                { id: 33, x: 80, y: 55, label: '🏹', title: 'Viento Silbante', maxPoints: 3, stats: { speed: 5 } },
+                { id: 34, x: 95, y: 50, label: '🎯', title: 'Ojo de Halcón', maxPoints: 5, stats: { skill: 15 } },
+
+                // RAMA CABALLERÍA (6:00 - Abajo)
+                { id: 20, x: 50, y: 70, label: '🏇', title: 'Ataque Caballería', maxPoints: 3, stats: { attack: 6 } },
+                { id: 21, x: 45, y: 85, label: '⚡', title: 'Velocidad Caballería', maxPoints: 3, stats: { speed: 10 } },
+                { id: 22, x: 55, y: 85, label: '🏇', title: 'Carga Ligera', maxPoints: 3, stats: { attack: 5, speed: 5 } },
+                { id: 23, x: 50, y: 95, label: '🔥', title: 'Impacto Fulminante', maxPoints: 5, stats: { attack: 15, defense: -5 } },
+
+                // RAMA LIDERAZGO (12:00 - Arriba)
+                { id: 40, x: 50, y: 30, label: '👑', title: 'Liderazgo', maxPoints: 3, stats: { attack: 2, defense: 2, health: 2 } },
+                { id: 41, x: 45, y: 15, label: '🔥', title: 'Furia Sangrienta', maxPoints: 5, stats: { skill: 10 } },
+                { id: 42, x: 55, y: 15, label: '🛡️', title: 'Bastión Impenetrable', maxPoints: 5, stats: { defense: 12 } },
+                { id: 43, x: 50, y: 5, label: '🌟', title: 'Ejército de Legiones', maxPoints: 1, stats: { attack: 10, defense: 10, health: 10 } },
+
+                // RAMA RECOLECCIÓN (1:30 - Arriba Derecha)
+                { id: 80, x: 70, y: 30, label: '⛏️', title: 'Excavación', maxPoints: 3, stats: { speed: 2 } },
+                { id: 81, x: 80, y: 20, label: '🪵', title: 'Logística', maxPoints: 5, stats: { health: 3 } },
+                { id: 82, x: 85, y: 35, label: '💎', title: 'Búsqueda de Tesoros', maxPoints: 5, stats: { skill: 5 } },
+
+                // RAMA PRESERVACIÓN / PAZ (10:30 - Arriba Izquierda)
+                { id: 90, x: 30, y: 30, label: '🛡️', title: 'Cazador de Bárbaros', maxPoints: 3, stats: { attack: 5 } },
+                { id: 91, x: 20, y: 20, label: '🐎', title: 'Marcha Forzada', maxPoints: 5, stats: { speed: 8 } },
+                { id: 92, x: 15, y: 35, label: '🍖', title: 'Botín de Guerra', maxPoints: 5, stats: { attack: 5, health: 5 } },
+
+                // RAMA GUARNICIÓN (7:30 - Abajo Izquierda)
+                { id: 50, x: 30, y: 75, label: '🏰', title: 'Defensa de Ciudad', maxPoints: 3, stats: { defense: 8 } },
+                { id: 51, x: 20, y: 85, label: '🛡️', title: 'Muros Divinos', maxPoints: 5, stats: { defense: 15 } },
+                { id: 52, x: 15, y: 70, label: '🔥', title: 'Contraataque', maxPoints: 5, stats: { attack: 10 } },
+
+                // RAMA CONQUISTA (4:30 - Abajo Derecha)
+                { id: 60, x: 70, y: 75, label: '💣', title: 'Asedio Tiránico', maxPoints: 3, stats: { attack: 8 } },
+                { id: 61, x: 80, y: 85, label: '🔥', title: 'Conquistador SoC', maxPoints: 5, stats: { attack: 15 } },
+                { id: 62, x: 85, y: 70, label: '💥', title: 'Golpe Maestro', maxPoints: 5, stats: { skill: 12 } },
+
+                // RAMA APOYO (Círculo de Poder)
+                { id: 70, x: 42, y: 42, label: '✨', title: 'Furia Eterna', maxPoints: 3, stats: { skill: 8 } },
+                { id: 71, x: 58, y: 42, label: '🩹', title: 'Milagro Médico', maxPoints: 3, stats: { health: 10 } },
+                { id: 72, x: 42, y: 58, label: '🛡️', title: 'Santuario', maxPoints: 3, stats: { defense: 8 } },
+                { id: 73, x: 58, y: 58, label: '⚔️', title: 'Bendición de Guerra', maxPoints: 3, stats: { attack: 8 } }
+            ];
+
+            let pointsUsed = 0;
+            const maxPoints = 74;
+            const nodesState = {};
+            const container = document.getElementById('treeGrid');
+
+            treeData.forEach(node => {
+                nodesState[node.id] = 0;
+                const nodeEl = document.createElement('div');
+                nodeEl.className = 'talent-node';
+                nodeEl.style.left = `${node.x}%`;
+                nodeEl.style.top = `${node.y}%`;
+                nodeEl.style.position = 'absolute';
+                nodeEl.style.transform = 'translate(-50%, -50%)'; // Centrar nodo en la coordenada
+                nodeEl.innerHTML = node.label;
+                nodeEl.setAttribute('data-points', `0/${node.maxPoints}`);
+                nodeEl.title = node.title;
+
+                nodeEl.addEventListener('click', () => {
+                    if (nodesState[node.id] < node.maxPoints && pointsUsed < maxPoints) {
+                        nodesState[node.id]++;
+                        pointsUsed++;
+                        updateUI();
+                        if (typeof playTacticalSound === 'function') playTacticalSound('click');
+                    }
+                });
+
+                nodeEl.addEventListener('contextmenu', (e) => {
+                    e.preventDefault();
+                    if (nodesState[node.id] > 0) {
+                        nodesState[node.id]--;
+                        pointsUsed--;
+                        updateUI();
+                        if (typeof playTacticalSound === 'function') playTacticalSound('click');
+                    }
+                });
+
+                container.appendChild(nodeEl);
+                node.element = nodeEl;
+            });
+
+            // Función para dibujar conexiones visuales
+            function drawConnections() {
+                // Primero limpiar links existentes
+                container.querySelectorAll('.talent-link').forEach(l => l.remove());
+
+                // Solo dibujamos conexiones lógicas por proximidad o ramas
+                const connections = [
+                    [1, 10], [10, 11], [11, 12], [10, 13], // Infantería
+                    [1, 30], [30, 31], [31, 32], [30, 33], // Arqueros
+                    [1, 20], [20, 21], [20, 22], [21, 23], // Caballería
+                    [1, 40], [40, 41], [40, 42], [41, 43], // Liderazgo
+                    [1, 70], [1, 71], [1, 72], [1, 73]     // Soporte
+                ];
+
+                connections.forEach(([fromId, toId]) => {
+                    const from = treeData.find(n => n.id === fromId);
+                    const to = treeData.find(n => n.id === toId);
+                    if (!from || !to) return;
+
+                    const link = document.createElement('div');
+                    link.className = 'talent-link';
+
+                    const x1 = from.x, y1 = from.y;
+                    const x2 = to.x, y2 = to.y;
+
+                    const dist = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+                    const angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
+
+                    link.style.width = `${dist}%`;
+                    link.style.left = `${x1}%`;
+                    link.style.top = `${y1}%`;
+                    link.style.transform = `rotate(${angle}deg)`;
+
+                    if (nodesState[fromId] > 0 && nodesState[toId] > 0) {
+                        link.classList.add('active');
+                    }
+
+                    container.appendChild(link);
+                });
+            }
+
+            function updateUI() {
+                document.getElementById('pointsRemaining').innerText = maxPoints - pointsUsed;
+
+                let totalStats = { attack: 0, defense: 0, health: 0, speed: 0, skill: 0 };
+
+                treeData.forEach(node => {
+                    const pts = nodesState[node.id];
+                    node.element.setAttribute('data-points', `${pts}/${node.maxPoints}`);
+
+                    if (pts > 0) {
+                        node.element.classList.add('active');
+                        if (pts === node.maxPoints) node.element.classList.add('maxed');
+                        else node.element.classList.remove('maxed');
+
+                        for (let s in node.stats) {
+                            totalStats[s] += node.stats[s] * pts;
+                        }
+                    } else {
+                        node.element.classList.remove('active', 'maxed');
+                    }
+                });
+
+                for (let s in totalStats) {
+                    const el = document.getElementById(`stat-${s}`);
+                    if (el) el.innerText = `+${totalStats[s].toFixed(1)}%`;
+                }
+
+                drawConnections();
+            }
+
+            // Guardar Build
+            document.getElementById('saveBuild').addEventListener('click', () => {
+                localStorage.setItem('rok_build_save', JSON.stringify(nodesState));
+                showNotification('🏰 Build guardada en el dispositivo!');
+            });
+
+            // Reiniciar Build
+            document.getElementById('resetBuild').addEventListener('click', () => {
+                treeData.forEach(node => nodesState[node.id] = 0);
+                pointsUsed = 0;
+                updateUI();
+                showNotification('🔄 Simulador reiniciado');
+            });
+
+            // Cargar si existe
+            const savedBuild = localStorage.getItem('rok_build_save');
+            if (savedBuild) {
+                const data = JSON.parse(savedBuild);
+                Object.assign(nodesState, data);
+                pointsUsed = Object.values(nodesState).reduce((a, b) => a + b, 0);
+                updateUI();
+            } else {
+                updateUI();
+            }
+
+            // Exportar Imagen (Simulado con Notificación por ahora)
+            document.getElementById('exportImage').addEventListener('click', () => {
+                showNotification('📸 Capturando build... (Función Premium)');
+            });
+        }
+
+        function showNotification(msg) {
+            const n = document.getElementById('notification');
+            n.innerText = msg;
+            n.classList.add('show');
+            setTimeout(() => n.classList.remove('show'), 3000);
+        }
+    </script>
+</body>
+
+</html>

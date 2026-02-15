@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Calculadora de recursos para Rise of Kingdoms - Calcula tiempo necesario para acumular recursos">
+    <title>Calculadora de Recursos - Guía Rise of Kingdoms</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .calculator-container {
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+
+        .calculator-card {
+            background: var(--background-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 2px solid var(--primary-gold);
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-gold);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 0.75rem;
+            background: var(--background-dark);
+            border: 2px solid var(--secondary-gold);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .resource-selector {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .resource-btn {
+            padding: 1rem;
+            background: var(--background-dark);
+            border: 2px solid var(--secondary-gold);
+            border-radius: 8px;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .resource-btn:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary-gold);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .resource-btn.active {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--secondary-gold) 100%);
+            border-color: var(--primary-gold);
+            color: var(--background-dark);
+            font-weight: 700;
+        }
+
+        .resource-icon {
+            font-size: 2rem;
+        }
+
+        .calculate-btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--secondary-gold) 100%);
+            border: none;
+            border-radius: 8px;
+            color: var(--background-dark);
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .calculate-btn:active {
+            transform: translateY(0);
+        }
+
+        .results-container {
+            display: none;
+            margin-top: 2rem;
+        }
+
+        .results-container.show {
+            display: block;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        .result-card {
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.4) 0%, rgba(212, 175, 55, 0.2) 100%);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-gold);
+        }
+
+        .result-title {
+            font-size: 1.5rem;
+            color: var(--primary-gold);
+            margin-bottom: 1rem;
+            font-family: 'Cinzel', serif;
+        }
+
+        .result-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .result-subtitle {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .stat-box {
+            background: var(--background-dark);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--secondary-gold);
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+        }
+
+        .speedup-breakdown {
+            margin-top: 1.5rem;
+        }
+
+        .speedup-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: var(--background-dark);
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+
+        .speedup-name {
+            font-weight: 600;
+        }
+
+        .speedup-amount {
+            color: var(--primary-gold);
+            font-weight: 700;
+        }
+
+        .export-btn {
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--secondary-blue);
+            border: 2px solid var(--primary-blue);
+            border-radius: 8px;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .export-btn:hover {
+            background: var(--primary-blue);
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .resource-selector {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .result-value {
+                font-size: 2rem;
+            }
+
+            .stat-value {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+    <div class="particles"></div>
+
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">Rise of Kingdoms</a>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="civilizaciones.html">Civilizaciones</a></li>
+                    <li><a href="comandantes.html">Comandantes</a></li>
+                    <li><a href="edificios.html">Edificios</a></li>
+                    <li><a href="tropas.html">Tropas</a></li>
+                    <li><a href="alianzas.html">Alianzas</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="tecnologia.html">Tecnología</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="avanzado.html">Avanzado</a></li>
+                    <li><a href="glosario.html">Glosario</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container calculator-container">
+            <h1>🧮 Calculadora de Recursos</h1>
+
+            <div class="card">
+                <p style="font-size: 1.2rem;">Calcula cuánto tiempo necesitas para acumular recursos y cuántos speedups
+                    te harían falta. Esta herramienta considera tus bonos de civilización, VIP y alianza.</p>
+            </div>
+
+            <div class="calculator-card">
+                <h2>Configuración</h2>
+
+                <!-- Selector de Recurso -->
+                <div class="input-group">
+                    <label>Tipo de Recurso</label>
+                    <div class="resource-selector">
+                        <button class="resource-btn active" data-resource="food">
+                            <span class="resource-icon">🌾</span>
+                            <span>Comida</span>
+                        </button>
+                        <button class="resource-btn" data-resource="wood">
+                            <span class="resource-icon">🪵</span>
+                            <span>Madera</span>
+                        </button>
+                        <button class="resource-btn" data-resource="stone">
+                            <span class="resource-icon">🪨</span>
+                            <span>Piedra</span>
+                        </button>
+                        <button class="resource-btn" data-resource="gold">
+                            <span class="resource-icon">💰</span>
+                            <span>Oro</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Objetivo de Recursos -->
+                <div class="input-group">
+                    <label for="targetAmount">Cantidad Objetivo (en millones)</label>
+                    <input type="number" id="targetAmount" placeholder="Ej: 10" min="0.1" step="0.1" value="10">
+                </div>
+
+                <!-- Producción por Hora -->
+                <div class="input-group">
+                    <label for="productionPerHour">Producción por Hora (sin bonos)</label>
+                    <input type="number" id="productionPerHour" placeholder="Ej: 50000" min="0" step="1000"
+                        value="50000">
+                    <small style="color: var(--text-muted); margin-top: 0.5rem; display: block;">
+                        💡 Tip: Revisa tu producción base en la pantalla de ciudad
+                    </small>
+                </div>
+
+                <!-- Bonificaciones -->
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-gold);">Bonificaciones</h3>
+
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label for="civBonus">Bono de Civilización (%)</label>
+                        <select id="civBonus">
+                            <option value="0">Sin civilización específica (0%)</option>
+                            <option value="10" selected>Roma - Comida (+10%)</option>
+                            <option value="5">China (+5%)</option>
+                            <option value="3">Francia - Madera (+3%)</option>
+                            <option value="10">España - Piedra (+10%)</option>
+                            <option value="0">Otra civilización (0%)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="vipBonus">Bono VIP (%)</label>
+                        <select id="vipBonus">
+                            <option value="0">VIP 0 (0%)</option>
+                            <option value="5">VIP 1-5 (+5%)</option>
+                            <option value="10" selected>VIP 6-9 (+10%)</option>
+                            <option value="15">VIP 10-11 (+15%)</option>
+                            <option value="20">VIP 12-13 (+20%)</option>
+                            <option value="25">VIP 14-15 (+25%)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="allianceBonus">Bono de Alianza (%)</label>
+                        <select id="allianceBonus">
+                            <option value="0">Sin alianza (0%)</option>
+                            <option value="5">Alianza básica (+5%)</option>
+                            <option value="10" selected>Alianza activa (+10%)</option>
+                            <option value="15">Alianza top (+15%)</option>
+                            <option value="20">Alianza elite (+20%)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="otherBonus">Otros Bonos (%)</label>
+                        <input type="number" id="otherBonus" placeholder="Ej: 5" min="0" max="100" step="1" value="0">
+                        <small style="color: var(--text-muted); margin-top: 0.5rem; display: block;">
+                            Items, buffs temporales, etc.
+                        </small>
+                    </div>
+                </div>
+
+                <button class="calculate-btn" onclick="calculateResources()">
+                    🧮 Calcular Tiempo y Speedups
+                </button>
+            </div>
+
+            <!-- Resultados -->
+            <div class="results-container" id="resultsContainer">
+                <div class="result-card">
+                    <h2 class="result-title">⏱️ Tiempo Necesario</h2>
+                    <div class="result-value" id="timeResult">-</div>
+                    <div class="result-subtitle">Para acumular <span id="targetDisplay">-</span> de <span
+                            id="resourceDisplay">-</span></div>
+                </div>
+
+                <div class="result-grid">
+                    <div class="stat-box">
+                        <div class="stat-label">Producción Total/Hora</div>
+                        <div class="stat-value" id="totalProduction">-</div>
+                    </div>
+
+                    <div class="stat-box">
+                        <div class="stat-label">Bonificación Total</div>
+                        <div class="stat-value" id="totalBonus">-</div>
+                    </div>
+
+                    <div class="stat-box">
+                        <div class="stat-label">Producción/Día</div>
+                        <div class="stat-value" id="dailyProduction">-</div>
+                    </div>
+
+                    <div class="stat-box">
+                        <div class="stat-label">Días Necesarios</div>
+                        <div class="stat-value" id="daysNeeded">-</div>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <h2 class="result-title">⚡ Speedups Necesarios</h2>
+                    <div class="speedup-breakdown">
+                        <div class="speedup-item">
+                            <span class="speedup-name">🕐 Speedups de 1 hora</span>
+                            <span class="speedup-amount" id="speedup1h">-</span>
+                        </div>
+                        <div class="speedup-item">
+                            <span class="speedup-name">🕒 Speedups de 3 horas</span>
+                            <span class="speedup-amount" id="speedup3h">-</span>
+                        </div>
+                        <div class="speedup-item">
+                            <span class="speedup-name">🕘 Speedups de 8 horas</span>
+                            <span class="speedup-amount" id="speedup8h">-</span>
+                        </div>
+                        <div class="speedup-item">
+                            <span class="speedup-name">📅 Speedups de 24 horas</span>
+                            <span class="speedup-amount" id="speedup24h">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="export-btn" onclick="exportResults()">
+                    📥 Exportar Resultados
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>Guía Completa de Rise of Kingdoms</strong></p>
+            <p>Creado por la comunidad para la comunidad • 2026</p>
+            <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-muted);">
+                Esta guía no está afiliada con Lilith Games. Rise of Kingdoms es una marca registrada de Lilith Games.
+            </p>
+            <div class="footer-links">
+                <a href="../index.html">Inicio</a>
+                <a href="glosario.html">Glosario</a>
+                <a href="avanzado.html">Guías Avanzadas</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Estado de la calculadora
+        let selectedResource = 'food';
+
+        // Selector de recursos
+        document.querySelectorAll('.resource-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.resource-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                selectedResource = this.dataset.resource;
+            });
+        });
+
+        // Función principal de cálculo
+        function calculateResources() {
+            // Obtener valores
+            const targetAmount = parseFloat(document.getElementById('targetAmount').value) * 1000000; // Convertir a unidades
+            const productionPerHour = parseFloat(document.getElementById('productionPerHour').value);
+            const civBonus = parseFloat(document.getElementById('civBonus').value);
+            const vipBonus = parseFloat(document.getElementById('vipBonus').value);
+            const allianceBonus = parseFloat(document.getElementById('allianceBonus').value);
+            const otherBonus = parseFloat(document.getElementById('otherBonus').value);
+
+            // Validación
+            if (!targetAmount || !productionPerHour) {
+                alert('Por favor completa todos los campos requeridos');
+                return;
+            }
+
+            // Calcular bonificación total
+            const totalBonusPercent = civBonus + vipBonus + allianceBonus + otherBonus;
+            const bonusMultiplier = 1 + (totalBonusPercent / 100);
+
+            // Calcular producción total por hora
+            const totalProductionPerHour = productionPerHour * bonusMultiplier;
+
+            // Calcular tiempo necesario en horas
+            const hoursNeeded = targetAmount / totalProductionPerHour;
+
+            // Calcular días
+            const daysNeeded = hoursNeeded / 24;
+
+            // Calcular producción diaria
+            const dailyProduction = totalProductionPerHour * 24;
+
+            // Calcular speedups necesarios
+            const speedup1h = Math.ceil(hoursNeeded);
+            const speedup3h = Math.ceil(hoursNeeded / 3);
+            const speedup8h = Math.ceil(hoursNeeded / 8);
+            const speedup24h = Math.ceil(hoursNeeded / 24);
+
+            // Formatear tiempo
+            const timeString = formatTime(hoursNeeded);
+
+            // Nombres de recursos
+            const resourceNames = {
+                food: 'Comida',
+                wood: 'Madera',
+                stone: 'Piedra',
+                gold: 'Oro'
+            };
+
+            // Mostrar resultados
+            document.getElementById('timeResult').textContent = timeString;
+            document.getElementById('targetDisplay').textContent = formatNumber(targetAmount);
+            document.getElementById('resourceDisplay').textContent = resourceNames[selectedResource];
+            document.getElementById('totalProduction').textContent = formatNumber(Math.round(totalProductionPerHour)) + '/h';
+            document.getElementById('totalBonus').textContent = '+' + totalBonusPercent.toFixed(0) + '%';
+            document.getElementById('dailyProduction').textContent = formatNumber(Math.round(dailyProduction));
+            document.getElementById('daysNeeded').textContent = daysNeeded.toFixed(1);
+            document.getElementById('speedup1h').textContent = formatNumber(speedup1h);
+            document.getElementById('speedup3h').textContent = formatNumber(speedup3h);
+            document.getElementById('speedup8h').textContent = formatNumber(speedup8h);
+            document.getElementById('speedup24h').textContent = formatNumber(speedup24h);
+
+            // Mostrar contenedor de resultados
+            document.getElementById('resultsContainer').classList.add('show');
+
+            // Scroll suave a resultados
+            document.getElementById('resultsContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Formatear tiempo en formato legible
+        function formatTime(hours) {
+            const days = Math.floor(hours / 24);
+            const remainingHours = Math.floor(hours % 24);
+            const minutes = Math.floor((hours % 1) * 60);
+
+            let result = [];
+            if (days > 0) result.push(`${days}d`);
+            if (remainingHours > 0) result.push(`${remainingHours}h`);
+            if (minutes > 0 && days === 0) result.push(`${minutes}m`);
+
+            return result.join(' ') || '0m';
+        }
+
+        // Formatear números con separadores
+        function formatNumber(num) {
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(2) + 'M';
+            } else if (num >= 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            }
+            return num.toLocaleString('es-ES');
+        }
+
+        // Exportar resultados
+        function exportResults() {
+            const targetAmount = parseFloat(document.getElementById('targetAmount').value);
+            const resourceNames = {
+                food: 'Comida',
+                wood: 'Madera',
+                stone: 'Piedra',
+                gold: 'Oro'
+            };
+
+            const results = `
+=== CALCULADORA DE RECURSOS - RISE OF KINGDOMS ===
+
+Objetivo: ${targetAmount}M de ${resourceNames[selectedResource]}
+
+TIEMPO NECESARIO:
+${document.getElementById('timeResult').textContent}
+
+PRODUCCIÓN:
+- Total por hora: ${document.getElementById('totalProduction').textContent}
+- Bonificación total: ${document.getElementById('totalBonus').textContent}
+- Producción diaria: ${document.getElementById('dailyProduction').textContent}
+- Días necesarios: ${document.getElementById('daysNeeded').textContent}
+
+SPEEDUPS NECESARIOS:
+- 1 hora: ${document.getElementById('speedup1h').textContent}
+- 3 horas: ${document.getElementById('speedup3h').textContent}
+- 8 horas: ${document.getElementById('speedup8h').textContent}
+- 24 horas: ${document.getElementById('speedup24h').textContent}
+
+Generado el: ${new Date().toLocaleString('es-ES')}
+            `.trim();
+
+            // Copiar al portapapeles
+            navigator.clipboard.writeText(results).then(() => {
+                alert('✅ Resultados copiados al portapapeles!');
+            }).catch(() => {
+                // Fallback: crear textarea temporal
+                const textarea = document.createElement('textarea');
+                textarea.value = results;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                alert('✅ Resultados copiados al portapapeles!');
+            });
+        }
+    </script>
+</body>
+
+</html>

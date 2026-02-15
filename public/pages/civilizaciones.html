@@ -1,0 +1,1943 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Guía completa de todas las civilizaciones en Rise of Kingdoms - Bonificaciones, comandantes especiales y cuál elegir">
+    <title>Civilizaciones - Guía Rise of Kingdoms</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <div class="particles"></div>
+
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                Rise of Kingdoms
+            </a>
+
+            <!-- Event Ticker -->
+            <div class="event-ticker" id="eventTicker">
+                <div class="ticker-content" id="tickerItems">
+                    <span class="ticker-item"><span class="event-dot live"></span> More Than Gems (En curso: 1d
+                        04h)</span>
+                    <span class="ticker-item"><span class="event-dot upcoming"></span> Ceroli Crisis (Próximamente:
+                        3d)</span>
+                    <span class="ticker-item"><span class="event-dot live"></span> MGE: Cavalry Stage (En curso:
+                        08h)</span>
+                </div>
+            </div>
+
+            <button class="search-btn" id="globalSearchBtn">
+                🔍 Buscar
+            </button>
+
+            <button class="theme-toggle" id="themeToggle" title="Cambiar Tema">
+                🌙
+            </button>
+
+            <button class="sound-toggle" id="soundToggle" title="Activar/Desactivar Sonidos">
+                🔊
+            </button>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" class="active">Guías Principales</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="civilizaciones.html">Civilizaciones</a></li>
+                            <li><a href="comandantes.html">Comandantes</a></li>
+                            <li><a href="builds.html">Árboles de Talentos</a></li>
+                            <li><a href="tier-lists.html">Tier Lists</a></li>
+                            <li><a href="equipment.html">Equipment</a></li>
+                            <li><a href="vip.html">VIP</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">Sistemas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="osiris.html">Arca de Osiris</a></li>
+                            <li><a href="armamentos.html">Armamentos y Formaciones</a></li>
+                            <li><a href="edificios.html">Edificios</a></li>
+                            <li><a href="tropas.html">Tropas</a></li>
+                            <li><a href="alianzas.html">Alianzas</a></li>
+                            <li><a href="recursos.html">Recursos</a></li>
+                            <li><a href="tecnologia.html">Tecnología</a></li>
+                            <li><a href="eventos.html">Eventos</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">Más</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="jumper-guide.html">🚀 Guía Jumper</a></li>
+                            <li><a href="avanzado.html">Guías Avanzadas</a></li>
+                            <li><a href="calculadora-tropas.html">🪖 Calculadora Tropas</a></li>
+                            <li><a href="calculadora-aceleradores.html">🧮 Calculadora Speedups</a></li>
+                            <li><a href="calculadora.html">⚖️ Calculadora Recursos</a></li>
+                            <li><a href="comparador.html">⚖️ Comparador</a></li>
+                            <li><a href="glosario.html">Glosario y FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>🏛️ Civilizaciones de Rise of Kingdoms</h1>
+
+            <section>
+                <div class="card">
+                    <p>En Rise of Kingdoms existen <strong>14 civilizaciones</strong> únicas,
+                        cada una inspirada en grandes imperios de la historia. La elección de tu civilización es una de
+                        las decisiones más importantes al comenzar el juego, ya que determina tus bonificaciones
+                        pasivas, tu comandante inicial y tu estilo de juego.</p>
+
+                    <p><strong>Importante:</strong> Puedes cambiar de civilización más adelante usando un item especial
+                        (Civilization Change), pero es costoso. Por eso es crucial elegir bien desde el principio.</p>
+                </div>
+            </section>
+
+            <section id="tabla-comparativa">
+                <h2>Tabla Comparativa de Civilizaciones</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Civilización</th>
+                                <th>Bonificación Principal</th>
+                                <th>Tropa Especial</th>
+                                <th>Comandante Inicial</th>
+                                <th>Mejor Para</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>🏛️ Roma</strong></td>
+                                <td>+10% Producción de comida<br>+5% Velocidad de marcha</td>
+                                <td>Infantería</td>
+                                <td>Scipio Africanus</td>
+                                <td>Principiantes, PvE</td>
+                            </tr>
+                            <tr>
+                                <td><strong>🏯 China</strong></td>
+                                <td>+5% Velocidad de construcción<br>+5% Velocidad de investigación</td>
+                                <td>Infantería</td>
+                                <td>Sun Tzu</td>
+                                <td>Desarrollo rápido</td>
+                            </tr>
+                            <tr>
+                                <td><strong>🗼 Francia</strong></td>
+                                <td>+20% Velocidad de curación<br>+10% Capacidad de hospital</td>
+                                <td>Caballería</td>
+                                <td>Joan of Arc</td>
+                                <td>Soporte, Gathering</td>
+                            </tr>
+                            <tr>
+                                <td><strong>🏰 Alemania</strong></td>
+                                <td>+5% Velocidad de entrenamiento<br>+10% Capacidad de acción</td>
+                                <td>Caballería</td>
+                                <td>Hermann</td>
+                                <td>Producción de tropas</td>
+                            </tr>
+                            <tr>
+                                <td><strong>⛩️ Japón</strong></td>
+                                <td>+5% Velocidad de investigación<br>+30% Daño a bárbaros</td>
+                                <td>Infantería</td>
+                                <td>Kusunoki Masashige</td>
+                                <td>Farming bárbaros</td>
+                            </tr>
+                            <tr>
+                                <td><strong>🕌 Arabia</strong></td>
+                                <td>+10% Velocidad de recolección<br>+5% Capacidad de tropas</td>
+                                <td>Caballería</td>
+                                <td>Baibars</td>
+                                <td>Gathering, Recursos</td>
+                            </tr>
+                            <tr>
+                                <td><strong>🏛️ España</strong></td>
+                                <td>+20% Experiencia de comandantes<br>+5% Velocidad de construcción</td>
+                                <td>Caballería</td>
+                                <td>El Cid</td>
+                                <td>Leveling comandantes</td>
+                            </tr>
+                            <tr>
+                                <td><strong>🏛️ Bizancio</strong></td>
+                                <td>+5% Daño de caballería<br>+5% Defensa de caballería</td>
+                                <td>Caballería</td>
+                                <td>Belisarius</td>
+                                <td>Caballería especializada</td>
+                            </tr>
+                            <tr>
+                                <td><strong>🇬🇧 Gran Bretaña</strong></td>
+                                <td>+5% Ataque de arqueros<br>+5% Vel. entrenamiento</td>
+                                <td>Arqueros</td>
+                                <td>Boudica</td>
+                                <td>Entrenamiento rápido</td>
+                            </tr>
+                            <tr>
+                                <td><strong>🇰🇷 Corea</strong></td>
+                                <td>+5% Defensa de arqueros<br>+3% Vel. investigación</td>
+                                <td>Arqueros</td>
+                                <td>Eulji Mundeok</td>
+                                <td>Investigación, Defensa</td>
+                            </tr>
+                            <tr>
+                                <td><strong>🇹🇷 Imperio Otomano</strong></td>
+                                <td>+5% Salud de arqueros<br>+5% Daño habilidad activa</td>
+                                <td>Arqueros</td>
+                                <td>Osman I</td>
+                                <td>Nuke, Daño de Habilidad</td>
+                            </tr>
+                            <tr>
+                                <td><strong>🪓 Vikingos</strong></td>
+                                <td>+5% Ataque infantería<br>+10% Daño contraataque</td>
+                                <td>Infantería</td>
+                                <td>Bjorn Ironside</td>
+                                <td>Combate cuerpo a cuerpo</td>
+                            </tr>
+                            <tr>
+                                <td><strong>🇪🇬 Egipto</strong></td>
+                                <td>+5% Ataque de arqueros<br>+5% Daño de Rally</td>
+                                <td>Arqueros</td>
+                                <td>Imhotep</td>
+                                <td>Rallies, Arqueros meta</td>
+                            </tr>
+                            <tr>
+                                <td><strong>🏛️ Grecia</strong></td>
+                                <td>+5% Salud de infantería<br>+30% Vel. ayuda alianza</td>
+                                <td>Infantería</td>
+                                <td>Pericles</td>
+                                <td>Infantería, Desarrollo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="detalles">
+                <h2>Análisis Detallado por Civilización</h2>
+
+                <div class="accordion">
+                    <!-- ROMA -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>🏛️ Roma - El Imperio Eterno</span>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <!-- Imagen de la civilización -->
+                                <div style="text-align: center; margin-bottom: 2rem;">
+                                    <div
+                                        style="width: 100%; max-width: 600px; height: 300px; margin: 0 auto; background: linear-gradient(135deg, #8B0000 0%, #DC143C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 3px solid var(--primary-gold);">
+                                        <div style="text-align: center; color: white;">
+                                            <h2 style="color: var(--primary-gold); margin: 0; font-size: 3rem;">🏛️</h2>
+                                            <h3 style="margin: 0.5rem 0; color: white;">ROMA</h3>
+                                            <p style="margin: 0; opacity: 0.9;">El Imperio Eterno</p>
+                                        </div>
+                                    </div>
+                                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                                        [Placeholder - Reemplazar con imagen oficial de Roma]
+                                    </p>
+                                </div>
+
+                                <h3>📊 Bonificaciones Completas</h3>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Bonificación</th>
+                                                <th>Valor</th>
+                                                <th>Impacto</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Producción de Comida</strong></td>
+                                                <td>+10%</td>
+                                                <td><span class="badge badge-epic">Alto</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Velocidad de Marcha</strong></td>
+                                                <td>+5%</td>
+                                                <td><span class="badge badge-advanced">Medio</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Defensa de Infantería</strong></td>
+                                                <td>+5%</td>
+                                                <td><span class="badge badge-advanced">Medio</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <h3>👑 Comandante Inicial: Scipio Africanus</h3>
+                                <div class="card">
+                                    <div style="display: flex; gap: 1rem; align-items: start; flex-wrap: wrap;">
+                                        <div
+                                            style="flex: 0 0 120px; height: 120px; background: linear-gradient(135deg, #8B0000 0%, #DC143C 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--primary-gold);">
+                                            <span style="font-size: 4rem;">⚔️</span>
+                                        </div>
+                                        <div style="flex: 1; min-width: 250px;">
+                                            <h4>Scipio Africanus</h4>
+                                            <p><span class="badge badge-epic">Épico</span> <span
+                                                    class="badge badge-advanced">Infantería</span></p>
+                                            <p><strong>Especialidad:</strong> Conquista y PvE</p>
+                                            <p><strong>Habilidad principal:</strong> Daño AoE a múltiples objetivos</p>
+                                            <p><strong>Mejor uso:</strong> Farming de bárbaros, combate early game</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3>🛡️ Tropa Especial: Legionario Romano</h3>
+                                <div class="card">
+                                    <p><strong>Tipo:</strong> Infantería T3</p>
+                                    <p><strong>Características:</strong></p>
+                                    <ul>
+                                        <li>Alta defensa base</li>
+                                        <li>Daño equilibrado</li>
+                                        <li>Excelente para formaciones defensivas</li>
+                                        <li>Efectivo contra arqueros</li>
+                                    </ul>
+                                    <p><strong>Stats (aprox):</strong></p>
+                                    <ul>
+                                        <li>Ataque: 85</li>
+                                        <li>Defensa: 95</li>
+                                        <li>Salud: 110</li>
+                                    </ul>
+                                </div>
+
+                                <h3>🎯 Estrategias Recomendadas</h3>
+                                <div class="card">
+                                    <h4>Early Game (CH 1-10)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Maximiza producción de comida:</strong> Mejora granjas para
+                                            aprovechar el +10%</li>
+                                        <li><strong>Usa Scipio para bárbaros:</strong> Levelea rápido tu comandante
+                                            inicial</li>
+                                        <li><strong>Enfócate en infantería:</strong> Aprovecha el bono de defensa</li>
+                                        <li><strong>Gathering eficiente:</strong> Velocidad de marcha ayuda a recolectar
+                                            más rápido</li>
+                                    </ul>
+
+                                    <h4>Mid Game (CH 11-21)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Transición a comandantes mejores:</strong> Sun Tzu, Richard I</li>
+                                        <li><strong>Mantén producción de comida:</strong> Necesitarás millones para T4
+                                        </li>
+                                        <li><strong>Participa en rallies:</strong> Infantería es buena para garrison
+                                        </li>
+                                    </ul>
+
+                                    <h4>Late Game (CH 22+)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Considera cambiar civilización:</strong> Bonos de Roma son menos
+                                            impactantes</li>
+                                        <li><strong>O especialízate en infantería:</strong> Guan Yu, Alexander, Leo</li>
+                                        <li><strong>Rol de garrison:</strong> Infantería tanky es perfecta para defender
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <h3>👥 Comandantes Recomendados para Roma</h3>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <h4>Early Game</h4>
+                                        <ul>
+                                            <li>Scipio Africanus (Inicial)</li>
+                                            <li>Sun Tzu (Infantry)</li>
+                                            <li>Joan of Arc (Support)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4>Mid Game</h4>
+                                        <ul>
+                                            <li>Richard I (Tank)</li>
+                                            <li>Charles Martel (Garrison)</li>
+                                            <li>Eulji Mundeok (Infantry)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4>Late Game</h4>
+                                        <ul>
+                                            <li>Guan Yu (Top Infantry)</li>
+                                            <li>Alexander (Infantry/Mixed)</li>
+                                            <li>Leonidas (Pair para Guan)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <h3>✅ Pros y ❌ Contras</h3>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <h4 style="color: #10b981;">✅ Ventajas</h4>
+                                        <ul>
+                                            <li><strong>Excelente para principiantes:</strong> Bonos simples y efectivos
+                                            </li>
+                                            <li><strong>Comida abundante:</strong> El recurso más usado en el juego</li>
+                                            <li><strong>Velocidad de marcha:</strong> Útil para gathering y movilidad
+                                            </li>
+                                            <li><strong>Scipio decente:</strong> Buen comandante inicial para PvE</li>
+                                            <li><strong>Infantería versátil:</strong> Funciona en muchas situaciones
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4 style="color: #ef4444;">❌ Desventajas</h4>
+                                        <ul>
+                                            <li><strong>Bonos modestos:</strong> 5-10% no es mucho comparado con otras
+                                                civs</li>
+                                            <li><strong>Late game débil:</strong> Otras civs escalan mejor</li>
+                                            <li><strong>Infantería no es meta:</strong> Caballería domina en PvP</li>
+                                            <li><strong>Scipio cae en mid/late:</strong> Necesitarás reemplazarlo</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <h3>📈 Rating General</h3>
+                                <div class="card">
+                                    <ul>
+                                        <li><strong>Principiantes:</strong> <span
+                                                class="badge badge-legendary">9/10</span> - Excelente elección</li>
+                                        <li><strong>F2P:</strong> <span class="badge badge-epic">7/10</span> - Decente
+                                            pero China es mejor</li>
+                                        <li><strong>PvP:</strong> <span class="badge badge-advanced">6/10</span> -
+                                            Infantería no es meta</li>
+                                        <li><strong>PvE:</strong> <span class="badge badge-epic">8/10</span> - Muy buena
+                                            para bárbaros</li>
+                                        <li><strong>Gathering:</strong> <span class="badge badge-epic">7/10</span> -
+                                            Velocidad de marcha ayuda</li>
+                                        <li><strong>Late Game:</strong> <span class="badge badge-advanced">5/10</span> -
+                                            Se queda atrás</li>
+                                    </ul>
+                                </div>
+
+                                <p class="mt-2"
+                                    style="padding: 1rem; background: rgba(212, 175, 55, 0.1); border-left: 4px solid var(--primary-gold); border-radius: 4px;">
+                                    <strong>💡 Consejo Final:</strong> Roma es perfecta para principiantes que quieren
+                                    una civilización fácil de jugar y entender. Si eres nuevo, Roma te dará una base
+                                    sólida. Sin embargo, jugadores experimentados pueden preferir civilizaciones con
+                                    bonos más impactantes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CHINA -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>🏯 China - El Reino Celestial</span>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>Bonificaciones</h3>
+                                <ul>
+                                    <li><strong>+5% Velocidad de construcción:</strong> Construye edificios más rápido
+                                    </li>
+                                    <li><strong>+5% Velocidad de investigación:</strong> Completa tecnologías más rápido
+                                    </li>
+                                    <li><strong>+5% Defensa de infantería:</strong> Infantería más tanky</li>
+                                </ul>
+
+                                <h3>Comandante Inicial</h3>
+                                <p><strong>Sun Tzu:</strong> Uno de los MEJORES comandantes épicos del juego.
+                                    Especialista en infantería con AoE damage masivo.</p>
+
+                                <h3>Tropa Especial</h3>
+                                <p><strong>Chu-Ko-Nu:</strong> Arquero con alta cadencia de ataque.</p>
+
+                                <h3>¿Para quién es China?</h3>
+                                <ul class="icon-list">
+                                    <li><strong>Jugadores eficientes:</strong> Velocidad de construcción e investigación
+                                        acelera todo el progreso</li>
+                                    <li><strong>F2P (Free to Play):</strong> Sun Tzu es increíblemente fuerte y fácil de
+                                        mejorar</li>
+                                    <li><strong>Competitivos:</strong> Llegar antes a tecnologías clave es ventaja
+                                        enorme</li>
+                                </ul>
+
+                                <h3>Pros y Contras</h3>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <h4 style="color: #10b981;">✅ Ventajas</h4>
+                                        <ul>
+                                            <li>Sun Tzu es TOP tier</li>
+                                            <li>Desarrollo más rápido que otras civs</li>
+                                            <li>Bonos útiles en todas las fases del juego</li>
+                                            <li>Excelente para F2P</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4 style="color: #ef4444;">❌ Desventajas</h4>
+                                        <ul>
+                                            <li>No tiene bonos de combate directos</li>
+                                            <li>5% puede parecer poco (pero se acumula)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <p class="mt-2"><span class="badge badge-legendary">RECOMENDADO</span> <strong>China es
+                                        una de las mejores civilizaciones para principiantes y jugadores F2P gracias a
+                                        Sun Tzu y sus bonos de desarrollo.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FRANCIA -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>🗼 Francia - La Nación de la Luz</span>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>Bonificaciones</h3>
+                                <ul>
+                                    <li><strong>+20% Velocidad de curación:</strong> Tropas heridas se curan mucho más
+                                        rápido</li>
+                                    <li><strong>+10% Capacidad de hospital:</strong> Más tropas pueden ir al hospital en
+                                        lugar de morir</li>
+                                    <li><strong>+3% Velocidad de recolección de madera:</strong> Gathering de madera más
+                                        eficiente</li>
+                                </ul>
+
+                                <h3>Comandante Inicial</h3>
+                                <p><strong>Joan of Arc (Juana de Arco):</strong> Comandante de soporte excepcional.
+                                    Buffs masivos para gathering y combate.</p>
+
+                                <h3>Tropa Especial</h3>
+                                <p><strong>Throwing Axeman:</strong> Infantería con daño a distancia.</p>
+
+                                <h3>¿Para quién es Francia?</h3>
+                                <ul class="icon-list">
+                                    <li><strong>Gatherers:</strong> Joan es la MEJOR comandante para recolección</li>
+                                    <li><strong>Jugadores defensivos:</strong> Bonos de hospital reducen pérdidas en
+                                        combate</li>
+                                    <li><strong>Soporte en alianza:</strong> Joan es esencial en rallies y garrison</li>
+                                </ul>
+
+                                <h3>Pros y Contras</h3>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <h4 style="color: #10b981;">✅ Ventajas</h4>
+                                        <ul>
+                                            <li>Joan es comandante universal TOP</li>
+                                            <li>Bonos de hospital salvan tropas</li>
+                                            <li>Curación rápida = menos downtime</li>
+                                            <li>Excelente para gathering</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4 style="color: #ef4444;">❌ Desventajas</h4>
+                                        <ul>
+                                            <li>No tiene bonos ofensivos</li>
+                                            <li>Bono de madera es muy específico</li>
+                                            <li>Joan es más soporte que damage dealer</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <p class="mt-2"><span class="badge badge-epic">VERSÁTIL</span> <strong>Francia es ideal
+                                        si quieres un rol de soporte y maximizar gathering de recursos.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ALEMANIA -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>🏰 Alemania - El Imperio Teutónico</span>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <!-- Imagen de la civilización -->
+                                <div style="text-align: center; margin-bottom: 2rem;">
+                                    <div
+                                        style="width: 100%; max-width: 600px; height: 300px; margin: 0 auto; background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 3px solid var(--primary-gold);">
+                                        <div style="text-align: center; color: white;">
+                                            <h2 style="color: var(--primary-gold); margin: 0; font-size: 3rem;">🏰</h2>
+                                            <h3 style="margin: 0.5rem 0; color: white;">ALEMANIA</h3>
+                                            <p style="margin: 0; opacity: 0.9;">El Imperio Teutónico</p>
+                                        </div>
+                                    </div>
+                                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                                        [Placeholder - Reemplazar con imagen oficial de Alemania]
+                                    </p>
+                                </div>
+
+                                <h3>📊 Bonificaciones Completas</h3>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Bonificación</th>
+                                                <th>Valor</th>
+                                                <th>Impacto</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Velocidad de Entrenamiento</strong></td>
+                                                <td>+5%</td>
+                                                <td><span class="badge badge-advanced">Medio</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Capacidad de Acción (AP)</strong></td>
+                                                <td>+10%</td>
+                                                <td><span class="badge badge-epic">Alto</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Ataque de Caballería</strong></td>
+                                                <td>+5%</td>
+                                                <td><span class="badge badge-advanced">Medio</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <h3>👑 Comandante Inicial: Hermann</h3>
+                                <div class="card">
+                                    <div style="display: flex; gap: 1rem; align-items: start; flex-wrap: wrap;">
+                                        <div
+                                            style="flex: 0 0 120px; height: 120px; background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--primary-gold);">
+                                            <span style="font-size: 4rem;">⚔️</span>
+                                        </div>
+                                        <div style="flex: 1; min-width: 250px;">
+                                            <h4>Hermann</h4>
+                                            <p><span class="badge badge-epic">Épico</span> <span
+                                                    class="badge badge-advanced">Caballería</span></p>
+                                            <p><strong>Especialidad:</strong> Anti-arqueros y movilidad</p>
+                                            <p><strong>Habilidad principal:</strong> Daño aumentado contra arqueros</p>
+                                            <p><strong>Mejor uso:</strong> Raids rápidos, counter a arqueros</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3>🛡️ Tropa Especial: Caballero Teutónico</h3>
+                                <div class="card">
+                                    <p><strong>Tipo:</strong> Caballería T3</p>
+                                    <p><strong>Características:</strong></p>
+                                    <ul>
+                                        <li>Caballería pesada con armadura superior</li>
+                                        <li>Balance entre ataque y defensa</li>
+                                        <li>Excelente para cargas frontales</li>
+                                        <li>Efectivo contra infantería</li>
+                                    </ul>
+                                    <p><strong>Stats (aprox):</strong></p>
+                                    <ul>
+                                        <li>Ataque: 100</li>
+                                        <li>Defensa: 90</li>
+                                        <li>Salud: 95</li>
+                                    </ul>
+                                </div>
+
+                                <h3>🎯 Estrategias Recomendadas</h3>
+                                <div class="card">
+                                    <h4>Early Game (CH 1-10)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Aprovecha el +10% AP:</strong> Más acciones diarias para bárbaros y
+                                            eventos
+                                        </li>
+                                        <li><strong>Usa Hermann para raids:</strong> Movilidad de caballería es clave
+                                        </li>
+                                        <li><strong>Entrena constantemente:</strong> +5% velocidad se acumula con el
+                                            tiempo
+                                        </li>
+                                        <li><strong>Enfócate en caballería:</strong> Aprovecha el bono de ataque</li>
+                                    </ul>
+
+                                    <h4>Mid Game (CH 11-21)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Transición a mejores comandantes de cav:</strong> Cao Cao, Minamoto
+                                        </li>
+                                        <li><strong>Mantén producción de tropas:</strong> Necesitarás ejércitos grandes
+                                        </li>
+                                        <li><strong>Participa en rallies:</strong> Caballería es buena para DPS
+                                        </li>
+                                    </ul>
+
+                                    <h4>Late Game (CH 22+)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Especialízate en caballería:</strong> Saladin, William, Genghis
+                                        </li>
+                                        <li><strong>Rol de flanqueo:</strong> Caballería rápida para hit-and-run
+                                        </li>
+                                        <li><strong>Producción constante:</strong> +5% entrenamiento siempre útil
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <h3>👥 Comandantes Recomendados para Alemania</h3>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <h4>Early Game</h4>
+                                        <ul>
+                                            <li>Hermann (Inicial)</li>
+                                            <li>Belisarius (Cavalry)</li>
+                                            <li>Pelagius (Cavalry)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4>Mid Game</h4>
+                                        <ul>
+                                            <li>Cao Cao (Speed)</li>
+                                            <li>Minamoto (Nuker)</li>
+                                            <li>Baibars (Mobility)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4>Late Game</h4>
+                                        <ul>
+                                            <li>Saladin (Top Cavalry)</li>
+                                            <li>William (Cavalry Tank)</li>
+                                            <li>Genghis Khan (Cavalry DPS)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <h3>✅ Pros y ❌ Contras</h3>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <h4 style="color: #10b981;">✅ Ventajas</h4>
+                                        <ul>
+                                            <li><strong>+10% AP es único:</strong> Más acciones = más progreso diario
+                                            </li>
+                                            <li><strong>Producción de tropas acelerada:</strong> Recuperación rápida
+                                                post-batalla
+                                            </li>
+                                            <li><strong>Bonos de caballería directos:</strong> Útil en todas las fases
+                                            </li>
+                                            <li><strong>Hermann decente early:</strong> Buen comandante para raids
+                                            </li>
+                                            <li><strong>Versatilidad:</strong> Bonos útiles para jugadores activos
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4 style="color: #ef4444;">❌ Desventajas</h4>
+                                        <ul>
+                                            <li><strong>5% entrenamiento es modesto:</strong> No es game-changing
+                                            </li>
+                                            <li><strong>Hermann no es top tier:</strong> Necesitarás reemplazarlo pronto
+                                            </li>
+                                            <li><strong>Caballería es cara:</strong> Consume muchos recursos
+                                            </li>
+                                            <li><strong>Bonos no son espectaculares:</strong> Otras civs tienen bonos
+                                                más impactantes
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <h3>📈 Rating General</h3>
+                                <div class="card">
+                                    <ul>
+                                        <li><strong>Principiantes:</strong> <span
+                                                class="badge badge-advanced">6/10</span> - Decente pero hay mejores
+                                            opciones</li>
+                                        <li><strong>F2P:</strong> <span class="badge badge-advanced">6/10</span> - Bonos
+                                            modestos
+                                        </li>
+                                        <li><strong>PvP:</strong> <span class="badge badge-epic">7/10</span> -
+                                            Caballería es buena para PvP</li>
+                                        <li><strong>PvE:</strong> <span class="badge badge-epic">7/10</span> - +10% AP
+                                            ayuda mucho
+                                        </li>
+                                        <li><strong>Gathering:</strong> <span class="badge badge-advanced">5/10</span> -
+                                            Sin bonos específicos</li>
+                                        <li><strong>KvK:</strong> <span class="badge badge-epic">7/10</span> -
+                                            Caballería es meta
+                                        </li>
+                                        <li><strong>Late Game:</strong> <span class="badge badge-advanced">6/10</span> -
+                                            Bonos se quedan cortos</li>
+                                    </ul>
+                                </div>
+
+                                <p class="mt-2"
+                                    style="padding: 1rem; background: rgba(212, 175, 55, 0.1); border-left: 4px solid var(--primary-gold); border-radius: 4px;">
+                                    <strong>💡 Consejo Final:</strong> Alemania es una civilización sólida para
+                                    jugadores activos que quieren especializarse en caballería. El +10% AP es único y
+                                    muy útil para jugadores que juegan varias horas al día. Sin embargo, los bonos de
+                                    combate son modestos comparados con otras civilizaciones. Ideal para jugadores que
+                                    valoran la actividad constante sobre bonos pasivos masivos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- JAPÓN -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>⛩️ Japón - La Tierra del Sol Naciente</span>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <!-- Imagen de la civilización -->
+                                <div style="text-align: center; margin-bottom: 2rem;">
+                                    <div
+                                        style="width: 100%; max-width: 600px; height: 300px; margin: 0 auto; background: linear-gradient(135deg, #BC002D 0%, #FFFFFF 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 3px solid var(--primary-gold);">
+                                        <div style="text-align: center; color: white;">
+                                            <h2 style="color: var(--primary-gold); margin: 0; font-size: 3rem;">⛩️</h2>
+                                            <h3
+                                                style="margin: 0.5rem 0; color: #BC002D; text-shadow: 1px 1px 2px white;">
+                                                JAPÓN</h3>
+                                            <p
+                                                style="margin: 0; opacity: 0.9; color: #BC002D; text-shadow: 1px 1px 2px white;">
+                                                La Tierra del Sol Naciente</p>
+                                        </div>
+                                    </div>
+                                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                                        [Placeholder - Reemplazar con imagen oficial de Japón]
+                                    </p>
+                                </div>
+
+                                <h3>📊 Bonificaciones Completas</h3>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Bonificación</th>
+                                                <th>Valor</th>
+                                                <th>Impacto</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Daño a Bárbaros</strong></td>
+                                                <td>+30%</td>
+                                                <td><span class="badge badge-legendary">Muy Alto</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Velocidad de Investigación</strong></td>
+                                                <td>+5%</td>
+                                                <td><span class="badge badge-advanced">Medio</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Ataque de Infantería</strong></td>
+                                                <td>+5%</td>
+                                                <td><span class="badge badge-advanced">Medio</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <h3>👑 Comandante Inicial: Kusunoki Masashige</h3>
+                                <div class="card">
+                                    <div style="display: flex; gap: 1rem; align-items: start; flex-wrap: wrap;">
+                                        <div
+                                            style="flex: 0 0 120px; height: 120px; background: linear-gradient(135deg, #BC002D 0%, #FFFFFF 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--primary-gold);">
+                                            <span style="font-size: 4rem;">🗡️</span>
+                                        </div>
+                                        <div style="flex: 1; min-width: 250px;">
+                                            <h4>Kusunoki Masashige</h4>
+                                            <p><span class="badge badge-epic">Épico</span> <span
+                                                    class="badge badge-advanced">Infantería</span></p>
+                                            <p><strong>Especialidad:</strong> PvE y farming de bárbaros</p>
+                                            <p><strong>Habilidad principal:</strong> Daño masivo contra unidades
+                                                neutrales</p>
+                                            <p><strong>Mejor uso:</strong> Farming bárbaros, leveling de comandantes</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3>🛡️ Tropa Especial: Samurai</h3>
+                                <div class="card">
+                                    <p><strong>Tipo:</strong> Infantería T3</p>
+                                    <p><strong>Características:</strong></p>
+                                    <ul>
+                                        <li>Infantería de élite con alto daño</li>
+                                        <li>Excelente balance ataque/defensa</li>
+                                        <li>Especializado en combate cuerpo a cuerpo</li>
+                                        <li>Efectivo contra arqueros</li>
+                                    </ul>
+                                    <p><strong>Stats (aprox):</strong></p>
+                                    <ul>
+                                        <li>Ataque: 95</li>
+                                        <li>Defensa: 90</li>
+                                        <li>Salud: 105</li>
+                                    </ul>
+                                </div>
+
+                                <h3>🎯 Estrategias Recomendadas</h3>
+                                <div class="card">
+                                    <h4>Early Game (CH 1-10)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Farmea bárbaros sin parar:</strong> +30% daño es MASIVO para farming
+                                        </li>
+                                        <li><strong>Usa Kusunoki exclusivamente para PvE:</strong> Levelea rápido
+                                        </li>
+                                        <li><strong>Domina eventos de bárbaros:</strong> Serás top en rankings
+                                        </li>
+                                        <li><strong>Leveling de otros comandantes:</strong> Usa como secundario en
+                                            farming
+                                        </li>
+                                    </ul>
+
+                                    <h4>Mid Game (CH 11-21)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Continúa farming intensivo:</strong> Acumula recursos y XP
+                                        </li>
+                                        <li><strong>Transición a comandantes PvP:</strong> Sun Tzu, Richard para combate
+                                        </li>
+                                        <li><strong>Aprovecha investigación rápida:</strong> Llega antes a T4
+                                        </li>
+                                    </ul>
+
+                                    <h4>Late Game (CH 22+)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Considera cambiar civilización:</strong> Bono de bárbaros pierde
+                                            valor
+                                        </li>
+                                        <li><strong>O mantén para farming:</strong> Sigue siendo útil para eventos
+                                        </li>
+                                        <li><strong>Especialízate en infantería:</strong> Guan Yu, Alexander si te
+                                            quedas
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <h3>👥 Comandantes Recomendados para Japón</h3>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <h4>Early Game</h4>
+                                        <ul>
+                                            <li>Kusunoki (Inicial - PvE)</li>
+                                            <li>Sun Tzu (Infantry PvP)</li>
+                                            <li>Lohar (Bárbaros)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4>Mid Game</h4>
+                                        <ul>
+                                            <li>Richard I (Tank)</li>
+                                            <li>Eulji Mundeok (Infantry)</li>
+                                            <li>Charles Martel (Garrison)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4>Late Game</h4>
+                                        <ul>
+                                            <li>Guan Yu (Top Infantry)</li>
+                                            <li>Alexander (Infantry/Mixed)</li>
+                                            <li>Leonidas (Pair Infantry)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <h3>✅ Pros y ❌ Contras</h3>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <h4 style="color: #10b981;">✅ Ventajas</h4>
+                                        <ul>
+                                            <li><strong>+30% daño bárbaros es ÚNICO:</strong> Ninguna otra civ tiene
+                                                esto
+                                            </li>
+                                            <li><strong>Leveling ultra rápido:</strong> Comandantes listos en tiempo
+                                                récord
+                                            </li>
+                                            <li><strong>Domina eventos PvE:</strong> Top rankings garantizados
+                                            </li>
+                                            <li><strong>Kusunoki perfecto para su rol:</strong> Mejor comandante PvE
+                                                inicial
+                                            </li>
+                                            <li><strong>Investigación acelerada:</strong> +5% ayuda a largo plazo
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4 style="color: #ef4444;">❌ Desventajas</h4>
+                                        <ul>
+                                            <li><strong>Bono de bárbaros inútil en PvP:</strong> No ayuda en combate
+                                                real
+                                            </li>
+                                            <li><strong>Muy especializado:</strong> Solo sirve para una cosa
+                                            </li>
+                                            <li><strong>Kusunoki no sirve para PvP:</strong> Necesitarás otros
+                                                comandantes
+                                            </li>
+                                            <li><strong>Late game débil:</strong> Bonos pierden relevancia
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <h3>📈 Rating General</h3>
+                                <div class="card">
+                                    <ul>
+                                        <li><strong>Principiantes:</strong> <span class="badge badge-epic">8/10</span> -
+                                            Excelente para aprender farmeando</li>
+                                        <li><strong>F2P:</strong> <span class="badge badge-legendary">9/10</span> -
+                                            Leveling gratis es oro puro
+                                        </li>
+                                        <li><strong>PvP:</strong> <span class="badge badge-advanced">4/10</span> -
+                                            Bonos no ayudan en combate</li>
+                                        <li><strong>PvE:</strong> <span class="badge badge-legendary">10/10</span> - LA
+                                            MEJOR para PvE
+                                        </li>
+                                        <li><strong>Gathering:</strong> <span class="badge badge-advanced">5/10</span> -
+                                            Sin bonos específicos</li>
+                                        <li><strong>KvK:</strong> <span class="badge badge-advanced">5/10</span> - Bonos
+                                            no aplican
+                                        </li>
+                                        <li><strong>Late Game:</strong> <span class="badge badge-advanced">4/10</span> -
+                                            Bonos pierden valor</li>
+                                    </ul>
+                                </div>
+
+                                <p class="mt-2"
+                                    style="padding: 1rem; background: rgba(212, 175, 55, 0.1); border-left: 4px solid var(--primary-gold); border-radius: 4px;">
+                                    <strong>💡 Consejo Final:</strong> Japón es LA civilización definitiva para
+                                    jugadores que quieren maximizar farming de bárbaros y leveling de comandantes. El
+                                    +30% daño a bárbaros es absolutamente imbatible y te permitirá dominar todos los
+                                    eventos PvE. Sin embargo, estos bonos no te ayudarán en PvP, así que es ideal para
+                                    jugadores F2P que necesitan levelear comandantes rápidamente o para farm accounts
+                                    dedicadas. Si tu prioridad es PvE y leveling eficiente, Japón es tu mejor opción.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ARABIA -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>🕌 Arabia - El Desierto Dorado</span>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <!-- Imagen de la civilización -->
+                                <div style="text-align: center; margin-bottom: 2rem;">
+                                    <div
+                                        style="width: 100%; max-width: 600px; height: 300px; margin: 0 auto; background: linear-gradient(135deg, #006C35 0%, #FFFFFF 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 3px solid var(--primary-gold);">
+                                        <div style="text-align: center; color: white;">
+                                            <h2 style="color: var(--primary-gold); margin: 0; font-size: 3rem;">🕌</h2>
+                                            <h3
+                                                style="margin: 0.5rem 0; color: #006C35; text-shadow: 1px 1px 2px white;">
+                                                ARABIA</h3>
+                                            <p
+                                                style="margin: 0; opacity: 0.9; color: #006C35; text-shadow: 1px 1px 2px white;">
+                                                El Desierto Dorado</p>
+                                        </div>
+                                    </div>
+                                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                                        [Placeholder - Reemplazar con imagen oficial de Arabia]
+                                    </p>
+                                </div>
+
+                                <h3>📊 Bonificaciones Completas</h3>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Bonificación</th>
+                                                <th>Valor</th>
+                                                <th>Impacto</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Velocidad de Recolección</strong></td>
+                                                <td>+10%</td>
+                                                <td><span class="badge badge-legendary">Muy Alto</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Capacidad de Tropas</strong></td>
+                                                <td>+5%</td>
+                                                <td><span class="badge badge-epic">Alto</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Ataque de Caballería</strong></td>
+                                                <td>+5%</td>
+                                                <td><span class="badge badge-advanced">Medio</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <h3>👑 Comandante Inicial: Baibars</h3>
+                                <div class="card">
+                                    <div style="display: flex; gap: 1rem; align-items: start; flex-wrap: wrap;">
+                                        <div
+                                            style="flex: 0 0 120px; height: 120px; background: linear-gradient(135deg, #006C35 0%, #FFFFFF 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--primary-gold);">
+                                            <span style="font-size: 4rem;">🐎</span>
+                                        </div>
+                                        <div style="flex: 1; min-width: 250px;">
+                                            <h4>Baibars</h4>
+                                            <p><span class="badge badge-epic">Épico</span> <span
+                                                    class="badge badge-advanced">Caballería</span></p>
+                                            <p><strong>Especialidad:</strong> Gathering y movilidad</p>
+                                            <p><strong>Habilidad principal:</strong> Bonos de gathering y velocidad de
+                                                marcha</p>
+                                            <p><strong>Mejor uso:</strong> Recolección de recursos, raids rápidos</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3>🛡️ Tropa Especial: Mameluke</h3>
+                                <div class="card">
+                                    <p><strong>Tipo:</strong> Caballería T3</p>
+                                    <p><strong>Características:</strong></p>
+                                    <ul>
+                                        <li>Caballería rápida con alta movilidad</li>
+                                        <li>Excelente para raids y gathering</li>
+                                        <li>Balance entre velocidad y poder</li>
+                                        <li>Efectivo en terreno abierto</li>
+                                    </ul>
+                                    <p><strong>Stats (aprox):</strong></p>
+                                    <ul>
+                                        <li>Ataque: 90</li>
+                                        <li>Defensa: 85</li>
+                                        <li>Salud: 90</li>
+                                        <li>Velocidad: +15%</li>
+                                    </ul>
+                                </div>
+
+                                <h3>🎯 Estrategias Recomendadas</h3>
+                                <div class="card">
+                                    <h4>Early Game (CH 1-10)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Maximiza gathering:</strong> +10% velocidad es ENORME para recursos
+                                        </li>
+                                        <li><strong>Usa Baibars constantemente:</strong> Mejor gatherer inicial del
+                                            juego
+                                        </li>
+                                        <li><strong>Acumula recursos rápido:</strong> Ventaja económica desde el inicio
+                                        </li>
+                                        <li><strong>Farm accounts:</strong> Arabia es LA civilización para farms
+                                        </li>
+                                    </ul>
+
+                                    <h4>Mid Game (CH 11-21)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Continúa gathering intensivo:</strong> Acumula millones de recursos
+                                        </li>
+                                        <li><strong>Consigue Joan of Arc:</strong> Pairing perfecto con Baibars
+                                        </li>
+                                        <li><strong>Aprovecha +5% capacidad:</strong> Más tropas = más recursos por
+                                            viaje
+                                        </li>
+                                    </ul>
+
+                                    <h4>Late Game (CH 22+)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Mantén como farm account:</strong> Arabia es perfecta para esto
+                                        </li>
+                                        <li><strong>O especialízate en caballería:</strong> Saladin, William si combates
+                                        </li>
+                                        <li><strong>Gathering sigue siendo útil:</strong> Recursos siempre necesarios
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <h3>👥 Comandantes Recomendados para Arabia</h3>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <h4>Early Game</h4>
+                                        <ul>
+                                            <li>Baibars (Inicial - Gathering)</li>
+                                            <li>Joan of Arc (Gathering)</li>
+                                            <li>Constance (Gathering)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4>Mid Game</h4>
+                                        <ul>
+                                            <li>Seondeok (Gathering)</li>
+                                            <li>Cao Cao (Cavalry)</li>
+                                            <li>Minamoto (Cavalry)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4>Late Game</h4>
+                                        <ul>
+                                            <li>Cleopatra (Gathering)</li>
+                                            <li>Saladin (Cavalry)</li>
+                                            <li>William (Cavalry)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <h3>✅ Pros y ❌ Contras</h3>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <h4 style="color: #10b981;">✅ Ventajas</h4>
+                                        <ul>
+                                            <li><strong>+10% gathering es MASIVO:</strong> LA mejor para recolección
+                                            </li>
+                                            <li><strong>Baibars es top gatherer:</strong> Perfecto para su rol
+                                            </li>
+                                            <li><strong>+5% capacidad siempre útil:</strong> Más tropas en todo
+                                            </li>
+                                            <li><strong>Perfecta para farm accounts:</strong> Rol económico ideal
+                                            </li>
+                                            <li><strong>Bonos de cavalry:</strong> Útil si decides combatir
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4 style="color: #ef4444;">❌ Desventajas</h4>
+                                        <ul>
+                                            <li><strong>Bonos no ayudan en combate directo:</strong> Solo gathering
+                                            </li>
+                                            <li><strong>Baibars no es comandante de combate:</strong> Solo para recursos
+                                            </li>
+                                            <li><strong>Menos útil para PvP puro:</strong> Enfoque económico
+                                            </li>
+                                            <li><strong>Requiere juego activo:</strong> Gathering constante para
+                                                aprovechar
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <h3>📈 Rating General</h3>
+                                <div class="card">
+                                    <ul>
+                                        <li><strong>Principiantes:</strong> <span class="badge badge-epic">7/10</span> -
+                                            Buena para aprender economía</li>
+                                        <li><strong>F2P:</strong> <span class="badge badge-legendary">10/10</span> - LA
+                                            MEJOR para F2P
+                                        </li>
+                                        <li><strong>PvP:</strong> <span class="badge badge-advanced">5/10</span> -
+                                            Bonos no ayudan en combate</li>
+                                        <li><strong>PvE:</strong> <span class="badge badge-advanced">6/10</span> -
+                                            Decente
+                                        </li>
+                                        <li><strong>Gathering:</strong> <span class="badge badge-legendary">10/10</span>
+                                            -
+                                            LA MEJOR para gathering</li>
+                                        <li><strong>KvK:</strong> <span class="badge badge-advanced">6/10</span> - Rol
+                                            de soporte económico
+                                        </li>
+                                        <li><strong>Late Game:</strong> <span class="badge badge-epic">7/10</span> -
+                                            Gathering siempre útil</li>
+                                    </ul>
+                                </div>
+
+                                <p class="mt-2"
+                                    style="padding: 1rem; background: rgba(212, 175, 55, 0.1); border-left: 4px solid var(--primary-gold); border-radius: 4px;">
+                                    <strong>💡 Consejo Final:</strong> Arabia es LA civilización definitiva para
+                                    maximizar recolección de recursos. El +10% de velocidad de gathering es
+                                    absolutamente imbatible y te permitirá acumular recursos mucho más rápido que
+                                    cualquier otra civilización. Es perfecta para jugadores F2P que necesitan recursos
+                                    constantes, y es LA mejor opción para farm accounts. Baibars es el mejor gatherer
+                                    inicial del juego. Si tu prioridad es la economía y acumular recursos, Arabia es tu
+                                    mejor elección sin duda.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ESPAÑA -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>🏛️ España - El Imperio del Sol</span>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <!-- Imagen de la civilización -->
+                                <div style="text-align: center; margin-bottom: 2rem;">
+                                    <div
+                                        style="width: 100%; max-width: 600px; height: 300px; margin: 0 auto; background: linear-gradient(135deg, #AA151B 0%, #F1BF00 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 3px solid var(--primary-gold);">
+                                        <div style="text-align: center; color: white;">
+                                            <h2 style="color: var(--primary-gold); margin: 0; font-size: 3rem;">🏛️</h2>
+                                            <h3 style="margin: 0.5rem 0; color: white;">ESPAÑA</h3>
+                                            <p style="margin: 0; opacity: 0.9;">El Imperio del Sol</p>
+                                        </div>
+                                    </div>
+                                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                                        [Placeholder - Reemplazar con imagen oficial de España]
+                                    </p>
+                                </div>
+
+                                <h3>📊 Bonificaciones Completas</h3>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Bonificación</th>
+                                                <th>Valor</th>
+                                                <th>Impacto</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Experiencia de Comandantes</strong></td>
+                                                <td>+20%</td>
+                                                <td><span class="badge badge-legendary">Muy Alto</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Velocidad de Construcción</strong></td>
+                                                <td>+5%</td>
+                                                <td><span class="badge badge-advanced">Medio</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Producción de Piedra</strong></td>
+                                                <td>+10%</td>
+                                                <td><span class="badge badge-advanced">Medio</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <h3>👑 Comandante Inicial: El Cid</h3>
+                                <div class="card">
+                                    <div style="display: flex; gap: 1rem; align-items: start; flex-wrap: wrap;">
+                                        <div
+                                            style="flex: 0 0 120px; height: 120px; background: linear-gradient(135deg, #AA151B 0%, #F1BF00 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--primary-gold);">
+                                            <span style="font-size: 4rem;">⚔️</span>
+                                        </div>
+                                        <div style="flex: 1; min-width: 250px;">
+                                            <h4>El Cid</h4>
+                                            <p><span class="badge badge-epic">Épico</span> <span
+                                                    class="badge badge-advanced">Caballería</span></p>
+                                            <p><strong>Especialidad:</strong> Conquista y versatilidad</p>
+                                            <p><strong>Habilidad principal:</strong> Bonos de conquista y daño AoE</p>
+                                            <p><strong>Mejor uso:</strong> Conquista de ciudades, combate versátil</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3>🛡️ Tropa Especial: Conquistador</h3>
+                                <div class="card">
+                                    <p><strong>Tipo:</strong> Caballería T3</p>
+                                    <p><strong>Características:</strong></p>
+                                    <ul>
+                                        <li>Caballería con bonos de saqueo</li>
+                                        <li>Excelente para conquista</li>
+                                        <li>Balance entre movilidad y poder</li>
+                                        <li>Bonos adicionales en territorio enemigo</li>
+                                    </ul>
+                                    <p><strong>Stats (aprox):</strong></p>
+                                    <ul>
+                                        <li>Ataque: 92</li>
+                                        <li>Defensa: 88</li>
+                                        <li>Salud: 93</li>
+                                        <li>Saqueo: +20%</li>
+                                    </ul>
+                                </div>
+
+                                <h3>🎯 Estrategias Recomendadas</h3>
+                                <div class="card">
+                                    <h4>Early Game (CH 1-10)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Aprovecha +20% XP:</strong> Levelea comandantes mucho más rápido
+                                        </li>
+                                        <li><strong>Usa El Cid para bárbaros:</strong> Acumula XP rápidamente
+                                        </li>
+                                        <li><strong>Enfócate en leveling:</strong> Comandantes fuertes = ventaja enorme
+                                        </li>
+                                        <li><strong>Construcción acelerada:</strong> +5% ayuda en desarrollo
+                                        </li>
+                                    </ul>
+
+                                    <h4>Mid Game (CH 11-21)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Maxea múltiples comandantes:</strong> +20% XP se acumula enormemente
+                                        </li>
+                                        <li><strong>Transición a mejores comandantes:</strong> Tendrás ventaja de
+                                            niveles
+                                        </li>
+                                        <li><strong>Participa en eventos:</strong> Más XP = más progreso
+                                        </li>
+                                    </ul>
+
+                                    <h4>Late Game (CH 22+)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Colección de comandantes:</strong> Ideal para maxear muchos
+                                        </li>
+                                        <li><strong>Ventaja competitiva:</strong> Comandantes max antes que otros
+                                        </li>
+                                        <li><strong>Especialízate en caballería:</strong> Saladin, William, Genghis
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <h3>👥 Comandantes Recomendados para España</h3>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <h4>Early Game</h4>
+                                        <ul>
+                                            <li>El Cid (Inicial)</li>
+                                            <li>Sun Tzu (Infantry)</li>
+                                            <li>Joan of Arc (Support)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4>Mid Game</h4>
+                                        <ul>
+                                            <li>Cao Cao (Cavalry)</li>
+                                            <li>Richard I (Tank)</li>
+                                            <li>Minamoto (Nuker)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4>Late Game</h4>
+                                        <ul>
+                                            <li>Saladin (Cavalry)</li>
+                                            <li>Alexander (Mixed)</li>
+                                            <li>Guan Yu (Infantry)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <h3>✅ Pros y ❌ Contras</h3>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <h4 style="color: #10b981;">✅ Ventajas</h4>
+                                        <ul>
+                                            <li><strong>+20% XP es ENORME:</strong> Comandantes listos mucho antes
+                                            </li>
+                                            <li><strong>Ventaja competitiva a largo plazo:</strong> Se acumula con el
+                                                tiempo
+                                            </li>
+                                            <li><strong>Ideal para coleccionistas:</strong> Maxea muchos comandantes
+                                            </li>
+                                            <li><strong>El Cid es versátil:</strong> Útil en múltiples situaciones
+                                            </li>
+                                            <li><strong>Construcción acelerada:</strong> +5% siempre útil
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4 style="color: #ef4444;">❌ Desventajas</h4>
+                                        <ul>
+                                            <li><strong>Bono de XP no ayuda en combate directo:</strong> Solo leveling
+                                            </li>
+                                            <li><strong>Piedra es recurso menos usado:</strong> Bono menos útil
+                                            </li>
+                                            <li><strong>El Cid no es top tier:</strong> Hay mejores comandantes
+                                            </li>
+                                            <li><strong>Beneficio a largo plazo:</strong> No es inmediato
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <h3>📈 Rating General</h3>
+                                <div class="card">
+                                    <ul>
+                                        <li><strong>Principiantes:</strong> <span
+                                                class="badge badge-advanced">6/10</span> - Decente pero hay mejores</li>
+                                        <li><strong>F2P:</strong> <span class="badge badge-epic">8/10</span> - XP gratis
+                                            es muy valioso
+                                        </li>
+                                        <li><strong>PvP:</strong> <span class="badge badge-advanced">6/10</span> -
+                                            Bonos no ayudan directamente</li>
+                                        <li><strong>PvE:</strong> <span class="badge badge-epic">7/10</span> - Leveling
+                                            rápido útil
+                                        </li>
+                                        <li><strong>Gathering:</strong> <span class="badge badge-advanced">5/10</span> -
+                                            Sin bonos específicos</li>
+                                        <li><strong>KvK:</strong> <span class="badge badge-epic">7/10</span> -
+                                            Comandantes max = ventaja
+                                        </li>
+                                        <li><strong>Late Game:</strong> <span class="badge badge-epic">8/10</span> -
+                                            Beneficio se acumula enormemente</li>
+                                    </ul>
+                                </div>
+
+                                <p class="mt-2"
+                                    style="padding: 1rem; background: rgba(212, 175, 55, 0.1); border-left: 4px solid var(--primary-gold); border-radius: 4px;">
+                                    <strong>💡 Consejo Final:</strong> España es la civilización perfecta para jugadores
+                                    que planean jugar a largo plazo y quieren maxear múltiples comandantes. El +20% de
+                                    experiencia es absolutamente masivo y se acumula enormemente con el tiempo. Tendrás
+                                    comandantes max mucho antes que otros jugadores, lo que te da una ventaja
+                                    competitiva significativa. Es ideal para jugadores F2P que no pueden gastar en XP
+                                    books, y para coleccionistas que quieren tener muchos comandantes maxeados. Si
+                                    planeas jugar por meses o años, España es una inversión excelente.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BIZANCIO -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>🏛️ Bizancio - El Imperio Romano de Oriente</span>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <!-- Imagen de la civilización -->
+                                <div style="text-align: center; margin-bottom: 2rem;">
+                                    <div
+                                        style="width: 100%; max-width: 600px; height: 300px; margin: 0 auto; background: linear-gradient(135deg, #4B0082 0%, #FFD700 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 3px solid var(--primary-gold);">
+                                        <div style="text-align: center; color: white;">
+                                            <h2 style="color: var(--primary-gold); margin: 0; font-size: 3rem;">🏛️</h2>
+                                            <h3 style="margin: 0.5rem 0; color: white;">BIZANCIO</h3>
+                                            <p style="margin: 0; opacity: 0.9;">El Imperio Romano de Oriente</p>
+                                        </div>
+                                    </div>
+                                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                                        [Placeholder - Reemplazar con imagen oficial de Bizancio]
+                                    </p>
+                                </div>
+
+                                <h3>📊 Bonificaciones Completas</h3>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Bonificación</th>
+                                                <th>Valor</th>
+                                                <th>Impacto</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Daño de Caballería</strong></td>
+                                                <td>+5%</td>
+                                                <td><span class="badge badge-advanced">Medio</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Defensa de Caballería</strong></td>
+                                                <td>+5%</td>
+                                                <td><span class="badge badge-advanced">Medio</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Velocidad de Curación</strong></td>
+                                                <td>+5%</td>
+                                                <td><span class="badge badge-advanced">Medio</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <h3>👑 Comandante Inicial: Belisarius</h3>
+                                <div class="card">
+                                    <div style="display: flex; gap: 1rem; align-items: start; flex-wrap: wrap;">
+                                        <div
+                                            style="flex: 0 0 120px; height: 120px; background: linear-gradient(135deg, #4B0082 0%, #FFD700 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--primary-gold);">
+                                            <span style="font-size: 4rem;">🐴</span>
+                                        </div>
+                                        <div style="flex: 1; min-width: 250px;">
+                                            <h4>Belisarius</h4>
+                                            <p><span class="badge badge-epic">Épico</span> <span
+                                                    class="badge badge-advanced">Caballería</span></p>
+                                            <p><strong>Especialidad:</strong> Movilidad y conquista</p>
+                                            <p><strong>Habilidad principal:</strong> Alta velocidad de marcha y daño</p>
+                                            <p><strong>Mejor uso:</strong> Hit-and-run, scouting, raids rápidos</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3>🛡️ Tropa Especial: Cataphract</h3>
+                                <div class="card">
+                                    <p><strong>Tipo:</strong> Caballería T3</p>
+                                    <p><strong>Características:</strong></p>
+                                    <ul>
+                                        <li>Caballería pesada con armadura superior</li>
+                                        <li>Excelente balance ataque/defensa</li>
+                                        <li>Tanky pero móvil</li>
+                                        <li>Efectivo en combate prolongado</li>
+                                    </ul>
+                                    <p><strong>Stats (aprox):</strong></p>
+                                    <ul>
+                                        <li>Ataque: 98</li>
+                                        <li>Defensa: 95</li>
+                                        <li>Salud: 100</li>
+                                    </ul>
+                                </div>
+
+                                <h3>🎯 Estrategias Recomendadas</h3>
+                                <div class="card">
+                                    <h4>Early Game (CH 1-10)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Especialízate en caballería:</strong> Bonos directos de ataque y
+                                            defensa
+                                        </li>
+                                        <li><strong>Usa Belisarius para raids:</strong> Movilidad superior
+                                        </li>
+                                        <li><strong>Enfócate en cavalry pura:</strong> Aprovecha ambos bonos
+                                        </li>
+                                        <li><strong>Curación rápida:</strong> +5% reduce downtime
+                                        </li>
+                                    </ul>
+
+                                    <h4>Mid Game (CH 11-21)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Transición a mejores cavalry:</strong> Cao Cao, Minamoto
+                                        </li>
+                                        <li><strong>Domina campo abierto:</strong> Caballería es meta en KvK
+                                        </li>
+                                        <li><strong>Hit-and-run tactics:</strong> Movilidad es tu ventaja
+                                        </li>
+                                    </ul>
+
+                                    <h4>Late Game (CH 22+)</h4>
+                                    <ul class="icon-list">
+                                        <li><strong>Cavalry meta:</strong> Saladin, William, Genghis
+                                        </li>
+                                        <li><strong>Rol de flanqueo:</strong> Caballería rápida para envolvimiento
+                                        </li>
+                                        <li><strong>Bonos siguen siendo útiles:</strong> +5% ataque y defensa se
+                                            acumulan
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <h3>👥 Comandantes Recomendados para Bizancio</h3>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <h4>Early Game</h4>
+                                        <ul>
+                                            <li>Belisarius (Inicial)</li>
+                                            <li>Pelagius (Cavalry)</li>
+                                            <li>Lancelot (Cavalry)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4>Mid Game</h4>
+                                        <ul>
+                                            <li>Cao Cao (Speed Cavalry)</li>
+                                            <li>Minamoto (Nuker)</li>
+                                            <li>Baibars (Mobility)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4>Late Game</h4>
+                                        <ul>
+                                            <li>Saladin (Top Cavalry)</li>
+                                            <li>William (Cavalry Tank)</li>
+                                            <li>Genghis Khan (Cavalry DPS)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <h3>✅ Pros y ❌ Contras</h3>
+                                <div class="card-grid">
+                                    <div class="card">
+                                        <h4 style="color: #10b981;">✅ Ventajas</h4>
+                                        <ul>
+                                            <li><strong>Bonos directos a cavalry:</strong> Ataque Y defensa
+                                            </li>
+                                            <li><strong>Belisarius excelente:</strong> Mejor para hit-and-run
+                                            </li>
+                                            <li><strong>Caballería es meta:</strong> Especialmente en KvK
+                                            </li>
+                                            <li><strong>Curación rápida:</strong> Menos downtime post-batalla
+                                            </li>
+                                            <li><strong>Versatilidad:</strong> Cavalry funciona en muchas situaciones
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card">
+                                        <h4 style="color: #ef4444;">❌ Desventajas</h4>
+                                        <ul>
+                                            <li><strong>Muy especializado:</strong> Solo cavalry, nada más
+                                            </li>
+                                            <li><strong>Caballería es cara:</strong> Consume muchos recursos
+                                            </li>
+                                            <li><strong>Belisarius no es top combate:</strong> Más para movilidad
+                                            </li>
+                                            <li><strong>5% puede parecer poco:</strong> Bonos modestos
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <h3>📈 Rating General</h3>
+                                <div class="card">
+                                    <ul>
+                                        <li><strong>Principiantes:</strong> <span
+                                                class="badge badge-advanced">6/10</span> - Requiere enfoque en cavalry
+                                        </li>
+                                        <li><strong>F2P:</strong> <span class="badge badge-advanced">6/10</span> -
+                                            Cavalry es cara
+                                        </li>
+                                        <li><strong>PvP:</strong> <span class="badge badge-epic">8/10</span> -
+                                            Caballería domina campo abierto</li>
+                                        <li><strong>PvE:</strong> <span class="badge badge-advanced">6/10</span> -
+                                            Decente
+                                        </li>
+                                        <li><strong>Gathering:</strong> <span class="badge badge-advanced">5/10</span> -
+                                            Sin bonos específicos</li>
+                                        <li><strong>KvK:</strong> <span class="badge badge-epic">8/10</span> - Cavalry
+                                            es meta en KvK
+                                        </li>
+                                        <li><strong>Late Game:</strong> <span class="badge badge-epic">7/10</span> -
+                                            Cavalry sigue siendo fuerte</li>
+                                    </ul>
+                                </div>
+
+                                <p class="mt-2"
+                                    style="padding: 1rem; background: rgba(212, 175, 55, 0.1); border-left: 4px solid var(--primary-gold); border-radius: 4px;">
+                                    <strong>💡 Consejo Final:</strong> Bizancio es la civilización ideal para jugadores
+                                    que quieren especializarse completamente en caballería. Los bonos de +5% ataque y
+                                    +5% defensa de cavalry son únicos (ninguna otra civ tiene ambos) y te dan una
+                                    ventaja clara si te enfocas 100% en caballería. Belisarius es excelente para
+                                    hit-and-run y scouting. La curación rápida reduce el downtime. Sin embargo, es muy
+                                    especializada y caballería es cara de mantener. Ideal para jugadores PvP que dominan
+                                    las tácticas de cavalry y tienen los recursos para mantenerla.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GRAN BRETAÑA -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>🇬🇧 Gran Bretaña - El Sol Nunca se Pone</span>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>📊 Bonificaciones</h3>
+                                <ul class="icon-list">
+                                    <li><strong>Ataque de Arqueros:</strong> +5%</li>
+                                    <li><strong>Velocidad de Entrenamiento:</strong> +5%</li>
+                                    <li><strong>Capacidad Guarnición Aliados:</strong> +20%</li>
+                                </ul>
+                                <h3>👑 Comandante: Boudica</h3>
+                                <p>Excelente para PvE y bárbaros. Gran regeneración de furia y daño AoE.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COREA -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>🇰🇷 Corea - El Reino de la Mañana Calma</span>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>📊 Bonificaciones</h3>
+                                <ul class="icon-list">
+                                    <li><strong>Defensa de Arqueros:</strong> +5%</li>
+                                    <li><strong>Capacidad de Hospital:</strong> +15%</li>
+                                    <li><strong>Velocidad de Investigación:</strong> +3% (Esencial para T5)</li>
+                                </ul>
+                                <h3>👑 Comandante: Eulji Mundeok</h3>
+                                <p>Especialista en infantería y defensa de guarniciones. Muy sólido para F2P.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IMPERIO OTOMANO -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>🇹🇷 Imperio Otomano - La Puerta Sublime</span>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>📊 Bonificaciones</h3>
+                                <ul class="icon-list">
+                                    <li><strong>Salud de Arqueros:</strong> +5%</li>
+                                    <li><strong>Velocidad de Marcha:</strong> +5%</li>
+                                    <li><strong>Daño de Habilidad Activa:</strong> +5% (Bono ofensivo top)</li>
+                                </ul>
+                                <h3>👑 Comandante: Osman I</h3>
+                                <p>Fuerte daño nuke y ataques a ciudades. Ideal para rallies ofensivos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VIKINGOS -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>🪓 Vikingos - Los Señores del Norte</span>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>📊 Bonificaciones</h3>
+                                <ul class="icon-list">
+                                    <li><strong>Ataque de Infantería:</strong> +5%</li>
+                                    <li><strong>Daño de Contraataque:</strong> +10%</li>
+                                    <li><strong>Capacidad de Carga:</strong> +10%</li>
+                                </ul>
+                                <h3>👑 Comandante: Bjorn Ironside</h3>
+                                <p>Poderoso líder de infantería para campo abierto. Incrementa el daño recibido del
+                                    enemigo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EGIPTO -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>🇪🇬 Egipto - El Don del Nilo</span>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>📊 Bonificaciones</h3>
+                                <ul class="icon-list">
+                                    <li><strong>Ataque de Arqueros:</strong> +5%</li>
+                                    <li><strong>Daño de Rally:</strong> +5%</li>
+                                    <li><strong>Velocidad de Construcción/Investigación:</strong> +1.5%</li>
+                                </ul>
+                                <h3>👑 Comandante: Imhotep</h3>
+                                <p>Debuffer de área masivo, reduce el ataque y defensa de los enemigos cercanos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GRECIA -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>🏛️ Grecia - La Cuna de la Civilización</span>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>📊 Bonificaciones</h3>
+                                <ul class="icon-list">
+                                    <li><strong>Salud de Infantería:</strong> +5%</li>
+                                    <li><strong>Daño a Bárbaros:</strong> +5%</li>
+                                    <li><strong>Velocidad Ayuda Alianza:</strong> +30% (Acelera construcciones gratis)
+                                    </li>
+                                </ul>
+                                <h3>👑 Comandante: Pericles</h3>
+                                <p>Excelente comandante de soporte e infantería tanky. Protege aliados con escudos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="recomendaciones">
+                <h2>¿Qué Civilización Elegir?</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>🥇 Para Principiantes</h3>
+                        <p><strong>Recomendación: China o Roma</strong></p>
+                        <ul>
+                            <li><strong>China:</strong> Sun Tzu es increíble, bonos de desarrollo aceleran progreso</li>
+                            <li><strong>Roma:</strong> Comida extra ayuda mucho, fácil de jugar</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>💎 Para F2P (Free to Play)</h3>
+                        <p><strong>Recomendación: China</strong></p>
+                        <ul>
+                            <li>Sun Tzu es el mejor comandante épico</li>
+                            <li>Bonos de desarrollo compensan falta de gemas</li>
+                            <li>Llegar antes a tecnologías clave</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>🌾 Para Gatherers/Farmers</h3>
+                        <p><strong>Recomendación: Arabia o Francia</strong></p>
+                        <ul>
+                            <li><strong>Arabia:</strong> +10% gathering es masivo</li>
+                            <li><strong>Francia:</strong> Joan es la mejor gatherer</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>⚔️ Para PvP Agresivo</h3>
+                        <p><strong>Recomendación: Alemania o Bizancio</strong></p>
+                        <ul>
+                            <li><strong>Alemania:</strong> Producción rápida de tropas</li>
+                            <li><strong>Bizancio:</strong> Bonos directos de caballería</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>🎯 Para Farming Bárbaros</h3>
+                        <p><strong>Recomendación: Japón</strong></p>
+                        <ul>
+                            <li>+30% daño a bárbaros es imbatible</li>
+                            <li>Leveling de comandantes ultra rápido</li>
+                            <li>Domina eventos PvE</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>📈 Para Long-Term</h3>
+                        <p><strong>Recomendación: España o China</strong></p>
+                        <ul>
+                            <li><strong>España:</strong> +20% XP se acumula enormemente</li>
+                            <li><strong>China:</strong> Desarrollo rápido siempre útil</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cambio">
+                <h2>Cambiar de Civilización</h2>
+                <div class="card">
+                    <p>Si ya elegiste una civilización y quieres cambiar, puedes hacerlo usando el item
+                        <strong>"Civilization Change"</strong>.
+                    </p>
+
+                    <h3>¿Cómo obtenerlo?</h3>
+                    <ul>
+                        <li>Eventos especiales (muy raro)</li>
+                        <li>Bundles de la tienda (ocasionalmente)</li>
+                        <li>Recompensas de KvK (limitado)</li>
+                    </ul>
+
+                    <h3>Consideraciones</h3>
+                    <ul class="icon-list">
+                        <li><strong>Es costoso:</strong> Civilization Change es un item muy valioso y raro</li>
+                        <li><strong>Pierdes el comandante inicial:</strong> Tu comandante inicial de la civ anterior se
+                            pierde</li>
+                        <li><strong>Ganas el nuevo comandante:</strong> Recibes el comandante inicial de la nueva civ
+                        </li>
+                        <li><strong>Las bonificaciones cambian inmediatamente:</strong> Empiezas a recibir los bonos de
+                            la nueva civilización</li>
+                    </ul>
+
+                    <p class="mt-2"><strong>Consejo:</strong> Piensa bien tu elección inicial para no tener que cambiar
+                        más adelante. Si eres principiante, China o Roma son apuestas seguras.</p>
+                </div>
+            </section>
+
+            <section class="text-center">
+                <div class="card"
+                    style="background: linear-gradient(135deg, rgba(30, 58, 95, 0.4) 0%, rgba(212, 175, 55, 0.2) 100%);">
+                    <h2>Siguiente Paso: Comandantes</h2>
+                    <p style="font-size: 1.2rem;">Ahora que conoces las civilizaciones, es hora de dominar el sistema de
+                        comandantes.</p>
+                    <a href="comandantes.html" class="btn btn-primary mt-2">Ver Guía de Comandantes →</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>Guía Completa de Rise of Kingdoms</strong></p>
+            <p>Creado por la comunidad para la comunidad • 2026</p>
+            <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-muted);">
+                Esta guía no está afiliada con Lilith Games. Rise of Kingdoms es una marca registrada de Lilith Games.
+            </p>
+            <div class="footer-links">
+                <a href="../index.html">Inicio</a>
+                <a href="glosario.html">Glosario</a>
+                <a href="avanzado.html">Guías Avanzadas</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

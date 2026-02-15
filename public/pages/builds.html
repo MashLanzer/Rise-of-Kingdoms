@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árboles de Talentos y Builds - Rise of Kingdoms Academy</title>
+    <meta name="description"
+        content="Las mejores builds y árboles de talentos para comandantes de Rise of Kingdoms. Optimiza tus héroes para campo abierto, guarnición y recolección.">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">RoK Academy</a>
+
+            <!-- Event Ticker -->
+            <div class="event-ticker" id="eventTicker">
+                <div class="ticker-content" id="tickerItems">
+                    <span class="ticker-item"><span class="event-dot live"></span> More Than Gems (En curso: 1d
+                        04h)</span>
+                    <span class="ticker-item"><span class="event-dot upcoming"></span> Ceroli Crisis (Próximamente:
+                        3d)</span>
+                    <span class="ticker-item"><span class="event-dot live"></span> MGE: Cavalry Stage (En curso:
+                        08h)</span>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li class="dropdown active">
+                        <a class="dropdown-toggle">Guías Principales</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="civilizaciones.html">Civilizaciones</a></li>
+                            <li><a href="comandantes.html">Comandantes</a></li>
+                            <li><a href="builds.html" class="active">Árboles de Talentos</a></li>
+                            <li><a href="tier-lists.html">Tier Lists</a></li>
+                            <li><a href="equipment.html">Equipment</a></li>
+                            <li><a href="vip.html">VIP</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">Sistemas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="osiris.html">Arca de Osiris</a></li>
+                            <li><a href="armamentos.html">Armamentos y Formaciones</a></li>
+                            <li><a href="edificios.html">Edificios</a></li>
+                            <li><a href="tropas.html">Tropas</a></li>
+                            <li><a href="alianzas.html">Alianzas</a></li>
+                            <li><a href="recursos.html">Recursos</a></li>
+                            <li><a href="tecnologia.html">Tecnología</a></li>
+                            <li><a href="eventos.html">Eventos</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">Más</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="jumper-guide.html">🚀 Guía Jumper</a></li>
+                            <li><a href="kvk.html">Especial KvK</a></li>
+                            <li><a href="avanzado.html">Guías Avanzadas</a></li>
+                            <li><a href="calculadora-tropas.html">🪖 Calculadora Tropas</a></li>
+                            <li><a href="calculadora-aceleradores.html">🧮 Calculadora Speedups</a></li>
+                        </ul>
+                    </li>
+                    <li><button class="search-btn" id="globalSearchBtn">🔍 Buscar</button></li>
+                    <li><button class="theme-toggle" id="themeToggle" title="Cambiar Tema">🌙</button></li>
+                    <li><button class="sound-toggle" id="soundToggle" title="Activar/Desactivar Sonidos">🔊</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero builds-hero">
+            <div class="hero-content">
+                <span class="badge badge-legendary">OPTIMIZACIÓN TÁCTICA</span>
+                <div
+                    style="display: flex; align-items: center; gap: 20px; justify-content: center; margin-bottom: 20px;">
+                    <button class="fav-btn" data-fav-id="all-builds" data-fav-name="Todas las Builds Maestras"
+                        data-fav-category="Talentos" data-fav-url="builds.html">☆</button>
+                    <h1 style="margin: 0;">🎭 Árboles de Talentos Maestros</h1>
+                </div>
+                <p>No desperdicies tus puntos de talento. Aquí encontrarás las builds optimizadas por los mejores
+                    jugadores del mundo para cada situación.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Selector de Filtros -->
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="infanteria">Infantería</button>
+                <button class="filter-btn" data-filter="caballeria">Caballería</button>
+                <button class="filter-btn" data-filter="arqueros">Arqueros</button>
+                <button class="filter-btn" data-filter="recoleccion">Recolección</button>
+            </div>
+
+            <div class="builds-grid" id="buildsGrid">
+                <!-- Sun Tzu -->
+                <article class="build-card reveal" data-category="infanteria">
+                    <div class="build-header">
+                        <div class="commander-info">
+                            <span class="badge badge-epic">ÉPICO</span>
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <button class="fav-btn" data-fav-id="build-suntzu"
+                                    data-fav-name="Build: Sun Tzu - Arte de la Furia" data-fav-category="Build Talentos"
+                                    data-fav-url="builds.html">☆</button>
+                                <h3 style="margin: 0;">Sun Tzu</h3>
+                            </div>
+                        </div>
+                        <div class="build-type-tag">Campo Abierto / AOE</div>
+                    </div>
+                    <div class="build-preview">
+                        <img src="https://images.unsplash.com/photo-1541560052-5e137f229371?q=80&w=300&h=200&fit=crop"
+                            alt="Sun Tzu Build" class="talent-img" loading="lazy">
+                        <div class="overlay-zoom">🔍 Ver Detalles</div>
+                    </div>
+                    <div class="build-content">
+                        <h4>Build: "El Arte de la Furia"</h4>
+                        <p>Maximiza la generación de furia y el daño de habilidad. Ideal para batallas multitudinarias
+                            donde su AOE brilla.</p>
+                        <div class="priority-traits">
+                            <span>Furia ++</span>
+                            <span>Daño Habilidad +</span>
+                            <span>Salud Infantería</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Richard I -->
+                <article class="build-card reveal" data-category="infanteria">
+                    <div class="build-header">
+                        <div class="commander-info">
+                            <span class="badge badge-legendary">LEGENDARIO</span>
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <button class="fav-btn" data-fav-id="build-richard"
+                                    data-fav-name="Build: Richard I - Muro de Hierro" data-fav-category="Build Talentos"
+                                    data-fav-url="builds.html">☆</button>
+                                <h3 style="margin: 0;">Richard I</h3>
+                            </div>
+                        </div>
+                        <div class="build-type-tag">Guarnición / Tanque</div>
+                    </div>
+                    <div class="build-preview">
+                        <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=300&h=200&fit=crop"
+                            alt="Richard Build" class="talent-img" loading="lazy">
+                        <div class="overlay-zoom">🔍 Ver Detalles</div>
+                    </div>
+                    <div class="build-content">
+                        <h4>Build: "Muro de Hierro"</h4>
+                        <p>Enfocada en la rama de Defensa y Guarnición. Convierte tu ciudad en una fortaleza
+                            inexpugnable.</p>
+                        <div class="priority-traits">
+                            <span>Defensa +++</span>
+                            <span>Curación</span>
+                            <span>Reducción Daño</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Minamoto -->
+                <article class="build-card reveal" data-category="caballeria">
+                    <div class="build-header">
+                        <div class="commander-info">
+                            <span class="badge badge-legendary">LEGENDARIO</span>
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <button class="fav-btn" data-fav-id="build-mina"
+                                    data-fav-name="Build: Minamoto - Relámpago" data-fav-category="Build Talentos"
+                                    data-fav-url="builds.html">☆</button>
+                                <h3 style="margin: 0;">Minamoto</h3>
+                            </div>
+                        </div>
+                        <div class="build-type-tag">Nuker / Caballeria</div>
+                    </div>
+                    <div class="build-preview">
+                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=300&h=200&fit=crop"
+                            alt="Minamoto Build" class="talent-img" loading="lazy">
+                        <div class="overlay-zoom">🔍 Ver Detalles</div>
+                    </div>
+                    <div class="build-content">
+                        <h4>Build: "Relámpago Carmesí"</h4>
+                        <p>Todo al daño de habilidad y velocidad de marcha. Perfecto para cazar granjas o rallies
+                            rápidos.</p>
+                        <div class="priority-traits">
+                            <span>Nuke +++</span>
+                            <span>Velocidad</span>
+                            <span>Ataque Cav</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Constanza -->
+                <article class="build-card reveal" data-category="recoleccion">
+                    <div class="build-header">
+                        <div class="commander-info">
+                            <span class="badge badge-elite">ÉLITE</span>
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <button class="fav-btn" data-fav-id="build-constanza"
+                                    data-fav-name="Build: Constanza - Maestra Agraria"
+                                    data-fav-category="Build Talentos" data-fav-url="builds.html">☆</button>
+                                <h3 style="margin: 0;">Constanza</h3>
+                            </div>
+                        </div>
+                        <div class="build-type-tag">Recolección</div>
+                    </div>
+                    <div class="build-preview">
+                        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=300&h=200&fit=crop"
+                            alt="Gathering Build" class="talent-img" loading="lazy">
+                        <div class="overlay-zoom">🔍 Ver Detalles</div>
+                    </div>
+                    <div class="build-content">
+                        <h4>Build: "Maestra Agraria"</h4>
+                        <p>Maximiza la carga de tropas y la velocidad de recolección de madera y comida.</p>
+                        <div class="priority-traits">
+                            <span>Vel. Carga</span>
+                            <span>Recurso Extra</span>
+                            <span>Vel. Madera</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Build Modal (Detalles) -->
+        <div class="build-modal" id="buildModal">
+            <div class="build-modal-content">
+                <button class="close-modal">✕</button>
+                <div class="modal-grid">
+                    <div class="modal-image-container">
+                        <img src="" alt="Talent Tree Detail" id="modalTalentImg">
+                    </div>
+                    <div class="modal-info">
+                        <h2 id="modalTitle">Nombre del Comandante</h2>
+                        <div class="badge-row" id="modalBadges"></div>
+                        <p id="modalDesc">Descripción completa de la build...</p>
+                        <div class="talent-details">
+                            <h3>Puntos Clave:</h3>
+                            <ul id="modalPoints">
+                                <!-- Dinámico -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>RoK Academy - Master Builds</strong></p>
+            <p>Optimización táctica para el campo de batalla.</p>
+            <div class="footer-links">
+                <a href="../index.html">Inicio</a>
+                <a href="comandantes.html">Comandantes</a>
+                <a href="tier-lists.html">Tier Lists</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Búsqueda -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <div class="search-input-container">
+                    <input type="text" class="search-input" id="globalSearchInput"
+                        placeholder="Buscar builds, talentos, comandantes...">
+                </div>
+                <button class="close-search" id="closeSearch">✕</button>
+            </div>
+            <div class="search-modal-body">
+                <div id="searchResults"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/search.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        // Lógica de filtrado
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const buildCards = document.querySelectorAll('.build-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+                buildCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lógica de Modal
+        const modal = document.getElementById('buildModal');
+        const closeModal = document.querySelector('.close-modal');
+
+        buildCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const title = card.querySelector('h3').innerText;
+                const buildName = card.querySelector('h4').innerText;
+                const imgSrc = card.querySelector('.talent-img').src;
+                const desc = card.querySelector('p').innerText;
+
+                document.getElementById('modalTitle').innerText = `${title} - ${buildName}`;
+                document.getElementById('modalTalentImg').src = imgSrc;
+                document.getElementById('modalDesc').innerText = desc;
+
+                modal.classList.add('active');
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) modal.classList.remove('active');
+        });
+    </script>
+
+    <style>
+        .builds-hero {
+            background: linear-gradient(135deg, rgba(8, 10, 15, 0.9) 0%, rgba(44, 28, 15, 0.8) 100%),
+                url('images/talents-bg.webp') center/cover;
+            border-bottom: 2px solid var(--gold-primary);
+        }
+
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            background: var(--navy-800);
+            border: 1px solid var(--navy-border);
+            color: var(--text-medium);
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: var(--transition-premium);
+        }
+
+        .filter-btn.active {
+            background: var(--gold-primary);
+            color: var(--navy-900);
+            border-color: var(--gold-primary);
+        }
+
+        .builds-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .build-card {
+            background: var(--navy-800);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--navy-border);
+            transition: var(--transition-premium);
+            cursor: pointer;
+        }
+
+        .build-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold-primary);
+            box-shadow: var(--shadow-premium);
+        }
+
+        .build-header {
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .commander-info h3 {
+            margin-top: 0.5rem;
+            font-family: var(--font-heading);
+            color: white;
+        }
+
+        .build-type-tag {
+            font-size: 0.7rem;
+            color: var(--gold-primary);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.3rem 0.6rem;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 4px;
+        }
+
+        .build-preview {
+            position: relative;
+            height: 200px;
+            background: #000;
+        }
+
+        .talent-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            transition: 0.5s;
+        }
+
+        .build-card:hover .talent-img {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .overlay-zoom {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-weight: 700;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .build-card:hover .overlay-zoom {
+            opacity: 1;
+        }
+
+        .build-content {
+            padding: 1.5rem;
+        }
+
+        .build-content h4 {
+            color: var(--gold-light);
+            margin-bottom: 0.8rem;
+            font-family: var(--font-heading);
+        }
+
+        .build-content p {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            line-height: 1.5;
+            margin-bottom: 1.2rem;
+        }
+
+        .priority-traits {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .priority-traits span {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            background: var(--navy-700);
+            border: 1px solid var(--navy-border);
+            border-radius: 4px;
+            color: var(--text-dim);
+        }
+
+        /* Modal Styles */
+        .build-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            padding: 2rem;
+        }
+
+        .build-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .build-modal-content {
+            background: var(--navy-900);
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 20px;
+            border: 1px solid var(--gold-primary);
+            position: relative;
+            overflow: hidden;
+            animation: modalIn 0.5s var(--ease-out-expo);
+        }
+
+        @keyframes modalIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .modal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .modal-image-container {
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-image-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .modal-info {
+            padding: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .modal-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-info {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</body>
+
+</html>

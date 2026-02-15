@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Estrategias avanzadas para Rise of Kingdoms - Tácticas de combate, optimización y meta strategies">
+    <title>Guías Avanzadas - Rise of Kingdoms</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+    <div class="particles"></div>
+
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                Rise of Kingdoms
+            </a>
+
+            <!-- Event Ticker -->
+            <div class="event-ticker" id="eventTicker">
+                <div class="ticker-content" id="tickerItems">
+                    <span class="ticker-item"><span class="event-dot live"></span> More Than Gems (En curso: 1d
+                        04h)</span>
+                    <span class="ticker-item"><span class="event-dot upcoming"></span> Ceroli Crisis (Próximamente:
+                        3d)</span>
+                    <span class="ticker-item"><span class="event-dot live"></span> MGE: Cavalry Stage (En curso:
+                        08h)</span>
+                </div>
+            </div>
+
+            <button class="search-btn" id="globalSearchBtn">
+                🔍 Buscar
+            </button>
+
+            <button class="theme-toggle" id="themeToggle" title="Cambiar Tema">
+                🌙
+            </button>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">Guías Principales</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="civilizaciones.html">Civilizaciones</a></li>
+                            <li><a href="comandantes.html">Comandantes</a></li>
+                            <li><a href="tier-lists.html">Tier Lists</a></li>
+                            <li><a href="equipment.html">Equipment</a></li>
+                            <li><a href="vip.html">VIP</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">Sistemas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="edificios.html">Edificios</a></li>
+                            <li><a href="tropas.html">Tropas</a></li>
+                            <li><a href="alianzas.html">Alianzas</a></li>
+                            <li><a href="recursos.html">Recursos</a></li>
+                            <li><a href="tecnologia.html">Tecnología</a></li>
+                            <li><a href="eventos.html">Eventos</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">Más</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="avanzado.html" class="active">Guías Avanzadas</a></li>
+                            <li><a href="calculadora.html">🧮 Calculadora</a></li>
+                            <li><a href="comparador.html">⚖️ Comparador</a></li>
+                            <li><a href="glosario.html">Glosario y FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>⚡ Estrategias Avanzadas</h1>
+
+            <section>
+                <div class="card">
+                    <p style="font-size: 1.2rem;">Esta sección está diseñada para jugadores experimentados que buscan
+                        optimizar cada aspecto de su gameplay. Aquí encontrarás tácticas avanzadas, meta strategies y
+                        conocimiento profundo del juego.</p>
+
+                    <p><strong>Advertencia:</strong> Estas estrategias asumen conocimiento intermedio-avanzado de RoK.
+                        Si eres principiante, revisa primero las guías básicas.</p>
+                </div>
+            </section>
+
+            <section id="combate">
+                <h2>Tácticas Avanzadas de Combate</h2>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <button class="fav-btn" data-fav-id="guide-micro" data-fav-name="Guía: Micromanagement"
+                                    data-fav-category="Guía Avanzada" data-fav-url="avanzado.html#combate">☆</button>
+                                <span>🎯 Micromanagement en Batallas</span>
+                            </div>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>Control de Rage</h3>
+                                <p>El <strong>rage management</strong> es crucial para maximizar daño y supervivencia.
+                                </p>
+
+                                <h4>Conceptos Clave</h4>
+                                <ul class="icon-list">
+                                    <li><strong>Rage inicial:</strong> Comandantes empiezan con 0-100 rage según
+                                        talentos</li>
+                                    <li><strong>Generación de rage:</strong> +10 rage por ataque normal, +10 por recibir
+                                        daño</li>
+                                    <li><strong>Habilidades:</strong> Requieren 1000 rage para activarse</li>
+                                    <li><strong>Timing:</strong> Activar habilidades en el momento óptimo es clave</li>
+                                </ul>
+
+                                <h4>Estrategias de Rage</h4>
+                                <ul class="icon-list">
+                                    <li><strong>Rage Engine:</strong> Usa comandantes con generación de rage (YSG, Guan
+                                        Yu)</li>
+                                    <li><strong>Talent optimization:</strong> Talentos que dan rage inicial o generación
+                                        extra</li>
+                                    <li><strong>Pairing synergy:</strong> Combina comandantes con habilidades
+                                        complementarias</li>
+                                    <li><strong>Timing de skills:</strong> Activa habilidades cuando más daño puedan
+                                        hacer</li>
+                                </ul>
+
+                                <h3>Positioning y Kiting</h3>
+                                <p>El <strong>posicionamiento</strong> en el mapa afecta el resultado de batallas.</p>
+
+                                <h4>Tácticas de Positioning</h4>
+                                <ul class="icon-list">
+                                    <li><strong>High ground:</strong> Atacar desde terreno elevado da bonos</li>
+                                    <li><strong>Chokepoints:</strong> Usa pasos estrechos para emboscar</li>
+                                    <li><strong>Retreat paths:</strong> Siempre ten ruta de escape planeada</li>
+                                    <li><strong>Fog of war:</strong> Usa la niebla para ocultar movimientos</li>
+                                </ul>
+
+                                <h4>Kiting (Hit and Run)</h4>
+                                <ul class="icon-list">
+                                    <li><strong>Cavalry kiting:</strong> Ataca y retírate antes de que contraataquen
+                                    </li>
+                                    <li><strong>Speed advantage:</strong> Usa velocidad de marcha para escapar</li>
+                                    <li><strong>Baiting:</strong> Atrae enemigos a trampas</li>
+                                    <li><strong>Timing:</strong> Ataca cuando enemigos están ocupados</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <button class="fav-btn" data-fav-id="guide-garrison"
+                                    data-fav-name="Guía: Garrison Defense" data-fav-category="Guía Avanzada"
+                                    data-fav-url="avanzado.html#combate">☆</button>
+                                <span>🛡️ Garrison Defense Strategies</span>
+                            </div>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>Optimización de Garrison</h3>
+
+                                <h4>Composición de Garrison</h4>
+                                <ul class="icon-list">
+                                    <li><strong>Primary garrison:</strong> Comandante tanky (Richard, Charles Martel)
+                                    </li>
+                                    <li><strong>Reinforcements:</strong> Mix de tipos de tropas para counter</li>
+                                    <li><strong>Troop ratio:</strong> 40% infantry, 30% cavalry, 30% archer (balanceado)
+                                    </li>
+                                    <li><strong>Tier mix:</strong> Solo T4/T5, nunca mezcles con T3 o menos</li>
+                                </ul>
+
+                                <h4>Rotaciones de Garrison</h4>
+                                <ul class="icon-list">
+                                    <li><strong>24/7 coverage:</strong> Coordina con alianza para turnos</li>
+                                    <li><strong>Refresh timing:</strong> Cambia garrison antes de que expire</li>
+                                    <li><strong>Emergency reinforcements:</strong> Sistema de alerta para ataques</li>
+                                    <li><strong>Resource management:</strong> Cura tropas entre rotaciones</li>
+                                </ul>
+
+                                <h3>Counter Strategies</h3>
+
+                                <h4>Contra Rallies</h4>
+                                <ul class="icon-list">
+                                    <li><strong>Scout el rally:</strong> Identifica tipo de tropas atacantes</li>
+                                    <li><strong>Counter troops:</strong> Ajusta garrison para counter</li>
+                                    <li><strong>Timing:</strong> Refuerza justo antes del impacto</li>
+                                    <li><strong>Buffs:</strong> Activa buffs defensivos antes del ataque</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <button class="fav-btn" data-fav-id="guide-rally" data-fav-name="Guía: Rally Leadership"
+                                    data-fav-category="Guía Avanzada" data-fav-url="avanzado.html#combate">☆</button>
+                                <span>⚔️ Rally Leadership</span>
+                            </div>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>Ser un Buen Rally Leader</h3>
+
+                                <h4>Preparación</h4>
+                                <ul class="icon-list">
+                                    <li><strong>Scout primero:</strong> SIEMPRE reconoce el objetivo</li>
+                                    <li><strong>Analiza defensa:</strong> Tipo de tropas, poder, comandantes</li>
+                                    <li><strong>Planifica composición:</strong> Qué tipo de tropas usar</li>
+                                    <li><strong>Comunica:</strong> Informa a la alianza del plan</li>
+                                </ul>
+
+                                <h4>Ejecución</h4>
+                                <ul class="icon-list">
+                                    <li><strong>Timing del rally:</strong> 5-10 minutos para llenar</li>
+                                    <li><strong>Coordina llegada:</strong> Múltiples rallies llegan simultáneamente</li>
+                                    <li><strong>Tipo de tropas:</strong> Especifica qué tropas enviar</li>
+                                    <li><strong>Buffs:</strong> Todos activan buffs antes del impacto</li>
+                                </ul>
+
+                                <h4>Mejores Rally Leaders</h4>
+                                <ul>
+                                    <li><strong>Genghis Khan:</strong> Mejor rally leader de caballería</li>
+                                    <li><strong>Attila:</strong> Rally leader de caballería, alto daño</li>
+                                    <li><strong>Takeda Shingen:</strong> Rally leader de caballería/mixto</li>
+                                    <li><strong>Alexander + YSG:</strong> Rally de infantería/mixto</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <button class="fav-btn" data-fav-id="guide-field"
+                                    data-fav-name="Guía: Campo Abierto 2026" data-fav-category="Guía Avanzada"
+                                    data-fav-url="avanzado.html#combate">☆</button>
+                                <span>🚀 Tácticas de Campo Abierto (Meta 2026)</span>
+                            </div>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>Dominio del Open Field</h3>
+                                <p>Con la llegada de los comandantes <strong>Prime</strong>, las dinámicas de campo
+                                    abierto han cambiado drásticamente.
+                                </p>
+
+                                <h4>1. El Enjambre Nuke (The Nuke Swarm)</h4>
+                                <ul class="icon-list">
+                                    <li><strong>Pairing:</strong> Nevsky + Joan of Arc Prime</li>
+                                    <li><strong>Táctica:</strong> Usa la movilidad extrema para entrar y salir del
+                                        combate. No te quedes quieto.</li>
+                                    <li><strong>Burst:</strong> Lanza la habilidad activa y retírate inmediatamente. El
+                                        daño AoE de Joan Prime destruirá las marchas circundantes.</li>
+                                </ul>
+
+                                <h4>2. Control de Área de Infantería</h4>
+                                <ul class="icon-list">
+                                    <li><strong>Pairing:</strong> Scipio Prime + Guan Yu</li>
+                                    <li><strong>Táctica:</strong> "Shock and Awe". Carga directamente al centro del
+                                        enjambre enemigo.</li>
+                                    <li><strong>Efecto:</strong> El escudo de Scipio y el silencio de Guan Yu dejarán a
+                                        los enemigos vulnerables para que tus aliados rematen.</li>
+                                </ul>
+
+                                <h4>3. Táctica Anti-Habilidad (Silent Archer)</h4>
+                                <ul class="icon-list">
+                                    <li><strong>Pairing:</strong> Boudica Prime + Zhuge Liang</li>
+                                    <li><strong>Táctica:</strong> Enfócate en comandantes que dependen del rage.</li>
+                                    <li><strong>Efecto:</strong> Boudica Prime reduce el daño de habilidad del enemigo,
+                                        mientras Zhuge Liang aplica un sangrado masivo que ignora defensas.</li>
+                                </ul>
+
+                                <p class="mt-2"><strong>Tip Pro:</strong> En 2026, la clave no es quién tiene más
+                                    tropas, sino quién gestiona mejor los <strong>Debuffs de Área</strong>. Mantén tus
+                                    marchas separadas para evitar el daño AoE enemigo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="economia">
+                <h2>Optimización Económica Avanzada</h2>
+
+                <div class="card">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                        <button class="fav-btn" data-fav-id="strategy-farms" data-fav-name="Estrategia: Farm Accounts"
+                            data-fav-category="Economía" data-fav-url="avanzado.html#economia">☆</button>
+                        <h3 style="margin: 0;">Farm Account Network</h3>
+                    </div>
+
+                    <h4>Sistema Multi-Farm</h4>
+                    <p>Jugadores hardcore manejan 2-5 farm accounts para alimentar su main.</p>
+
+                    <div class="card-grid">
+                        <div class="card">
+                            <h4>Setup Básico (2 Farms)</h4>
+                            <ul>
+                                <li><strong>Main:</strong> Cuenta principal de combate</li>
+                                <li><strong>Farm 1:</strong> Gathering especializado</li>
+                                <li><strong>Farm 2:</strong> Gathering + garrison support</li>
+                            </ul>
+                            <p><strong>Producción:</strong> +10M-15M recursos/día</p>
+                        </div>
+
+                        <div class="card">
+                            <h4>Setup Avanzado (5 Farms)</h4>
+                            <ul>
+                                <li><strong>Main:</strong> Combate puro</li>
+                                <li><strong>Farms 1-4:</strong> Gathering 24/7</li>
+                                <li><strong>Farm 5:</strong> Garrison + scouting support</li>
+                            </ul>
+                            <p><strong>Producción:</strong> +30M-50M recursos/día</p>
+                        </div>
+                    </div>
+
+                    <h4>Gestión de Farms</h4>
+                    <ul class="icon-list">
+                        <li><strong>Desarrollo mínimo:</strong> Solo City Hall, Academy, Castle</li>
+                        <li><strong>Comandantes gatherers:</strong> Maximiza Joan, Seondeok</li>
+                        <li><strong>Tecnologías:</strong> Solo gathering y capacidad</li>
+                        <li><strong>No combate:</strong> Cero inversión en tropas de combate</li>
+                        <li><strong>Transferencia:</strong> Trading Post o "farming" controlado</li>
+                    </ul>
+                </div>
+
+                <div class="card mt-3">
+                    <h3>Resource Timing Strategies</h3>
+
+                    <h4>Pre-KvK Accumulation</h4>
+                    <ul class="icon-list">
+                        <li><strong>2 meses antes:</strong> Empieza a acumular recursos</li>
+                        <li><strong>1 mes antes:</strong> Maximiza gathering, minimiza gasto</li>
+                        <li><strong>2 semanas antes:</strong> Entrena tropas al máximo</li>
+                        <li><strong>1 semana antes:</strong> Stockpile speedups de curación</li>
+                    </ul>
+
+                    <h4>Event Coordination</h4>
+                    <ul class="icon-list">
+                        <li><strong>Guarda acciones para eventos:</strong> No entrenes tropas fuera de eventos</li>
+                        <li><strong>Stack speedups:</strong> Usa speedups durante eventos de speedup</li>
+                        <li><strong>Coordinate upgrades:</strong> Mejora edificios durante eventos de construcción</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="comandantes">
+                <h2>Meta de Comandantes Avanzada</h2>
+
+                <div class="card">
+                    <h3>Pairings Meta (2026)</h3>
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Pairing</th>
+                                    <th>Tipo</th>
+                                    <th>Uso</th>
+                                    <th>Tier</th>
+                                    <th>Notas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Guan Yu + Leo</strong></td>
+                                    <td>Infantry</td>
+                                    <td>Field, Garrison</td>
+                                    <td><span class="badge badge-legendary">S+</span></td>
+                                    <td>Mejor pairing de infantry</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>XY + Saladin</strong></td>
+                                    <td>Cavalry</td>
+                                    <td>Field</td>
+                                    <td><span class="badge badge-legendary">S+</span></td>
+                                    <td>Meta de cavalry</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Nebu + Artemisia</strong></td>
+                                    <td>Archer</td>
+                                    <td>Field</td>
+                                    <td><span class="badge badge-legendary">S</span></td>
+                                    <td>Top archer pairing</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Alex + YSG</strong></td>
+                                    <td>Infantry/Mixed</td>
+                                    <td>Field, Rally</td>
+                                    <td><span class="badge badge-legendary">S</span></td>
+                                    <td>Clásico, siempre efectivo</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Richard + Charles</strong></td>
+                                    <td>Infantry</td>
+                                    <td>Garrison</td>
+                                    <td><span class="badge badge-epic">A+</span></td>
+                                    <td>Mejor garrison tank</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Cao Cao + Mina</strong></td>
+                                    <td>Cavalry</td>
+                                    <td>Hit-and-run</td>
+                                    <td><span class="badge badge-epic">A</span></td>
+                                    <td>Máxima velocidad</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sun Tzu + Eulji</strong></td>
+                                    <td>Infantry</td>
+                                    <td>F2P Field</td>
+                                    <td><span class="badge badge-advanced">B+</span></td>
+                                    <td>Mejor F2P pairing</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="mt-3">Investment Priority (Late Game)</h3>
+
+                    <h4>Para Whales</h4>
+                    <ol>
+                        <li><strong>Guan Yu:</strong> Mejor comandante del juego</li>
+                        <li><strong>XY (Xiang Yu):</strong> Meta cavalry</li>
+                        <li><strong>Leo (Leonidas):</strong> Pair perfecto para Guan</li>
+                        <li><strong>Saladin:</strong> Top cavalry</li>
+                        <li><strong>Nebu (Nebuchadnezzar):</strong> Mejor archer</li>
+                    </ol>
+
+                    <h4>Para Low Spenders</h4>
+                    <ol>
+                        <li><strong>YSG:</strong> Versatil, siempre útil</li>
+                        <li><strong>Alex:</strong> Mejor tank accesible</li>
+                        <li><strong>Richard:</strong> Garrison esencial</li>
+                        <li><strong>Saladin:</strong> Si juegas cavalry</li>
+                        <li><strong>Charles Martel:</strong> Garrison support</li>
+                    </ol>
+
+                    <h4>Para F2P</h4>
+                    <ol>
+                        <li><strong>Sun Tzu:</strong> Maxéalo primero (5/5/5/5)</li>
+                        <li><strong>YSG:</strong> Si consigues sculptures, invierte</li>
+                        <li><strong>Eulji Mundeok:</strong> Pair para Sun Tzu</li>
+                        <li><strong>Joan of Arc:</strong> Gathering + support</li>
+                        <li><strong>Lohar:</strong> Gratis, farming bárbaros</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section id="kvk">
+                <h2>KvK Advanced Tactics</h2>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>🎯 Roles Especializados en KvK</span>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>1. Rally Leader</h3>
+                                <p><strong>Responsabilidades:</strong></p>
+                                <ul>
+                                    <li>Liderar ataques coordinados a estructuras</li>
+                                    <li>Comunicar timing y estrategia</li>
+                                    <li>Tener comandantes rally optimizados</li>
+                                </ul>
+                                <p><strong>Requisitos:</strong></p>
+                                <ul>
+                                    <li>Comandantes: Genghis, Attila, Takeda</li>
+                                    <li>Poder: 50M+ (para rallies efectivos)</li>
+                                    <li>Comunicación: Activa en chat de alianza</li>
+                                </ul>
+
+                                <h3>2. Field Fighter</h3>
+                                <p><strong>Responsabilidades:</strong></p>
+                                <ul>
+                                    <li>Combate en campo abierto</li>
+                                    <li>Defender territorios</li>
+                                    <li>Atacar ejércitos enemigos</li>
+                                </ul>
+                                <p><strong>Requisitos:</strong></p>
+                                <ul>
+                                    <li>Comandantes: Alex, YSG, Guan Yu</li>
+                                    <li>Tropas: T4/T5 especializadas</li>
+                                    <li>Movilidad: Buena velocidad de marcha</li>
+                                </ul>
+
+                                <h3>3. Garrison Specialist</h3>
+                                <p><strong>Responsabilidades:</strong></p>
+                                <ul>
+                                    <li>Defender estructuras clave</li>
+                                    <li>Rotaciones 24/7</li>
+                                    <li>Absorber daño enemigo</li>
+                                </ul>
+                                <p><strong>Requisitos:</strong></p>
+                                <ul>
+                                    <li>Comandantes: Richard, Charles Martel, Wu Zetian</li>
+                                    <li>Tropas: Infantry tanky</li>
+                                    <li>Hospitales: Máxima capacidad</li>
+                                </ul>
+
+                                <h3>4. Scout/Intel</h3>
+                                <p><strong>Responsabilidades:</strong></p>
+                                <ul>
+                                    <li>Reconocimiento enemigo</li>
+                                    <li>Reportar movimientos</li>
+                                    <li>Identificar objetivos</li>
+                                </ul>
+                                <p><strong>Requisitos:</strong></p>
+                                <ul>
+                                    <li>Comandantes: Belisarius, Cao Cao</li>
+                                    <li>Velocidad: Máxima march speed</li>
+                                    <li>Comunicación: Reportes constantes</li>
+                                </ul>
+
+                                <h3>5. Farmer/Support</h3>
+                                <p><strong>Responsabilidades:</strong></p>
+                                <ul>
+                                    <li>Gathering masivo de recursos</li>
+                                    <li>Proveer recursos a alianza</li>
+                                    <li>Support en garrison</li>
+                                </ul>
+                                <p><strong>Requisitos:</strong></p>
+                                <ul>
+                                    <li>Comandantes: Joan, Seondeok, Cleo</li>
+                                    <li>Enfoque: Economía sobre combate</li>
+                                    <li>Actividad: Gathering 24/7</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>🗺️ Map Control Strategies</span>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>Control de Pases (Passes)</h3>
+                                <p>Los <strong>pases</strong> son puntos estratégicos que conectan zonas del mapa.</p>
+
+                                <h4>Importancia</h4>
+                                <ul class="icon-list">
+                                    <li><strong>Chokepoints:</strong> Controlan flujo de tropas</li>
+                                    <li><strong>Defensibles:</strong> Fáciles de defender, difíciles de atacar</li>
+                                    <li><strong>Estratégicos:</strong> Acceso a zonas ricas en recursos</li>
+                                </ul>
+
+                                <h4>Estrategia de Control</h4>
+                                <ul class="icon-list">
+                                    <li><strong>Conquista temprana:</strong> Toma pases en fase 1 de KvK</li>
+                                    <li><strong>Garrison permanente:</strong> Mantén tropas 24/7</li>
+                                    <li><strong>Fortificación:</strong> Construye forts cerca de pases</li>
+                                    <li><strong>Rotaciones:</strong> Cambia garrison regularmente</li>
+                                </ul>
+
+                                <h3>Control de Holy Sites</h3>
+                                <p>Los <strong>Holy Sites</strong> otorgan buffs masivos.</p>
+
+                                <h4>Beneficios</h4>
+                                <ul>
+                                    <li>+30% Attack/Defense para toda la alianza</li>
+                                    <li>Bonos de recursos</li>
+                                    <li>Prestigio enorme</li>
+                                </ul>
+
+                                <h4>Estrategia</h4>
+                                <ul class="icon-list">
+                                    <li><strong>Prioridad máxima:</strong> Conquista y defiende a toda costa</li>
+                                    <li><strong>Garrison masivo:</strong> Múltiples jugadores defendiendo</li>
+                                    <li><strong>Rotaciones perfectas:</strong> Nunca dejes el site sin garrison</li>
+                                    <li><strong>Contraataques:</strong> Responde inmediatamente a ataques</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>⚡ Advanced Combat Tactics</span>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <h3>Swarming (Enjambre)</h3>
+                                <p>Táctica de atacar con múltiples marchas pequeñas simultáneamente.</p>
+
+                                <h4>Cómo Ejecutar</h4>
+                                <ul class="icon-list">
+                                    <li><strong>Coordinación:</strong> 5-10 jugadores atacan al mismo tiempo</li>
+                                    <li><strong>Timing:</strong> Todas las marchas llegan al mismo segundo</li>
+                                    <li><strong>Target:</strong> Enfócate en un objetivo específico</li>
+                                    <li><strong>Overwhelm:</strong> Sobrepasa capacidad de garrison enemiga</li>
+                                </ul>
+
+                                <h4>Ventajas</h4>
+                                <ul>
+                                    <li>Difícil de defender contra múltiples ataques</li>
+                                    <li>Divide fuerzas enemigas</li>
+                                    <li>Menor riesgo individual</li>
+                                </ul>
+
+                                <h3>Baiting (Cebo)</h3>
+                                <p>Atraer enemigos a una trampa.</p>
+
+                                <h4>Ejecución</h4>
+                                <ul class="icon-list">
+                                    <li><strong>Cebo:</strong> Jugador débil se expone</li>
+                                    <li><strong>Trampa:</strong> Aliados ocultos cerca</li>
+                                    <li><strong>Ataque:</strong> Cuando enemigo ataca el cebo, contraatacas</li>
+                                    <li><strong>Timing:</strong> Coordina para atrapar al enemigo</li>
+                                </ul>
+
+                                <h3>Pincer Movement (Tenaza)</h3>
+                                <p>Atacar desde múltiples direcciones simultáneamente.</p>
+
+                                <h4>Ejecución</h4>
+                                <ul class="icon-list">
+                                    <li><strong>División:</strong> Divide fuerzas en 2-3 grupos</li>
+                                    <li><strong>Posicionamiento:</strong> Rodea al enemigo</li>
+                                    <li><strong>Ataque simultáneo:</strong> Ataca desde todos los lados</li>
+                                    <li><strong>Corta retirada:</strong> Bloquea rutas de escape</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="meta">
+                <h2>Meta Strategies 2026</h2>
+
+                <div class="card">
+                    <h3>Tendencias Actuales</h3>
+
+                    <h4>1. Cavalry Meta Dominance</h4>
+                    <p>La caballería domina el meta actual debido a:</p>
+                    <ul class="icon-list">
+                        <li><strong>Movilidad:</strong> Velocidad superior para kiting</li>
+                        <li><strong>Burst damage:</strong> Alto daño en corto tiempo</li>
+                        <li><strong>Comandantes fuertes:</strong> XY, Saladin, Genghis</li>
+                    </ul>
+
+                    <h4>2. Skill Damage Focus</h4>
+                    <p>El daño de habilidades (skill damage) es más importante que stats básicos:</p>
+                    <ul class="icon-list">
+                        <li><strong>YSG meta:</strong> Daño AoE masivo</li>
+                        <li><strong>Guan Yu:</strong> Habilidades devastadoras</li>
+                        <li><strong>Equipo:</strong> Prioriza skill damage sobre attack</li>
+                    </ul>
+
+                    <h4>3. Mixed Troop Compositions</h4>
+                    <p>Composiciones mixtas son más efectivas que mono-troop:</p>
+                    <ul class="icon-list">
+                        <li><strong>Versatilidad:</strong> Counter a múltiples tipos</li>
+                        <li><strong>Synergy:</strong> Comandantes que buffean múltiples tipos</li>
+                        <li><strong>Flexibilidad:</strong> Adaptación a situaciones</li>
+                    </ul>
+
+                    <h4>4. Hospital Capacity Meta</h4>
+                    <p>Maximizar hospitales es crucial:</p>
+                    <ul class="icon-list">
+                        <li><strong>4-5 hospitales:</strong> Nivel 25 cada uno</li>
+                        <li><strong>Curar > Entrenar:</strong> Proteger tropas es prioridad</li>
+                        <li><strong>Speedups de curación:</strong> Guarda para KvK</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="minmax">
+                <h2>Min-Maxing Avanzado</h2>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>📊 Stat Optimization</h3>
+                        <h4>Prioridad de Stats</h4>
+                        <ol>
+                            <li><strong>Skill Damage:</strong> +30% es masivo</li>
+                            <li><strong>Attack:</strong> Daño base</li>
+                            <li><strong>Defense:</strong> Supervivencia</li>
+                            <li><strong>Health:</strong> Menos importante que defense</li>
+                            <li><strong>March Speed:</strong> Movilidad</li>
+                        </ol>
+
+                        <h4>Breakpoints</h4>
+                        <ul>
+                            <li><strong>50M poder:</strong> Competitivo en KvK</li>
+                            <li><strong>70M poder:</strong> Top tier player</li>
+                            <li><strong>100M+ poder:</strong> Whale territory</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>⚡ Speedup Management</h3>
+                        <h4>Prioridades</h4>
+                        <ol>
+                            <li><strong>Universales:</strong> Solo para T5 o emergencias</li>
+                            <li><strong>Investigación:</strong> Para tecnologías críticas</li>
+                            <li><strong>Construcción:</strong> Para City Hall 21+</li>
+                            <li><strong>Entrenamiento:</strong> Solo durante eventos</li>
+                            <li><strong>Curación:</strong> Guarda para KvK</li>
+                        </ol>
+
+                        <h4>Acumulación</h4>
+                        <ul>
+                            <li>Completa TODOS los eventos</li>
+                            <li>Participa en KvK activamente</li>
+                            <li>Compra bundles con mejor valor</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>💎 Gem Efficiency</h3>
+                        <h4>Mejor ROI</h4>
+                        <ol>
+                            <li><strong>VIP Points:</strong> 100 gems = 100 VIP (1:1)</li>
+                            <li><strong>Wheel of Fortune:</strong> 10K gems = 10-20 sculptures</li>
+                            <li><strong>Segundo constructor:</strong> 5K gems (one-time)</li>
+                        </ol>
+
+                        <h4>Evitar</h4>
+                        <ul>
+                            <li>❌ Acelerar construcciones</li>
+                            <li>❌ Comprar recursos</li>
+                            <li>❌ Cofres aleatorios</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>🎯 Power Efficiency</h3>
+                        <h4>Maximizar Poder</h4>
+                        <ul>
+                            <li><strong>Tropas T4/T5:</strong> +10-20 poder cada una</li>
+                            <li><strong>Investigaciones:</strong> +Miles de poder</li>
+                            <li><strong>Edificios:</strong> +Cientos de poder</li>
+                            <li><strong>Comandantes:</strong> +Poder por nivel y stars</li>
+                        </ul>
+
+                        <h4>Dead Troops = Lost Power</h4>
+                        <p>Cada tropa muerta es poder perdido permanentemente. Prioriza supervivencia sobre kills.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="psicologia">
+                <h2>Psicología y Diplomacia</h2>
+
+                <div class="card">
+                    <h3>Diplomacia en RoK</h3>
+
+                    <h4>NAPs (Non-Aggression Pacts)</h4>
+                    <p>Acuerdos de no agresión entre alianzas.</p>
+                    <ul class="icon-list">
+                        <li><strong>Beneficios:</strong> Paz, enfoque en otros enemigos</li>
+                        <li><strong>Riesgos:</strong> Pueden romperse, traiciones</li>
+                        <li><strong>Negociación:</strong> Líderes R4/R5 negocian términos</li>
+                    </ul>
+
+                    <h4>Alianzas Temporales</h4>
+                    <p>Unirse con otras alianzas para objetivos comunes.</p>
+                    <ul class="icon-list">
+                        <li><strong>Contra enemigo común:</strong> "El enemigo de mi enemigo..."</li>
+                        <li><strong>KvK coordination:</strong> Múltiples alianzas del mismo reino</li>
+                        <li><strong>Temporal:</strong> Solo mientras sea mutuamente beneficioso</li>
+                    </ul>
+
+                    <h4>Psychological Warfare</h4>
+                    <ul class="icon-list">
+                        <li><strong>Intimidación:</strong> Mostrar fuerza para evitar ataques</li>
+                        <li><strong>Desinformación:</strong> Confundir enemigos sobre tus planes</li>
+                        <li><strong>Morale:</strong> Mantén alta la moral de tu alianza</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="errores">
+                <h2>Errores Comunes a Evitar</h2>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>❌ Early Game</h3>
+                        <ul>
+                            <li>No unirse a alianza inmediatamente</li>
+                            <li>Gastar gemas en acelerar construcciones</li>
+                            <li>Mejorar todos los edificios sin priorizar</li>
+                            <li>No usar ayuda de alianza</li>
+                            <li>Invertir en comandantes incorrectos</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>❌ Mid Game</h3>
+                        <ul>
+                            <li>No guardar speedups para T4 push</li>
+                            <li>Dispersar sculptures en múltiples comandantes</li>
+                            <li>No especializar en un tipo de tropa</li>
+                            <li>Ignorar eventos importantes</li>
+                            <li>No prepararse para KvK</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>❌ Late Game</h3>
+                        <ul>
+                            <li>Mezclar tiers de tropas (T3 con T4)</li>
+                            <li>No maximizar hospitales</li>
+                            <li>Pelear batallas que no puedes ganar</li>
+                            <li>No coordinar con alianza en KvK</li>
+                            <li>Desperdiciar tropas T5 innecesariamente</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>❌ General</h3>
+                        <ul>
+                            <li>No hacer login diario</li>
+                            <li>Ignorar comunicación de alianza</li>
+                            <li>Atacar aliados o NAPs</li>
+                            <li>No proteger recursos antes de desconectar</li>
+                            <li>Gastar dinero sin estrategia</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="text-center">
+                <div class="card"
+                    style="background: linear-gradient(135deg, rgba(30, 58, 95, 0.4) 0%, rgba(212, 175, 55, 0.2) 100%);">
+                    <h2>🎉 ¡Felicidades!</h2>
+                    <p style="font-size: 1.2rem;">Has completado la guía completa de Rise of Kingdoms. Ahora tienes todo
+                        el conocimiento necesario para dominar el juego.</p>
+
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                        <a href="../index.html" class="btn btn-primary">Volver al Inicio</a>
+                        <a href="glosario.html" class="btn">Ver Glosario</a>
+                    </div>
+
+                    <p style="margin-top: 2rem; font-size: 0.95rem;">
+                        ¿Tienes preguntas? Únete a la comunidad de RoK en Reddit, Discord o Facebook para conectar con
+                        otros jugadores.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>Guía Completa de Rise of Kingdoms</strong></p>
+            <p>Creado por la comunidad para la comunidad • 2026</p>
+            <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-muted);">
+                Esta guía no está afiliada con Lilith Games. Rise of Kingdoms es una marca registrada de Lilith Games.
+            </p>
+            <div class="footer-links">
+                <a href="../index.html">Inicio</a>
+                <a href="glosario.html">Glosario</a>
+                <a href="avanzado.html">Guías Avanzadas</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
