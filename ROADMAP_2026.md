@@ -49,7 +49,8 @@ Este documento detalla los planes de expansión y mejoras técnicas para elevar 
 
 1.  **Fase Actual:** Implementación de Herramientas Estratégicas (Calculadoras).
 2.  **✅ Fase Completada:** Implementación de Herramientas Estratégicas y Guía Jumper. [DONE]
-3.  **Futuro:** Sistema de Favoritos y Árboles de Talentos.
+3.  **✅ Fase Completada:** Árboles de Talentos Visuales (Master Builds). [IMPLEMENTADO]
+4.  **Siguiente:** Guía de Armamentos y Formaciones.
 
 ---
 
