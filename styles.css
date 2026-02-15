@@ -36,6 +36,10 @@
     --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
     --transition-premium: 0.5s var(--ease-out-expo);
     --transition-fast: 0.25s ease;
+
+    /* Favoritos */
+    --fav-star: #ffd700;
+    --fav-star-empty: rgba(255, 255, 255, 0.2);
 }
 
 /* ===================================
@@ -2466,3 +2470,18 @@ mark {
         grid-template-columns: 1fr;
     }
 }
+/* FAVORITOS */
+.fav-btn { background: none; border: none; color: var(--fav-star-empty); font-size: 1.5rem; cursor: pointer; transition: var(--transition-premium); padding: 0; line-height: 1; z-index: 10; }
+.fav-btn.active { color: var(--fav-star); text-shadow: 0 0 10px rgba(255,215,0,0.4); }
+.fav-btn:hover { transform: scale(1.2); color: var(--fav-star); }
+#favoritesContainer { margin-top: 2rem; }
+.empty-favorites { text-align: center; padding: 3rem; background: rgba(255,255,255,0.02); border: 1px dashed var(--navy-border); border-radius: 12px; color: var(--text-dim); }
+.favorites-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+.fav-card { background: var(--navy-800); border: 1px solid var(--navy-border); padding: 1.2rem; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; transition: var(--transition-premium); }
+.fav-card:hover { border-color: var(--gold-primary); transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); }
+.fav-card-info { display: flex; flex-direction: column; gap: 0.3rem; }
+.fav-category { font-size: 0.7rem; text-transform: uppercase; color: var(--text-dim); letter-spacing: 1px; }
+.fav-name { font-size: 1.1rem; font-weight: 700; color: white; text-decoration: none; }
+.fav-name:hover { color: var(--gold-primary); }
+.commander-card { position: relative; }
+.commander-card .fav-btn { position: absolute; top: 10px; right: 15px; }

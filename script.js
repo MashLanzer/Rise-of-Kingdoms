@@ -28,10 +28,10 @@ function initializeApp() {
   initAnimations();
   initParticles();
   initScrollEffects();
-  initActiveNavLink();
   initGlobalSearch();
   initTooltips();
   initRevealAnimations();
+  initFavorites();
 
   console.log('🏰 Rise of Kingdoms Guide - Initialized');
 }
@@ -753,6 +753,89 @@ function saveToSearchHistory(query) {
   history = history.slice(0, 10);
 
   localStorage.setItem('rokSearchHistory', JSON.stringify(history));
+}
+
+// ===================================
+// SISTEMA DE FAVORITOS
+// ===================================
+
+let favorites = JSON.parse(localStorage.getItem('rokFavorites') || '[]');
+
+function initFavorites() {
+  console.log('⭐ Iniciando sistema de favoritos...');
+  renderFavoritesDashboard();
+
+  // Escuchar clicks en botones de favoritos (delegación de eventos)
+  document.addEventListener('click', (e) => {
+    const favBtn = e.target.closest('.fav-btn');
+    if (favBtn) {
+      const id = favBtn.getAttribute('data-fav-id');
+      const category = favBtn.getAttribute('data-fav-category');
+      const name = favBtn.getAttribute('data-fav-name');
+      const url = favBtn.getAttribute('data-fav-url');
+
+      toggleFavorite({ id, category, name, url });
+
+      // Actualizar UI del botón
+      updateFavButtonUI(favBtn, id);
+    }
+  });
+}
+
+function toggleFavorite(item) {
+  const index = favorites.findIndex(f => f.id === item.id);
+
+  if (index === -1) {
+    favorites.push(item);
+    showNotification(`⭐ ${item.name} añadido a favoritos`);
+  } else {
+    favorites.splice(index, 1);
+    showNotification(`❌ ${item.name} eliminado de favoritos`);
+  }
+
+  localStorage.setItem('rokFavorites', JSON.stringify(favorites));
+  renderFavoritesDashboard();
+}
+
+function updateFavButtonUI(btn, id) {
+  const isFav = favorites.some(f => f.id === id);
+  if (isFav) {
+    btn.classList.add('active');
+    btn.innerHTML = '★'; // Estrella llena
+  } else {
+    btn.classList.remove('active');
+    btn.innerHTML = '☆'; // Estrella vacía
+  }
+}
+
+function renderFavoritesDashboard() {
+  const container = document.getElementById('favoritesContainer');
+  if (!container) return;
+
+  if (favorites.length === 0) {
+    container.innerHTML = `
+      <div class="empty-favorites">
+        <p>No tienes favoritos guardados aún.</p>
+        <p style="font-size: 0.8rem; opacity: 0.7;">¡Haz clic en la estrella de un comandante o guía para guardarlo aquí!</p>
+      </div>
+    `;
+    return;
+  }
+
+  let html = '<div class="favorites-grid">';
+  favorites.forEach(fav => {
+    html += `
+      <div class="fav-card">
+        <div class="fav-card-info">
+          <span class="fav-category">${fav.category}</span>
+          <a href="${fav.url}" class="fav-name">${fav.name}</a>
+        </div>
+        <button class="fav-btn active" data-fav-id="${fav.id}" data-fav-name="${fav.name}" data-fav-url="${fav.url}" data-fav-category="${fav.category}">★</button>
+      </div>
+    `;
+  });
+  html += '</div>';
+  container.innerHTML = html;
 }
 
 // ===================================
