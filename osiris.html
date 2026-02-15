@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrategia: Arca de Osiris - Rise of Kingdoms Academy</title>
+    <meta name="description"
+        content="Domina el campo de batalla en el Arca de Osiris. Tácticas de despliegue, control de objetivos y logística para ganar el evento de alianza más competitivo.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">RoK Academy</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">Guías Principales</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="civilizaciones.html">Civilizaciones</a></li>
+                            <li><a href="comandantes.html">Comandantes</a></li>
+                            <li><a href="builds.html">Árboles de Talentos</a></li>
+                            <li><a href="tier-lists.html">Tier Lists</a></li>
+                            <li><a href="equipment.html">Equipment</a></li>
+                            <li><a href="vip.html">VIP</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <a class="dropdown-toggle">Sistemas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="osiris.html" class="active">Arca de Osiris</a></li>
+                            <li><a href="armamentos.html">Armamentos y Formaciones</a></li>
+                            <li><a href="edificios.html">Edificios</a></li>
+                            <li><a href="tropas.html">Tropas</a></li>
+                            <li><a href="alianzas.html">Alianzas</a></li>
+                            <li><a href="eventos.html">Eventos</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">Más</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="jumper-guide.html">🚀 Guía Jumper</a></li>
+                            <li><a href="kvk.html">Especial KvK</a></li>
+                            <li><a href="avanzado.html">Guías Avanzadas</a></li>
+                            <li><a href="calculadora-aceleradores.html">🧮 Calculadora Speedups</a></li>
+                        </ul>
+                    </li>
+                    <li><button class="search-btn" id="globalSearchBtn">🔍 Buscar</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero osiris-hero">
+            <div class="hero-content">
+                <span class="badge badge-legendary">ALIANZA VS ALIANZA</span>
+                <h1>🏺 El Arca de Osiris</h1>
+                <p>La máxima competición de Rise of Kingdoms. Estrategia, coordinación y velocidad para llevar a tu
+                    alianza a la gloria eterna.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Introducción Tactica -->
+            <section class="reveal">
+                <div class="glass-card main-osiris">
+                    <h2>¿Cómo se gana el Arca?</h2>
+                    <p>El Arca de Osiris no es solo una batalla de fuerza bruta; es una carrera de puntos estratégicos.
+                        Se gana controlando estructuras y capturando el Arca central.</p>
+
+                    <div class="osiris-stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-val">⚓</span>
+                            <h3>Estructuras</h3>
+                            <p>Generan puntos pasivos cada minuto por segundo.</p>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-val">📦</span>
+                            <h3>El Arca</h3>
+                            <p>Puntos masivos inmediatos al ser entregada en una estructura controlada.</p>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-val">⚔️</span>
+                            <h3>Combate</h3>
+                            <p>Puntos por eliminar unidades enemigas (menos eficiente pero vital).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Objetivos Clave -->
+            <section class="reveal" style="margin-top: 4rem;">
+                <div class="section-header">
+                    <h2>📍 Objetivos Prioritarios</h2>
+                </div>
+                <div class="objectives-grid">
+                    <div class="obj-card">
+                        <h3>Obeliscos</h3>
+                        <p>Permiten a los jugadores teletransportarse a la zona de combate. **¡Són el primer objetivo
+                            absoluto!**</p>
+                        <div class="priority-high">PRIORIDAD: S+</div>
+                    </div>
+                    <div class="obj-card">
+                        <h3>Santuarios de Vida</h3>
+                        <p>Aumentan la velocidad de curación de todos los miembros de la alianza en el campo.</p>
+                        <div class="priority-med">PRIORIDAD: ALTA</div>
+                    </div>
+                    <div class="obj-card">
+                        <h3>Santuarios de Guerra</h3>
+                        <p>Aumentan el ataque y la defensa de las tropas aliadas.</p>
+                        <div class="priority-med">PRIORIDAD: ALTA</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Roles en el Campo -->
+            <section class="reveal" style="margin-top: 4rem;">
+                <div class="card">
+                    <h2>🎭 Roles de Batalla</h2>
+                    <table class="osiris-table">
+                        <thead>
+                            <tr>
+                                <th>Rol</th>
+                                <th>Función Principal</th>
+                                <th>Comandantes Sugeridos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Runners</strong></td>
+                                <td>Capturar edificios vacíos y el Arca central.</td>
+                                <td>Belisario, Cao Cao (Máxima velocidad).</td>
+                            </tr>
+                            <td><strong>Rally Leads</strong></td>
+                            <td>Liderar ataques masivos contra obeliscos y caps.</td>
+                            <td>Nevsky, Minamoto, Scipio P.</td>
+                            <tr>
+                            </tr>
+                            <tr>
+                                <td><strong>Garrison Leads</strong></td>
+                                <td>Mantener el control de los obeliscos y santuarios.</td>
+                                <td>Zhuge Liang, Flavio, Mulan.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gatherers</strong></td>
+                                <td>Recolectar orbes de vida en el mapa.</td>
+                                <td>Cualquier recolector rápido.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Estratregas de Apertura -->
+            <section class="reveal" style="margin-top: 4rem;">
+                <div class="section-header">
+                    <h2>🚀 Estrategia de Apertura (First Split)</h2>
+                </div>
+                <div class="glass-card">
+                    <ol class="step-list">
+                        <li><strong>Doble Salto:</strong> Tira varios teletransportes de nivel 1 al obelisco enemigo
+                            para bloquear su espacio.</li>
+                        <li><strong>Invocación Rápida:</strong> Los runners deben salir antes de que se abran los pases
+                            para ganar milisegundos.</li>
+                        <li><strong>Control de Orbes:</strong> No ignores las orbes; a veces diez puntos deciden un Arca
+                            de Osiris de alta intensidad.</li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>RoK Academy - Osiris Masterclass</strong></p>
+            <p>Estrategia de élite para alianzas competitivas.</p>
+            <div class="footer-links">
+                <a href="index.html">Inicio</a>
+                <a href="alianzas.html">Alianzas</a>
+                <a href="armamentos.html">Meta SoC</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Búsqueda -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <div class="search-input-container">
+                    <input type="text" class="search-input" id="globalSearchInput"
+                        placeholder="Buscar tácticas de osiris, roles, obeliscos...">
+                </div>
+                <button class="close-search" id="closeSearch">✕</button>
+            </div>
+            <div class="search-modal-body">
+                <div id="searchResults"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="search.js"></script>
+    <script src="script.js"></script>
+
+    <style>
+        .osiris-hero {
+            background: linear-gradient(135deg, rgba(8, 10, 15, 0.95) 0%, rgba(60, 40, 10, 0.85) 100%),
+                url('images/osiris-bg.webp') center/cover;
+            border-bottom: 2px solid var(--gold-primary);
+        }
+
+        .osiris-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid var(--navy-border);
+        }
+
+        .stat-val {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .obj-card {
+            background: var(--navy-800);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--gold-primary);
+            transition: var(--transition-premium);
+        }
+
+        .obj-card:hover {
+            transform: scale(1.02);
+            background: var(--navy-700);
+        }
+
+        .priority-high {
+            color: #f5576c;
+            font-weight: 900;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+        }
+
+        .priority-med {
+            color: var(--gold-primary);
+            font-weight: 900;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+        }
+
+        .osiris-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .osiris-table th,
+        .osiris-table td {
+            text-align: left;
+            padding: 1rem;
+            border-bottom: 1px solid var(--navy-border);
+        }
+
+        .osiris-table th {
+            color: var(--gold-primary);
+            border-bottom: 2px solid var(--gold-primary);
+        }
+
+        .step-list {
+            padding-left: 1.5rem;
+        }
+
+        .step-list li {
+            margin-bottom: 1.5rem;
+            color: var(--text-medium);
+            position: relative;
+        }
+
+        .step-list li strong {
+            color: var(--gold-light);
+        }
+
+        @media (max-width: 768px) {
+            .osiris-stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+
+</html>

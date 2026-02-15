@@ -51,7 +51,8 @@ Este documento detalla los planes de expansión y mejoras técnicas para elevar 
 2.  **✅ Fase Completada:** Implementación de Herramientas Estratégicas y Guía Jumper. [DONE]
 3.  **✅ Fase Completada:** Árboles de Talentos Visuales (Master Builds). [IMPLEMENTADO]
 4.  **✅ Fase Completada:** Guía de Armamentos y Formaciones (Meta de SoC). [IMPLEMENTADO]
-5.  **Siguiente:** Estrategia del Arca de Osiris.
+5.  **✅ Fase Completada:** Estrategia del Arca de Osiris. [IMPLEMENTADO]
+6.  **Siguiente:** Sistema de Favoritos de Comandantes.
 
 ---
 
