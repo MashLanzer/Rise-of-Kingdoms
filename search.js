@@ -56,7 +56,8 @@ const searchIndex = {
         { id: 'kvk-guide', name: 'Especial KvK (SoC & KvK 1)', keywords: ['kvk', 'guerra', 'mapas', 'soc', 'hero anthem', 'strife of eight'], url: 'kvk.html', category: 'Guías', description: 'Manual de supervivencia y análisis de mapas de guerra' }
     ],
     herramientas: [
-        { id: 'calculadora', name: 'Calculadora de Recursos', keywords: ['calculadora', 'recursos', 'speedups', 'tiempo'], url: 'calculadora.html', category: 'Herramientas', description: 'Calcula tiempo y speedups necesarios' },
+        { id: 'calculadora-speedups', name: 'Calculadora de Aceleradores', keywords: ['calculadora', 'aceleradores', 'speedups', 'tiempo', 'investigación', 'construcción'], url: 'calculadora-aceleradores.html', category: 'Herramientas', description: 'Calcula tu inventario total de aceleradores y planifica objetivos' },
+        { id: 'calculadora', name: 'Calculadora de Recursos', keywords: ['calculadora', 'recursos', 'farmear', 'tiempo'], url: 'calculadora.html', category: 'Herramientas', description: 'Calcula tiempo y speedups necesarios para recursos' },
         { id: 'comparador', name: 'Comparador de Civilizaciones', keywords: ['comparador', 'comparar', 'civilizaciones', 'vs'], url: 'comparador.html', category: 'Herramientas', description: 'Compara civilizaciones lado a lado' }
     ]
 };
