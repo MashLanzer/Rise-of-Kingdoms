@@ -48,7 +48,7 @@ Este documento detalla los planes de expansión y mejoras técnicas para elevar 
 ## 🛠️ 3. Próximos Pasos Inmediatos
 
 1.  **Fase Actual:** Implementación de Herramientas Estratégicas (Calculadoras).
-2.  **Siguiente:** Guía de "Jumper" (Salto de Reino).
+2.  **✅ Fase Completada:** Implementación de Herramientas Estratégicas y Guía Jumper. [DONE]
 3.  **Futuro:** Sistema de Favoritos y Árboles de Talentos.
 
 ---
