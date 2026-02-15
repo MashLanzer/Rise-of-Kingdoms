@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Guía completa en español de Rise of Kingdoms - Estrategias, comandantes, civilizaciones, tropas y todo lo que necesitas para dominar el juego">
+  <meta name="keywords" content="Rise of Kingdoms, RoK, guía, español, comandantes, civilizaciones, estrategia">
+  <title>Guía Completa de Rise of Kingdoms 2026 - Inicio</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Pantalla de carga -->
+  <div class="loading">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <!-- Partículas de fondo -->
+  <div class="particles"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        Rise of Kingdoms
+      </a>
+
+      <button class="search-btn" id="globalSearchBtn">
+        🔍 Buscar
+      </button>
+
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle">Guías Principales</a>
+            <ul class="dropdown-menu">
+              <li><a href="civilizaciones.html">Civilizaciones</a></li>
+              <li><a href="comandantes.html">Comandantes</a></li>
+              <li><a href="tier-lists.html">Tier Lists</a></li>
+              <li><a href="equipment.html">Equipment</a></li>
+              <li><a href="vip.html">VIP</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle">Sistemas</a>
+            <ul class="dropdown-menu">
+              <li><a href="edificios.html">Edificios</a></li>
+              <li><a href="tropas.html">Tropas</a></li>
+              <li><a href="alianzas.html">Alianzas</a></li>
+              <li><a href="recursos.html">Recursos</a></li>
+              <li><a href="tecnologia.html">Tecnología</a></li>
+              <li><a href="eventos.html">Eventos</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle">Más</a>
+            <ul class="dropdown-menu">
+              <li><a href="avanzado.html">Guías Avanzadas</a></li>
+              <li><a href="calculadora.html">🧮 Calculadora</a></li>
+              <li><a href="comparador.html">⚖️ Comparador</a></li>
+              <li><a href="glosario.html">Glosario y FAQ</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>🏰 Guía Completa de Rise of Kingdoms</h1>
+        <p>Domina el arte de la estrategia, conquista reinos y construye tu imperio. La guía definitiva en español para
+          convertirte en un gobernador legendario.</p>
+        <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
+          <a href="#inicio-rapido" class="btn btn-primary">Comenzar Ahora</a>
+          <a href="comandantes.html" class="btn">Ver Comandantes</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- ¿Qué es Rise of Kingdoms? -->
+      <section id="que-es">
+        <h2>¿Qué es Rise of Kingdoms?</h2>
+        <div class="card">
+          <p><strong>Rise of Kingdoms</strong> (anteriormente conocido como Rise of Civilizations) es un juego de
+            estrategia en tiempo real (RTS) para dispositivos móviles desarrollado por Lilith Games. Lanzado en 2018, se
+            ha convertido en uno de los juegos de estrategia más populares del mundo, con millones de jugadores activos.
+          </p>
+
+          <p>En RoK, asumes el rol de un <strong>gobernador</strong> que debe construir y expandir su civilización desde
+            cero. El juego combina elementos de:</p>
+
+          <ul class="icon-list reveal reveal-up">
+            <li><strong data-tooltip="Edificios básicos y avanzados que definen tu progreso.">Construcción de
+                ciudades:</strong> Desarrolla tu capital con edificios estratégicos, mejora tus
+              defensas y optimiza la producción de recursos.</li>
+            <li><strong data-tooltip="Batallas en tiempo real donde la táctica lo es todo.">Combate táctico:</strong>
+              Lidera ejércitos en batallas épicas contra bárbaros, jugadores
+              enemigos y en eventos masivos como <span
+                data-tooltip="Kingdom vs Kingdom: Guerra épica entre servidores.">Kingdom vs Kingdom (KvK)</span>.</li>
+            <li><strong data-tooltip="Comida, Madera, Piedra y Oro: La moneda del progreso.">Gestión de
+                recursos:</strong> Administra comida, madera, piedra y oro para mantener tu
+              civilización próspera.</li>
+            <li><strong data-tooltip="La base del éxito en RoK: Trabajar juntos.">Diplomacia y alianzas:</strong> Únete
+              a alianzas poderosas, coordina estrategias y conquista
+              territorios juntos.</li>
+            <li><strong data-tooltip="Héroes históricos con habilidades únicas para liderar tus tropas.">Comandantes
+                legendarios:</strong> Recluta y mejora héroes históricos como Julio César, Juana de
+              Arco, Sun Tzu y muchos más.</li>
+          </ul>
+
+          <p>El juego destaca por su <strong>mapa abierto sin fronteras</strong>, donde todos los jugadores de un reino
+            comparten el mismo territorio. Esto crea una experiencia única de estrategia en tiempo real donde la
+            coordinación, el timing y las alianzas son fundamentales para el éxito.</p>
+        </div>
+      </section>
+
+      <!-- ¿Por qué jugar Rise of Kingdoms? -->
+      <section id="por-que-jugar">
+        <h2>¿Por qué jugar Rise of Kingdoms?</h2>
+        <div class="card-grid">
+          <div class="card reveal reveal-up">
+            <h3>🌍 Mapa Abierto Infinito</h3>
+            <p>Explora un mapa masivo sin fronteras donde puedes moverte libremente, conquistar territorios y
+              enfrentarte a miles de jugadores en tiempo real.</p>
+          </div>
+
+          <div class="card reveal reveal-up">
+            <h3>👑 Comandantes Históricos</h3>
+            <p>Colecciona y mejora más de 50 comandantes legendarios de diferentes civilizaciones y épocas históricas,
+              cada uno con habilidades únicas.</p>
+          </div>
+
+          <div class="card reveal reveal-up">
+            <h3>⚔️ Combate Estratégico</h3>
+            <p>Las batallas no se ganan solo con números. La composición de tropas, los comandantes, el terreno y la
+              estrategia son cruciales para la victoria.</p>
+          </div>
+
+          <div class="card reveal reveal-up">
+            <h3>🤝 Alianzas Poderosas</h3>
+            <p>Únete a alianzas con jugadores de todo el mundo. Coordina ataques, defiende territorios y participa en
+              guerras épicas de reinos.</p>
+          </div>
+
+          <div class="card reveal reveal-up">
+            <h3>🎯 Eventos Constantes</h3>
+            <p>Participa en eventos diarios, semanales y especiales que ofrecen recompensas valiosas y mantienen el
+              juego siempre fresco.</p>
+          </div>
+
+          <div class="card reveal reveal-up">
+            <h3>📈 Progresión Profunda</h3>
+            <p>Con 8 civilizaciones, cientos de tecnologías, múltiples tipos de tropas y sistemas de mejora, siempre hay
+              algo nuevo que optimizar.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Novedades 2026 -->
+      <section id="novedades">
+        <h2>Novedades y Actualizaciones 2026</h2>
+        <div class="card">
+          <h3>🆕 Últimas Actualizaciones</h3>
+          <p>Rise of Kingdoms continúa evolucionando con nuevas características y mejoras. Aquí están las novedades más
+            importantes de 2026:</p>
+
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span>Nuevos Comandantes Legendarios</span>
+                <span class="accordion-icon">▼</span>
+              </div>
+              <div class="accordion-content">
+                <div class="accordion-body">
+                  <p>Se han añadido nuevos comandantes legendarios con mecánicas innovadoras:</p>
+                  <ul>
+                    <li><strong>Comandantes de Temporada:</strong> Héroes exclusivos disponibles por tiempo limitado con
+                      habilidades únicas.</li>
+                    <li><strong>Comandantes de Conquista:</strong> Especializados en KvK y batallas a gran escala.</li>
+                    <li><strong>Mejoras de Balance:</strong> Ajustes a comandantes existentes para mantener el meta
+                      equilibrado.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span>Sistema de Equipo Mejorado</span>
+                <span class="accordion-icon">▼</span>
+              </div>
+              <div class="accordion-content">
+                <div class="accordion-body">
+                  <p>El sistema de equipo ha recibido una revisión completa:</p>
+                  <ul>
+                    <li><strong>Nuevos Sets de Equipo:</strong> Conjuntos especializados para diferentes roles (tanque,
+                      DPS, soporte).</li>
+                    <li><strong>Forja Mejorada:</strong> Nuevas opciones de crafteo y mejora de estadísticas.</li>
+                    <li><strong>Equipo Legendario Plus:</strong> Nivel superior de equipo con bonificaciones masivas.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span>Modo Kingdom vs Kingdom (KvK) 4.0</span>
+                <span class="accordion-icon">▼</span>
+              </div>
+              <div class="accordion-content">
+                <div class="accordion-body">
+                  <p>La cuarta iteración de KvK trae cambios revolucionarios:</p>
+                  <ul>
+                    <li><strong>Mapa Expandido:</strong> Territorios más grandes con nuevos puntos estratégicos.</li>
+                    <li><strong>Mecánicas de Asedio:</strong> Nuevas estructuras defensivas y ofensivas.</li>
+                    <li><strong>Recompensas Mejoradas:</strong> Mejores premios por participación y victoria.</li>
+                    <li><strong>Sistema de Ranking:</strong> Clasificación individual y de alianza más detallada.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <span>Optimizaciones de Interfaz</span>
+                <span class="accordion-icon">▼</span>
+              </div>
+              <div class="accordion-content">
+                <div class="accordion-body">
+                  <p>Mejoras en la experiencia de usuario:</p>
+                  <ul>
+                    <li><strong>UI Rediseñada:</strong> Interfaz más limpia y accesible.</li>
+                    <li><strong>Gestión de Tropas:</strong> Nuevas herramientas para administrar ejércitos.</li>
+                    <li><strong>Filtros Avanzados:</strong> Búsqueda mejorada de comandantes, equipo y tecnologías.</li>
+                    <li><strong>Modo Oscuro:</strong> Opción de tema oscuro para reducir fatiga visual.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Guía Rápida para Principiantes -->
+      <section id="inicio-rapido">
+        <h2>Guía Rápida para Principiantes</h2>
+        <div class="card">
+          <p>¿Acabas de empezar en Rise of Kingdoms? Aquí tienes una guía paso a paso para tus primeros días en el
+            juego:</p>
+
+          <h3>Primeros Pasos (Día 1-3)</h3>
+          <ol>
+            <li>
+              <strong>Completa el Tutorial:</strong> Sigue las misiones iniciales para familiarizarte con los controles
+              básicos y mecánicas del juego.
+            </li>
+            <li>
+              <strong>Elige tu Civilización:</strong> Cada civilización ofrece bonificaciones únicas. Para
+              principiantes, recomendamos:
+              <ul>
+                <li><strong>China:</strong> Bonos de construcción (+5% velocidad de construcción)</li>
+                <li><strong>Alemania:</strong> Bonos de entrenamiento de tropas (+5% velocidad de entrenamiento)</li>
+                <li><strong>Roma:</strong> Bonos de comida (+10% producción de comida)</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Únete a una Alianza:</strong> Busca una alianza activa lo antes posible. Los beneficios incluyen:
+              <ul>
+                <li>Ayuda para acelerar construcciones y investigaciones</li>
+                <li>Protección contra ataques enemigos</li>
+                <li>Acceso a tecnologías de alianza</li>
+                <li>Regalos y recursos compartidos</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Enfócate en el City Hall:</strong> Tu prioridad #1 es mejorar el City Hall (Ayuntamiento) lo más
+              rápido posible. Cada nivel desbloquea nuevos edificios y funciones.
+            </li>
+          </ol>
+
+          <h3>Desarrollo Temprano (Día 4-14)</h3>
+          <ol>
+            <li>
+              <strong>Orden de Construcción Recomendado:</strong>
+              <ul>
+                <li>City Hall → Nivel 7 (desbloquea segundo constructor)</li>
+                <li>Academy → Investigación de economía</li>
+                <li>Barracks, Archery Range, Stable → Entrenamiento de tropas</li>
+                <li>Hospital → Protección de tropas heridas</li>
+                <li>Storehouse → Protección de recursos</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Gestión de Recursos:</strong>
+              <ul>
+                <li>Construye granjas, aserraderos, canteras y minas de oro</li>
+                <li>Envía comandantes a recolectar recursos del mapa</li>
+                <li>Completa misiones diarias para obtener recursos extra</li>
+                <li>Usa speedups (aceleradores) sabiamente - guárdalos para mejoras importantes</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Comandantes Iniciales:</strong>
+              <ul>
+                <li><strong>Sun Tzu:</strong> Excelente comandante de infantería (gratis, fácil de mejorar)</li>
+                <li><strong>Joan of Arc:</strong> Comandante de soporte versátil</li>
+                <li><strong>Lohar:</strong> Especialista en matar bárbaros (gratis)</li>
+                <li>Enfócate en mejorar 2-3 comandantes en lugar de dispersar recursos</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Mata Bárbaros:</strong>
+              <ul>
+                <li>Los bárbaros dan experiencia para comandantes y recursos</li>
+                <li>Empieza con bárbaros nivel 1-3</li>
+                <li>Usa Lohar como comandante principal para bonificaciones</li>
+                <li>Coordina con tu alianza para matar bárbaros de nivel alto</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h3>Consejos Esenciales</h3>
+          <div class="card-grid">
+            <div class="card">
+              <h4>💎 Gestión de Gemas</h4>
+              <p><strong>NO gastes gemas en:</strong></p>
+              <ul>
+                <li>Acelerar construcciones cortas</li>
+                <li>Comprar recursos básicos</li>
+                <li>Cofres de oro aleatorios</li>
+              </ul>
+              <p><strong>SÍ gasta gemas en:</strong></p>
+              <ul>
+                <li>VIP Points (prioridad #1)</li>
+                <li>Segundo constructor (5000 gemas)</li>
+                <li>Comandantes legendarios (wheels of fortune)</li>
+                <li>Migración de reino (si es necesario)</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4>⚡ Uso de Speedups</h4>
+              <p>Los aceleradores son el recurso más valioso:</p>
+              <ul>
+                <li>Guarda speedups universales para City Hall 21+</li>
+                <li>Usa speedups de construcción para edificios importantes</li>
+                <li>Speedups de investigación para tecnologías militares</li>
+                <li>Speedups de entrenamiento para eventos de tropas</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4>🛡️ Protección</h4>
+              <p>Evita ser atacado:</p>
+              <ul>
+                <li>Mantén escudo de paz activo (8h gratis cada día)</li>
+                <li>Guarda recursos en el Storehouse</li>
+                <li>Envía tropas a recolectar antes de desconectarte</li>
+                <li>Mantén tropas en hospitales si es necesario</li>
+                <li>Teletransportate cerca de tu alianza</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4>📊 Prioridades de Investigación</h4>
+              <p>Orden recomendado en la Academia:</p>
+              <ol>
+                <li>Gathering (recolección de recursos)</li>
+                <li>Economic Development (desarrollo económico)</li>
+                <li>Military Science (ciencia militar básica)</li>
+                <li>Troop Training (entrenamiento de tropas)</li>
+                <li>Combat (mejoras de combate)</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sistemas Principales del Juego -->
+      <section id="sistemas">
+        <h2>Sistemas Principales del Juego</h2>
+        <p class="text-center" style="font-size: 1.2rem; margin-bottom: 3rem;">Explora en profundidad cada aspecto de
+          Rise of Kingdoms:</p>
+
+        <div class="card-grid">
+          <a href="civilizaciones.html" class="card" style="text-decoration: none; color: inherit;">
+            <h3>🏛️ Civilizaciones</h3>
+            <p>Descubre las 8 civilizaciones disponibles, sus bonificaciones únicas, comandantes especiales y cuál
+              elegir según tu estilo de juego.</p>
+            <span class="btn" style="margin-top: 1rem; display: inline-block;">Ver Civilizaciones →</span>
+          </a>
+
+          <a href="comandantes.html" class="card" style="text-decoration: none; color: inherit;">
+            <h3>👑 Comandantes</h3>
+            <p>Guía completa de todos los comandantes: legendarios, épicos y élite. Builds, talentos, pairings y
+              estrategias para cada uno.</p>
+            <span class="btn" style="margin-top: 1rem; display: inline-block;">Ver Comandantes →</span>
+          </a>
+
+          <a href="edificios.html" class="card" style="text-decoration: none; color: inherit;">
+            <h3>🏗️ Edificios</h3>
+            <p>Optimiza tu ciudad con la guía de construcción: orden recomendado, función de cada edificio y estrategias
+              de desarrollo.</p>
+            <span class="btn" style="margin-top: 1rem; display: inline-block;">Ver Edificios →</span>
+          </a>
+
+          <a href="tropas.html" class="card" style="text-decoration: none; color: inherit;">
+            <h3>⚔️ Tropas y Combate</h3>
+            <p>Domina el combate: tipos de tropas, formaciones, estrategias PvP, counters y cómo ganar batallas
+              decisivas.</p>
+            <span class="btn" style="margin-top: 1rem; display: inline-block;">Ver Tropas →</span>
+          </a>
+
+          <a href="alianzas.html" class="card" style="text-decoration: none; color: inherit;">
+            <h3>🤝 Alianzas</h3>
+            <p>Todo sobre alianzas: cómo elegir una buena alianza, tecnologías, territorios, guerras y el modo Kingdom
+              vs Kingdom.</p>
+            <span class="btn" style="margin-top: 1rem; display: inline-block;">Ver Alianzas →</span>
+          </a>
+
+          <a href="recursos.html" class="card" style="text-decoration: none; color: inherit;">
+            <h3>📦 Recursos</h3>
+            <p>Gestión eficiente de recursos: farming, gathering, comandantes recolectores, eventos y cómo nunca
+              quedarte sin recursos.</p>
+            <span class="btn" style="margin-top: 1rem; display: inline-block;">Ver Recursos →</span>
+          </a>
+
+          <a href="tecnologia.html" class="card" style="text-decoration: none; color: inherit;">
+            <h3>🔬 Tecnología</h3>
+            <p>Árbol de investigación completo: orden óptimo, tecnologías esenciales y cómo maximizar tu poder
+              científico.</p>
+            <span class="btn" style="margin-top: 1rem; display: inline-block;">Ver Tecnología →</span>
+          </a>
+
+          <a href="eventos.html" class="card" style="text-decoration: none; color: inherit;">
+            <h3>🎉 Eventos</h3>
+            <p>Calendario de eventos: diarios, semanales, especiales, VIP system y cómo maximizar recompensas en cada
+              evento.</p>
+            <span class="btn" style="margin-top: 1rem; display: inline-block;">Ver Eventos →</span>
+          </a>
+
+          <a href="calculadora.html" class="card"
+            style="text-decoration: none; color: inherit; background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(30, 58, 95, 0.3) 100%); border: 2px solid var(--primary-gold);">
+            <h3>🧮 Calculadora de Recursos</h3>
+            <p>Herramienta interactiva para calcular tiempo necesario para acumular recursos y speedups requeridos.
+              ¡NUEVO!</p>
+            <span class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Usar Calculadora →</span>
+          </a>
+
+          <a href="comparador.html" class="card"
+            style="text-decoration: none; color: inherit; background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(30, 58, 95, 0.3) 100%); border: 2px solid var(--primary-gold);">
+            <h3>⚖️ Comparador de Civilizaciones</h3>
+            <p>Compara hasta 3 civilizaciones lado a lado: bonos, comandantes, ratings y recomendaciones. ¡NUEVO!</p>
+            <span class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Comparar Ahora →</span>
+          </a>
+
+          <a href="avanzado.html" class="card" style="text-decoration: none; color: inherit;">
+            <h3>🎯 Estrategias Avanzadas</h3>
+            <p>Guías para jugadores experimentados: jumper accounts, farm accounts, scouting, rallies, garrison y meta
+              strategies.</p>
+            <span class="btn" style="margin-top: 1rem; display: inline-block;">Ver Avanzado →</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Call to Action Final -->
+      <section id="cta" class="text-center">
+        <div class="card"
+          style="background: linear-gradient(135deg, rgba(30, 58, 95, 0.4) 0%, rgba(212, 175, 55, 0.2) 100%);">
+          <h2>¿Listo para Conquistar?</h2>
+          <p style="font-size: 1.3rem; margin-bottom: 2rem;">Comienza tu viaje hacia la gloria. Elige tu civilización,
+            recluta comandantes legendarios y construye un imperio que perdure a través de los siglos.</p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="civilizaciones.html" class="btn btn-primary">Elegir Civilización</a>
+            <a href="comandantes.html" class="btn">Ver Comandantes</a>
+            <a href="glosario.html" class="btn">Glosario y FAQ</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p><strong>Guía Completa de Rise of Kingdoms</strong></p>
+      <p>Creado por la comunidad para la comunidad • 2026</p>
+      <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-muted);">
+        Esta guía no está afiliada con Lilith Games. Rise of Kingdoms es una marca registrada de Lilith Games.
+      </p>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="glosario.html">Glosario</a>
+        <a href="avanzado.html">Guías Avanzadas</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de Búsqueda Global -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-modal-content">
+      <div class="search-modal-header">
+        <div class="search-input-container">
+          <input type="text" class="search-input" id="globalSearchInput"
+            placeholder="Buscar civilizaciones, comandantes, guías..." autocomplete="off" />
+        </div>
+        <button class="close-search" id="closeSearch">✕</button>
+      </div>
+      <div class="search-modal-body">
+        <div id="searchHistory"></div>
+        <div id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="search.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
