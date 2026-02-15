@@ -52,7 +52,8 @@ Este documento detalla los planes de expansión y mejoras técnicas para elevar 
 3.  **✅ Fase Completada:** Árboles de Talentos Visuales (Master Builds). [IMPLEMENTADO]
 4.  **✅ Fase Completada:** Guía de Armamentos y Formaciones (Meta de SoC). [IMPLEMENTADO]
 5.  **✅ Fase Completada:** Estrategia del Arca de Osiris. [IMPLEMENTADO]
-6.  **Siguiente:** Sistema de Favoritos de Comandantes.
+6.  **✅ Fase Completada:** Calculadora de Entrenamiento de Tropas (MGE Optimizer). [IMPLEMENTADO]
+7.  **Siguiente:** Sistema de Favoritos de Comandantes.
 
 ---
 

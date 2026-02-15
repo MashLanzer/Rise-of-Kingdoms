@@ -61,6 +61,7 @@ const searchIndex = {
     ],
     herramientas: [
         { id: 'calculadora-speedups', name: 'Calculadora de Aceleradores', keywords: ['calculadora', 'aceleradores', 'speedups', 'tiempo', 'investigación', 'construcción'], url: 'calculadora-aceleradores.html', category: 'Herramientas', description: 'Calcula tu inventario total de aceleradores y planifica objetivos' },
+        { id: 'calculadora-tropas', name: 'Calculadora de Entrenamiento (MGE)', keywords: ['calculadora', 'tropas', 'entrenamiento', 'poder', 'mge', 't4', 't5'], url: 'calculadora-tropas.html', category: 'Herramientas', description: 'Calcula cuánto poder y puntos de MGE ganarás' },
         { id: 'calculadora', name: 'Calculadora de Recursos', keywords: ['calculadora', 'recursos', 'farmear', 'tiempo'], url: 'calculadora.html', category: 'Herramientas', description: 'Calcula tiempo y speedups necesarios para recursos' },
         { id: 'comparador', name: 'Comparador de Civilizaciones', keywords: ['comparador', 'comparar', 'civilizaciones', 'vs'], url: 'comparador.html', category: 'Herramientas', description: 'Compara civilizaciones lado a lado' }
     ]
