@@ -1699,49 +1699,57 @@ mark {
 }
 
 .m-header {
-    padding: 1rem;
+    padding: 1.25rem;
     text-align: center;
-    font-family: var(--font-title);
-    font-size: 1.5rem;
-    font-weight: 900;
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
     color: white;
+    letter-spacing: 2px;
 }
 
 .tier-6 .m-header {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    border-bottom: 2px solid #4facfe;
 }
 
 .tier-10 .m-header {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #44107a 0%, #5b247a 100%);
+    border-bottom: 2px solid #f093fb;
 }
 
 .tier-12 .m-header {
-    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    background: linear-gradient(135deg, #134e5e 0%, #1c5b62 100%);
+    border-bottom: 2px solid #43e97b;
 }
 
 .tier-14 .m-header {
-    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    background: linear-gradient(135deg, #870000 0%, #a80000 100%);
+    border-bottom: 2px solid var(--gold-primary);
 }
 
 .m-body {
-    padding: 1.5rem;
+    padding: 2rem;
     flex: 1;
 }
 
 .m-body h3 {
-    color: var(--primary-gold);
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+    color: var(--gold-primary);
+    margin-bottom: 1.2rem;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    text-transform: uppercase;
 }
 
 .m-footer {
-    padding: 0.75rem;
-    background: rgba(0, 0, 0, 0.3);
+    padding: 0.8rem;
+    background: rgba(0, 0, 0, 0.4);
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-weight: 700;
+    color: var(--text-medium);
 }
 
 .highlight {
@@ -1772,14 +1780,25 @@ mark {
 }
 
 .strategy-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
+    background: var(--navy-800);
+    padding: 2rem;
     border-radius: 12px;
+    border: 1px solid var(--navy-border);
+    transition: var(--transition-premium);
+}
+
+.strategy-card:hover {
+    border-color: var(--gold-primary);
+    transform: translateY(-5px);
+    background: rgba(212, 175, 55, 0.03);
 }
 
 .strategy-card h3 {
-    color: var(--primary-gold);
-    margin-bottom: 0.75rem;
+    color: var(--gold-primary);
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
 /* ===================================

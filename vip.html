@@ -12,19 +12,47 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">🏰 RoK Guía</a>
-            <ul class="nav-menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="civilizaciones.html">Civilizaciones</a></li>
-                <li><a href="comandantes.html">Comandantes</a></li>
-                <li><a href="tier-lists.html">Tier Lists</a></li>
-                <li><a href="equipment.html">Equipment</a></li>
-                <li><a href="vip.html" class="active">VIP</a></li>
-            </ul>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">RoK Academy</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="dropdown active">
+                        <a class="dropdown-toggle">Guías Principales</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="civilizaciones.html">Civilizaciones</a></li>
+                            <li><a href="comandantes.html">Comandantes</a></li>
+                            <li><a href="tier-lists.html">Tier Lists</a></li>
+                            <li><a href="equipment.html">Equipment</a></li>
+                            <li><a href="vip.html" class="active">VIP</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">Sistemas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="edificios.html">Edificios</a></li>
+                            <li><a href="tropas.html">Tropas</a></li>
+                            <li><a href="alianzas.html">Alianzas</a></li>
+                            <li><a href="recursos.html">Recursos</a></li>
+                            <li><a href="tecnologia.html">Tecnología</a></li>
+                            <li><a href="eventos.html">Eventos</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">Más</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="kvk.html">Especial KvK</a></li>
+                            <li><a href="avanzado.html">Guías Avanzadas</a></li>
+                            <li><a href="calculadora.html">Calculadora</a></li>
+                            <li><a href="comparador.html">Comparador</a></li>
+                        </ul>
+                    </li>
+                    <li><button class="search-btn" id="globalSearchBtn">🔍 Buscar</button></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <div class="container">
         <header class="page-header">
@@ -240,12 +268,36 @@
         </section>
     </div>
 
-    <footer class="footer">
+    <!-- Footer -->
+    <footer>
         <div class="footer-content">
-            <p>&copy; 2026 Rise of Kingdoms Master Guide. Todos los derechos reservados.</p>
+            <p><strong>Guía Completa de Rise of Kingdoms</strong></p>
+            <p>Manual Maestro VIP • 2026</p>
+            <div class="footer-links">
+                <a href="index.html">Inicio</a>
+                <a href="tier-lists.html">Tier Lists</a>
+                <a href="kvk.html">Especial KvK</a>
+            </div>
         </div>
     </footer>
 
+    <!-- Modal de Búsqueda -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <div class="search-input-container">
+                    <input type="text" class="search-input" id="globalSearchInput"
+                        placeholder="Buscar tácticas, niveles VIP, gemas...">
+                </div>
+                <button class="close-search" id="closeSearch">✕</button>
+            </div>
+            <div class="search-modal-body">
+                <div id="searchResults"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="search.js"></script>
     <script src="script.js"></script>
 </body>
 
