@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armamentos y Formaciones SoC - Rise of Kingdoms Academy</title>
+    <meta name="description"
+        content="Domina el meta de la Temporada de Conquista. Guía completa de armamentos, inscripciones y formaciones tácticas en Rise of Kingdoms.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">RoK Academy</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="dropdown active">
+                        <a class="dropdown-toggle">Guías Principales</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="civilizaciones.html">Civilizaciones</a></li>
+                            <li><a href="comandantes.html">Comandantes</a></li>
+                            <li><a href="builds.html">Árboles de Talentos</a></li>
+                            <li><a href="tier-lists.html">Tier Lists</a></li>
+                            <li><a href="equipment.html">Equipment</a></li>
+                            <li><a href="vip.html">VIP</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">Sistemas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="armamentos.html" class="active">Armamentos y Formaciones</a></li>
+                            <li><a href="edificios.html">Edificios</a></li>
+                            <li><a href="tropas.html">Tropas</a></li>
+                            <li><a href="alianzas.html">Alianzas</a></li>
+                            <li><a href="recursos.html">Recursos</a></li>
+                            <li><a href="tecnologia.html">Tecnología</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">Más</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="jumper-guide.html">🚀 Guía Jumper</a></li>
+                            <li><a href="kvk.html">Especial KvK</a></li>
+                            <li><a href="avanzado.html">Guías Avanzadas</a></li>
+                            <li><a href="calculadora-aceleradores.html">🧮 Calculadora Speedups</a></li>
+                        </ul>
+                    </li>
+                    <li><button class="search-btn" id="globalSearchBtn">🔍 Buscar</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero armaments-hero">
+            <div class="hero-content">
+                <span class="badge badge-legendary">META SOC</span>
+                <h1>🏺 Armamentos y Formaciones</h1>
+                <p>El poder oculto de la Temporada de Conquista. Optimiza tu ejército con el sistema táctico más
+                    avanzado del juego.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Introducción a Formaciones -->
+            <section class="reveal">
+                <div class="section-header">
+                    <h2>📐 Formaciones Tácticas</h2>
+                    <p>Las formaciones cambian los atributos básicos de tus tropas y desbloquean sinergias únicas.</p>
+                </div>
+
+                <div class="formation-grid">
+                    <div class="formation-card">
+                        <div class="formation-icon">🏹</div>
+                        <h3>Formación de Cuña (Wedge)</h3>
+                        <div class="formation-stat">+5% Daño de Habilidad</div>
+                        <p>La formación más usada en el meta actual. Ideal para comandantes como Nevsky, Zhuge Liang o
+                            Sun Tzu.</p>
+                        <div class="verdict">👑 EL ESTÁNDAR PARA DPS</div>
+                    </div>
+
+                    <div class="formation-card">
+                        <div class="formation-icon">🛡️</div>
+                        <h3>Formación de Arco (Arch)</h3>
+                        <div class="formation-stat">+5% Daño de Ataque Normal</div>
+                        <p>Excelente para comandantes que dependen de sus ataques básicos y contraataque, como Atila o
+                            Pakal.</p>
+                        <div class="verdict">⚔️ IDEAL PARA ATAQUE NORMAL</div>
+                    </div>
+
+                    <div class="formation-card">
+                        <div class="formation-icon">🏰</div>
+                        <h3>Cuadro Hueco (Hollow Square)</h3>
+                        <div class="formation-stat">-5% Daño Recibido</div>
+                        <p>Aumenta la supervivencia drásticamente. Perfecta para marchas de apoyo o tanques puros en
+                            medio del caos.</p>
+                        <div class="verdict">🛡️ MÁXIMA SUPERVIVENCIA</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sistema de Armamentos -->
+            <section class="reveal" style="margin-top: 4rem;">
+                <div class="glass-card main-armaments">
+                    <h2>💎 Guía de Armamentos (Armaments)</h2>
+                    <p>Los armamentos son las piezas que equipas en cada formación. Tienen 4 ranuras por comandante y se
+                        dividen en 4 rarezas (Gris, Verde, Azul, Morada, Dorada).</p>
+
+                    <div class="armaments-info-grid">
+                        <div class="info-box">
+                            <h3>Atributos Base</h3>
+                            <p>Busca siempre atributos que coincidan con tu tipo de tropa (Infantería, Caballería,
+                                Arqueros). Los atributos más valiosos son **Salud** y **Ataque**.</p>
+                        </div>
+                        <div class="info-box">
+                            <h3>📜 Inscripciones</h3>
+                            <p>El verdadero poder de un armamento legendario está en su inscripción. Pueden otorgar
+                                desde daño extra hasta efectos de control de furia o curación.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box warning">
+                        <strong>PRO TIP:</strong> Prioriza armamentos con 2 o más atributos del mismo tipo de tropa. Un
+                        armamento morado con buenos stats es mejor que uno dorado con stats de "Asedio" o "Mixtos".
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recomendaciones por Tipo -->
+            <section class="reveal" style="margin-top: 4rem;">
+                <div class="section-header">
+                    <h2>🎯 Mejores Formaciones por Rol</h2>
+                </div>
+                <table class="premium-table">
+                    <thead>
+                        <tr>
+                            <th>Comandante</th>
+                            <th>Formación Sugerida</th>
+                            <th>Razón Táctica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Nevsky / Juana P</strong></td>
+                            <td>Cuña (Wedge)</td>
+                            <td>Maximiza el Nuke de habilidad masivo.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Scipio P / Sargon</strong></td>
+                            <td>Cuña o Cuadro Hueco</td>
+                            <td>Balance de daño y supervivencia en campo.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Boudica P / Zhuge</strong></td>
+                            <td>Cuña (Wedge)</td>
+                            <td>Potencia el daño AOE de arqueros.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gorgo / Flavio</strong></td>
+                            <td>Cuadro Hueco</td>
+                            <td>Aumenta la defensa para guarnición.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Cómo obtenerlos -->
+            <section class="reveal" style="margin-top: 4rem;">
+                <div class="card">
+                    <h3>🛠️ ¿Cómo conseguir Armamentos Legendarios?</h3>
+                    <ul class="icon-list">
+                        <li><strong>Cofres de Formación:</strong> Se obtienen en misiones diarias y eventos de
+                            temporada.</li>
+                        <li><strong>Forja de Inscripciones:</strong> Usa materiales de inscripción para añadir
+                            habilidades únicas a tus armamentos dorados.</li>
+                        <li><strong>Tienda de Temporada:</strong> Compra piezas garantizadas usando monedas de KvK.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>RoK Academy - Armament Strategy</strong></p>
+            <p>El estándar de oro para la Temporada de Conquista.</p>
+            <div class="footer-links">
+                <a href="index.html">Inicio</a>
+                <a href="builds.html">Talentos</a>
+                <a href="kvk.html">SoC Strategy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Búsqueda -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <div class="search-input-container">
+                    <input type="text" class="search-input" id="globalSearchInput"
+                        placeholder="Buscar armamentos, inscripciones, formaciones...">
+                </div>
+                <button class="close-search" id="closeSearch">✕</button>
+            </div>
+            <div class="search-modal-body">
+                <div id="searchResults"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="search.js"></script>
+    <script src="script.js"></script>
+
+    <style>
+        .armaments-hero {
+            background: linear-gradient(135deg, rgba(8, 10, 15, 0.92) 0%, rgba(20, 30, 50, 0.85) 100%),
+                url('images/armaments-bg.webp') center/cover;
+            border-bottom: 2px solid var(--gold-primary);
+        }
+
+        .formation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .formation-card {
+            background: var(--navy-800);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--navy-border);
+            text-align: center;
+            transition: var(--transition-premium);
+        }
+
+        .formation-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold-primary);
+            box-shadow: var(--shadow-premium);
+        }
+
+        .formation-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .formation-stat {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--gold-primary);
+            margin-bottom: 1rem;
+            font-family: var(--font-heading);
+        }
+
+        .verdict {
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            font-weight: 900;
+            padding: 0.4rem;
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold-light);
+            border-radius: 4px;
+        }
+
+        .main-armaments {
+            padding: 3rem;
+        }
+
+        .armaments-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .info-box {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            border-top: 2px solid var(--gold-primary);
+        }
+
+        .premium-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--navy-800);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 1.5rem;
+        }
+
+        .premium-table th,
+        .premium-table td {
+            padding: 1.25rem;
+            text-align: left;
+            border-bottom: 1px solid var(--navy-border);
+        }
+
+        .premium-table th {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold-primary);
+            font-family: var(--font-heading);
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .armaments-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-armaments {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</body>
+
+</html>

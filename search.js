@@ -55,7 +55,8 @@ const searchIndex = {
         { id: 'tier-lists', name: 'Tier Lists 2026', keywords: ['tier list', 'ranking', 'mejor', 'meta'], url: 'tier-lists.html', category: 'Guías', description: 'Los mejores comandantes y civilizaciones' },
         { id: 'builds', name: 'Árboles de Talentos (Builds)', keywords: ['build', 'talentos', 'árbol', 'configuración', 'puntos'], url: 'builds.html', category: 'Guías', description: 'Las mejores configuraciones de talentos para cada comandante' },
         { id: 'kvk-guide', name: 'Especial KvK (SoC & KvK 1)', keywords: ['kvk', 'guerra', 'mapas', 'soc', 'hero anthem', 'strife of eight'], url: 'kvk.html', category: 'Guías', description: 'Manual de supervivencia y análisis de mapas de guerra' },
-        { id: 'jumper-guide', name: 'Guía de Salto (Jumper)', keywords: ['jumper', 'salto', 'nascent', 'principiante', 'ayuntamiento 7', 'teletransporte'], url: 'jumper-guide.html', category: 'Guías', description: 'Estrategia de inicio avanzado para dominar nuevos reinos' }
+        { id: 'jumper-guide', name: 'Guía de Salto (Jumper)', keywords: ['jumper', 'salto', 'nascent', 'principiante', 'ayuntamiento 7', 'teletransporte'], url: 'jumper-guide.html', category: 'Guías', description: 'Estrategia de inicio avanzado para dominar nuevos reinos' },
+        { id: 'armamentos', name: 'Armamentos y Formaciones (SoC)', keywords: ['armamento', 'formación', 'wedge', 'arch', 'cuña', 'inscripción', 'soc'], url: 'armamentos.html', category: 'Sistemas', description: 'Optimización de tropas con el meta de la Temporada de Conquista' }
     ],
     herramientas: [
         { id: 'calculadora-speedups', name: 'Calculadora de Aceleradores', keywords: ['calculadora', 'aceleradores', 'speedups', 'tiempo', 'investigación', 'construcción'], url: 'calculadora-aceleradores.html', category: 'Herramientas', description: 'Calcula tu inventario total de aceleradores y planifica objetivos' },
